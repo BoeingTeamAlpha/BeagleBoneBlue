@@ -13,7 +13,7 @@ int main (void)
 	if( getuid() != 0 )
 	{
 		printf("You must run this program as root. Exiting.\n");
-		exit(EXIT_FAILURE);
+		exit( EXIT_FAILURE );
 	}
 
 	printf("This is coool with git\r\n");
@@ -24,8 +24,7 @@ int main (void)
 	while ( control.isRunning() )
 	{
 		sleep( 1 );
-
 	}
 
-	return(EXIT_SUCCESS);
+	return EXIT_SUCCESS;
 }

@@ -192,5 +192,5 @@ IOBase::Direction::Enum IOBase::getDirection()
 	return _direction;
 }
 
-} /* namespace IO */
-} /* namespace VehicleControl */
+} // namespace IO
+} // namespace VehicleControl

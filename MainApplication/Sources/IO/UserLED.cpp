@@ -190,5 +190,5 @@ void* UserLED::handleBlinking( void* value )
 	return 0;
 }
 
-} /* namespace IO */
-} /* namespace VehicleControl */
+} // namespace IO
+} // namespace VehicleControl

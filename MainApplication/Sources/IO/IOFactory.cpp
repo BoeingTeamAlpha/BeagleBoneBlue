@@ -54,7 +54,6 @@ void Control::IOFactory::fillInputList( InputList& list )
 	list[ IO::InputList::Input2 ] = createRisingEdgeThreadedInput( 116 );
 	list[ IO::InputList::Input3 ] = createRisingEdgeThreadedInput( 113 );
 	list[ IO::InputList::Input4 ] = createRisingEdgeThreadedInput( 98 );
-
 }
 
 void Control::IOFactory::fillOutputList( OutputList& list )
@@ -64,4 +63,4 @@ void Control::IOFactory::fillOutputList( OutputList& list )
 	list[ IO::OutputList::LeftDriveMotorForwardEnable ] = new IO::Output( setup );
 }
 
-} /* namespace VehicleControl */
+} // namespace VehicleControl

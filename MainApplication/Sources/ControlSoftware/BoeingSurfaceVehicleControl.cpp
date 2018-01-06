@@ -28,7 +28,7 @@ Control::Control()
 	signal( SIGTERM, signalHandler );
 
 	// set the running LED to its normal blinking
-	_runningLED.setState( IO::UserLED::State::Blinking, -1, 480 );
+	_runningLED.setState( IO::UserLED::State::Blinking, -1, 900 );
 }
 
 Control& Control::instance()
@@ -109,4 +109,4 @@ void Control::signalHandler( int signal )
 	}
 }
 
-}
+} // namespace VehicleControl

@@ -217,5 +217,5 @@ void* Input::threadedPoll( void* value )
 	return NULL;
 }
 
-} /* namespace IO */
-} /* namespace VehicleControl */
+} // namespace IO
+} // namespace VehicleControl

@@ -125,5 +125,5 @@ void* Output::threadedToggle( void* value )
 	return 0;
 }
 
-} /* namespace IO */
-} /* namespace VehicleControl */
+} // namespace IO
+} // namespace VehicleControl
