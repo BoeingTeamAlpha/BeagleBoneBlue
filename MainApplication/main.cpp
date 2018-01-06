@@ -16,7 +16,7 @@ int main (void)
 		exit(EXIT_FAILURE);
 	}
 
-	printf("This is coool\r\n");
+	printf("This is coool with git\r\n");
 	unsigned int count = 0;
 
 	Control& control = Control::instance();
