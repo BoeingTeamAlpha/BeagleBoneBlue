@@ -1,7 +1,5 @@
 .jxbrowser-data
 .metadata
-RemoteSystemsTempFiles
-RoboticsCapeInclude
 *.ccsproject
 *.cproject
 *.project
@@ -15,3 +13,4 @@ RoboticsCapeInclude
 *.mk
 *.opt
 makefile
+.DS_Store
