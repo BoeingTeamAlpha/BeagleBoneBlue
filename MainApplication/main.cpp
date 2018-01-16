@@ -16,14 +16,15 @@ int main (void)
 		exit( EXIT_FAILURE );
 	}
 
-	printf("This is coool with git\r\n");
+//	printf("This is coool with git!!!!!!!11\r\n");
 	unsigned int count = 0;
 
 	Control& control = Control::instance();
 
 	while ( control.isRunning() )
 	{
-		sleep( 1 );
+		control.update();
+		usleep( 500000 );
 	}
 
 	return EXIT_SUCCESS;

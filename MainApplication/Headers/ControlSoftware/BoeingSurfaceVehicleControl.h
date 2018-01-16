@@ -3,6 +3,8 @@
 
 #include <vector>
 #include "UserLED.h"
+#include "BluetoothClient.h"
+#include "BluetoothServer.h"
 
 namespace VehicleControl {
 
@@ -51,9 +53,14 @@ private:
 	// list of all of the outputs
 	OutputList _outputs;
 
+	IO::UserLED _bluetoothConnectedLED;
+
 	// this led is a status LED of the program. During normal operation,
 	// the led just blinks to signify the app is still running properly.
 	IO::UserLED _runningLED;
+
+//	Bluetooth::Client _client;
+	Bluetooth::Server _server;
 
 public:
 

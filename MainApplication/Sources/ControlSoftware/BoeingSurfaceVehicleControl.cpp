@@ -9,15 +9,19 @@
 #include "InputList.h"
 #include "OutputList.h"
 #include "IOFactory.h"
+#include "BluetoothDefinitions.h"
 
 namespace VehicleControl {
-
+//std::string( "30:85:A9:E0:1F:9A" )
 Control::Control()
 	: _isRunning( true )
 	, _inputs( IO::InputList::NUM_INPUTS )
 	, _outputs( IO::OutputList::NUM_OUTPUTS )
 	, _red( IO::UserLED::Setup( IO::UserLED::LED::Red ) )
+	, _bluetoothConnectedLED( IO::UserLED::Setup( IO::UserLED::LED::UserTwo ) )
 	, _runningLED( IO::UserLED::Setup( IO::UserLED::LED::UserThree ) )
+//	, _client( peerAdress )
+	, _server( peerAdress, localAdress )
 {
 	// Fill up the IO
 	IOFactory::fillInputList( _inputs );
@@ -29,6 +33,7 @@ Control::Control()
 
 	// set the running LED to its normal blinking
 	_runningLED.setState( IO::UserLED::State::Blinking, -1, 900 );
+	printf("finished constructor\r\n");
 }
 
 Control& Control::instance()
@@ -45,7 +50,19 @@ Control::~Control()
 
 void Control::update()
 {
+	static bool isBluetoothConnected = false;
 
+//	if ( isBluetoothConnected != this->_server.isConnected() )
+//	{
+//		printf("BT changed states\r\n");
+//		isBluetoothConnected = this->_server.isConnected();
+
+//		IO::UserLED::State::Enum state = isBluetoothConnected
+//				? IO::UserLED::State::On
+//				: IO::UserLED::State::Off;
+
+//		_bluetoothConnectedLED.setState( state );
+//	}
 }
 
 bool Control::isRunning() const

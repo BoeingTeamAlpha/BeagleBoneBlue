@@ -61,7 +61,6 @@ UserLED::UserLED( const Setup& setup )
 
 	// need to give Linux time to set up the sysfs structure
 	usleep( 250000 ); // 250ms delay
-
 }
 
 UserLED::~UserLED()
