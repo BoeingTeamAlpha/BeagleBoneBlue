@@ -11,6 +11,9 @@ find_package( BlueZ )
 set( CMAKE_BUILD_TYPE Release )
 #set( CMAKE_BUILD_TYPE Debug )
 
+# Add compiler flags
+set( CMAKE_CXX_FLAGS "-Wall" )
+
 # Bring in the project headers
 include_directories( ${CMAKE_SOURCE_DIR}/Headers )
 include_directories( ${CMAKE_SOURCE_DIR}/Headers/IO )
