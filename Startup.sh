@@ -1,5 +1,5 @@
 #!/bin/bash
-#This shell script loads both PRUs' firmware, binds the bluetooth channel, and 
+#This shell script loads both PRUs' firmware and 
 #starts the robot control software.
 
 CurrentDirectory=$PWD
@@ -26,8 +26,6 @@ cp $CurrentDirectory/PRU1/Release/PRU1.out /lib/firmware/am335x-pru1-fw
 #modprobe pru_rproc
 ###################
 
-#TODO: add any bluetooth binding code here if necessary!!
-
 #This code restarts each PRU by binding each PRU
 echo "4a334000.pru0" > /sys/bus/platform/drivers/pru-rproc/bind
 echo "4a338000.pru1" > /sys/bus/platform/drivers/pru-rproc/bind
@@ -36,4 +34,4 @@ echo "4a338000.pru1" > /sys/bus/platform/drivers/pru-rproc/bind
 sleep 1.0
 
 #Start the application
-./main
+./MainApplications
