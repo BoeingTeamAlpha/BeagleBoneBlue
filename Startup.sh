@@ -34,4 +34,6 @@ echo "4a338000.pru1" > /sys/bus/platform/drivers/pru-rproc/bind
 sleep 1.0
 
 #Start the application
-./MainApplications
+cd ../build
+echo $PWD
+./MainApplication
