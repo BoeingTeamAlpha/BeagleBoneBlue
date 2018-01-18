@@ -3,8 +3,8 @@
 
 #include <string>
 
-#define BeagleBlue
-//#define BeagleBlack
+//#define BeagleBlue
+#define BeagleBlack
 //#define Nexus7
 
 #define BeagleBlueBluetoothAddress ( "80:30:DC:04:39:D4" )
@@ -13,7 +13,7 @@
 
 #if defined( BeagleBlue )
 	static const std::string localAdress( BeagleBlueBluetoothAddress );
-	static const std::string peerAdress( Nexus7BluetoothAddress );
+	static const std::string peerAdress( BeagleBlackBluetoothAddress );
 #elif defined( BeagleBlack )
 	static const std::string localAdress( BeagleBlackBluetoothAddress );
 	static const std::string peerAdress( BeagleBlueBluetoothAddress );

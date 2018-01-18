@@ -201,7 +201,7 @@ void* Input::threadedPoll( void* value )
 	Input* input = static_cast< Input* >( value );
 
 	// loop until the thread stops running
-	while( input->_threadRunning )
+	while ( input->_threadRunning )
 	{
 		// call the wait for edge method
 		input->_callbackFunction( input->waitForEdge() );

@@ -18,14 +18,12 @@ Client::Client( const std::string& peerAddress )
 	: Base( peerAddress )
 	, _isConnected( false )
 {
-	char* returnVal;
 
-//	this->_peerAddress->rc_bdaddr;
-//	ba2str( &this->_peerAddress->rc_bdaddr, returnVal );
-//	str2ba( peerAddress.c_str(), &_peerAddress->rc_bdaddr );
-	printf("started client const %i\r\n", this->_peerAddress->rc_bdaddr );
+	//	this->_peerAddress->rc_bdaddr;
+	//	ba2str( &this->_peerAddress->rc_bdaddr, returnVal );
+	//	str2ba( peerAddress.c_str(), &_peerAddress->rc_bdaddr );
 	startThread( &this->_setupThread, tryToConnectToServer, &_setupThreadRunning, static_cast< void* >( this ) );
-	printf("finished client const\r\n");
+
 }
 
 Client::~Client()
@@ -48,29 +46,49 @@ void* Client::tryToConnectToServer( void* input )
 {
 	Client* client = static_cast< Client* >( input );
 
-	unsigned int opt = sizeof( *client->_peerAddress ) ;
-
 	unsigned int returnValue = 0;
+
+	char buff[ 18 ] = { 0 };
 
 	client->_isConnected = false;
 
-	client->setupSocket();
+	// setup the bluetooth family
+	client->_peerAddress->rc_family = AF_BLUETOOTH;
+
+	client->_peerAddress->rc_channel = 1;
+
 
 	printf("client setup socket %d\r\n", client->_socket );
 
-	returnValue |= connect( client->_socket, (struct sockaddr *)client->_peerAddress, sizeof( opt ) );
-//	while ( connect( client->_socket, (struct sockaddr *)client->_peerAddress, sizeof( opt ) ) != 0 )
-//	{
-//		printf("trying to connect\r\n");
-//	}
+	ba2str( &client->_peerAddress->rc_bdaddr, buff );
 
-	char* connectedAddress;
+	printf("connecting with:\r\n"
+//		   "add:\t%s\r\n"
+		   "ch:\t%d\r\n"
+		   "fam:\t%d\r\n", client->_peerAddress->rc_channel, client->_peerAddress->rc_family );
 
-	int errsv = errno;
+	while ( true )
+	{
+		client->setupSocket();
 
-//	ba2str( (bdaddr_t *)&client->_peerAddress->rc_bdaddr, connectedAddress );
+		returnValue |= connect( client->_socket, (struct sockaddr *)client->_peerAddress, sizeof( *client->_peerAddress ) );
 
-	printf("client connected %s\r\n", strerror( errsv ) );
+		int errsv = errno;
+		printf("client tried to connect %s %i\r\n", strerror( errsv ), errsv );
+
+		if ( errsv )
+		{
+			sleep( 4 );
+		}
+		else
+		{
+			break;
+		}
+	}
+
+//	int errsv = errno;
+
+//	printf("client tried to connect %s %i\r\n", strerror( errsv ), errsv );
 
 	if ( returnValue )
 	{
@@ -84,7 +102,7 @@ void* Client::tryToConnectToServer( void* input )
 
 	client->_setupThreadRunning = false;
 
-//	printf("conn %d\n", client->isConnected() );
+	//	printf("conn %d\n", client->isConnected() );
 
 	pthread_exit( NULL );
 	return 0;
@@ -187,110 +205,3 @@ void* Client::tryToConnectToServer( void* input )
 //	exit(0);
 //}
 
-//namespace VehicleControl {
-//namespace Bluetooth {
-
-//Client::Client( const std::string& clientAddress, const std::string& localAddress )
-//	: _readThreadRunning( false )
-//	, _writeThreadRunning( false )
-//	, _client( 0 )
-//	, _socket( 0 )
-//	, _clientAddress( clientAddress )
-//	, _localAddress( localAddress )
-//{
-
-//}
-
-//Client::~Client()
-//{
-//	if ( this->_readThreadRunning )
-//	{
-//		pthread_cancel( this->_readThread );
-//	}
-
-//	if ( this->_writeThreadRunning )
-//	{
-//		pthread_cancel( this->_writeThread );
-//	}
-//}
-
-//int Client::startBothThreads()
-//{
-//	int returnValue = 0;
-
-//	pthread_attr_t attribute;
-
-//	pthread_attr_init( &attribute );
-
-//	pthread_attr_setdetachstate( &attribute, PTHREAD_CREATE_DETACHED );
-
-//	returnValue |= pthread_create( &this->_writeThread, &attribute, &writeMessage, static_cast< void* >( this ) );
-
-//	pthread_attr_destroy( &attribute );
-
-//	if( returnValue )
-//	{
-//		perror("BluetoothServer: Failed to create the write thread");
-//		this->_writeThread = false;
-//		return -1;
-//	}
-//	else
-//	{
-//		this->_writeThread = true;
-//		return 0;
-//	}
-//}
-
-//int Client::startReadThread()
-//{
-//	int returnValue = 0;
-
-//	pthread_attr_t attribute;
-
-//	pthread_attr_init( &attribute );
-
-//	pthread_attr_setdetachstate( &attribute, PTHREAD_CREATE_DETACHED );
-
-//	returnValue |= pthread_create( &this->_readThread, &attribute, &readMessage, static_cast< void* >( this ) );
-
-//	pthread_attr_destroy( &attribute );
-
-//	if( returnValue )
-//	{
-//		perror("BluetoothServer: Failed to create the read thread");
-//		this->_readThread = false;
-//		return -1;
-//	}
-//	else
-//	{
-//		this->_readThread = true;
-//		return 0;
-//	}
-//}
-
-//int Client::startWriteThread()
-//{
-
-//}
-
-//int Client::setupBluetooth()
-//{
-
-//}
-
-//void *Client::readMessage(void *input)
-//{
-
-//}
-
-//void *Client::writeMessage(void *input)
-//{
-
-//}
-
-
-
-
-
-//} // namespace Bluetooth
-//} // namespace VehicleControl

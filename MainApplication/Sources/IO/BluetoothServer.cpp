@@ -27,12 +27,11 @@ Server::Server( const std::string& peerAddress, const std::string& localAddress 
 	// setup the port
 	_localAddress->rc_channel = 1;
 
-	printf("started server const\r\n");
 	// convert the string to the addresses
 	str2ba( localAddress.c_str(), &_localAddress->rc_bdaddr );
 
 	startThread( &this->_setupThread, waitForConnectionsConnections, &_setupThreadRunning, static_cast< void* >( this ) );
-	printf("finished server const with local of %s\r\n", localAddress.c_str() );
+//	printf("finished server const with local of %s\r\n", localAddress.c_str() );
 }
 
 Server::~Server()
@@ -72,7 +71,9 @@ void* Server::waitForConnectionsConnections( void* input )
 
 	server->_client = accept( server->_socket, (struct sockaddr *)server->_peerAddress, &opt );
 
-	fprintf( stdout, "Connection accepted from \n" );
+	int errsv = errno;
+
+	fprintf( stdout, "Connection accepted from %s\r\n", strerror( errsv ) );
 
 	if ( returnValue )
 	{

@@ -2,9 +2,9 @@
 #define BOEINGSURFACEVEHICLECONTROL_H_
 
 #include <vector>
-#include "UserLED.h"
 #include "BluetoothClient.h"
 #include "BluetoothServer.h"
+#include "UserLED.h"
 
 namespace VehicleControl {
 
@@ -59,7 +59,7 @@ private:
 	// the led just blinks to signify the app is still running properly.
 	IO::UserLED _runningLED;
 
-//	Bluetooth::Client _client;
+	Bluetooth::Client _client;
 	Bluetooth::Server _server;
 
 public:

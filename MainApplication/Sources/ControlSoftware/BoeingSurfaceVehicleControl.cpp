@@ -20,7 +20,7 @@ Control::Control()
 	, _red( IO::UserLED::Setup( IO::UserLED::LED::Red ) )
 	, _bluetoothConnectedLED( IO::UserLED::Setup( IO::UserLED::LED::UserTwo ) )
 	, _runningLED( IO::UserLED::Setup( IO::UserLED::LED::UserThree ) )
-//	, _client( peerAdress )
+	, _client( peerAdress )
 	, _server( peerAdress, localAdress )
 {
 	// Fill up the IO
@@ -33,7 +33,7 @@ Control::Control()
 
 	// set the running LED to its normal blinking
 	_runningLED.setState( IO::UserLED::State::Blinking, -1, 900 );
-	printf("finished constructor\r\n");
+//	printf("finished constructor\r\n");
 }
 
 Control& Control::instance()
@@ -52,17 +52,17 @@ void Control::update()
 {
 	static bool isBluetoothConnected = false;
 
-//	if ( isBluetoothConnected != this->_server.isConnected() )
-//	{
-//		printf("BT changed states\r\n");
-//		isBluetoothConnected = this->_server.isConnected();
+	if ( isBluetoothConnected != this->_server.isConnected() )
+	{
+		printf("BT changed states\r\n");
+		isBluetoothConnected = this->_server.isConnected();
 
-//		IO::UserLED::State::Enum state = isBluetoothConnected
-//				? IO::UserLED::State::On
-//				: IO::UserLED::State::Off;
+		IO::UserLED::State::Enum state = isBluetoothConnected
+				? IO::UserLED::State::On
+				: IO::UserLED::State::Off;
 
-//		_bluetoothConnectedLED.setState( state );
-//	}
+		_bluetoothConnectedLED.setState( state );
+	}
 }
 
 bool Control::isRunning() const
@@ -108,6 +108,7 @@ void Control::destroyOutputs()
 void Control::signalHandler( int signal )
 {
 	Control& control = Control::instance();
+
 	switch ( signal )
 	{
 	case SIGINT:

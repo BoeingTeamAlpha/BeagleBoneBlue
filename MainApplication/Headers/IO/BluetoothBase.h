@@ -52,6 +52,7 @@ protected:
 	static int startThread( pthread_t* thread, StartRoutine startRoutine, bool* isRunningFlag, void* objectPointer );
 
 	virtual void handleConnectionLoss();
+
 public:
 
 	virtual ~Base();

@@ -26,7 +26,7 @@ Base::Base( const std::string& peerAddress )
 	// setup the port
 	_peerAddress->rc_channel = 1;
 
-	printf("based finished const peer add is %s\r\n", peerAddress.c_str() );
+//	printf("based finished const peer add is %s\r\n", peerAddress.c_str() );
 }
 
 Base::~Base()
