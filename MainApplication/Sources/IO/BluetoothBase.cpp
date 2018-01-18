@@ -46,6 +46,7 @@ Base::~Base()
 		pthread_cancel( this->_setupThread );
 	}
 
+	close( _socket );
 	delete _peerAddress;
 }
 
@@ -63,7 +64,7 @@ void* Base::readMessage( void* input )
 {
 	Base* base = static_cast< Base* >( input );
 	int bytes_read;
-	char buf[1024] = { 0 };
+	char buf[ 1024 ] = { 0 };
 
 	while ( base->_readThreadRunning )
 	{
