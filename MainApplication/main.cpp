@@ -17,7 +17,7 @@ int main (void)
 	}
 
 //	printf("This is coool with git!!!!!!!11\r\n");
-	unsigned int count = 0;
+//	unsigned int count = 0;
 
 	Control& control = Control::instance();
 

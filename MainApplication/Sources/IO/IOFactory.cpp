@@ -10,7 +10,8 @@
 namespace VehicleControl {
 
 using namespace IO;
-int callback( int message )
+
+int callback( int /* message */ )
 {
 	UserLED& led = Control::instance()._red;
 
@@ -32,6 +33,7 @@ int callback( int message )
 //		printf("on\r\n");
 		break;
 	}
+	return 0;
 //	printf("left callback\r\n");
 }
 

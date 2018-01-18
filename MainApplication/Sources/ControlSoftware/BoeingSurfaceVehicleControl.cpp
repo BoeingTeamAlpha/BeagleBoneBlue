@@ -17,11 +17,11 @@ Control::Control()
 	: _isRunning( true )
 	, _inputs( IO::InputList::NUM_INPUTS )
 	, _outputs( IO::OutputList::NUM_OUTPUTS )
-	, _red( IO::UserLED::Setup( IO::UserLED::LED::Red ) )
 	, _bluetoothConnectedLED( IO::UserLED::Setup( IO::UserLED::LED::UserTwo ) )
 	, _runningLED( IO::UserLED::Setup( IO::UserLED::LED::UserThree ) )
 	, _client( peerAdress )
 	, _server( peerAdress, localAdress )
+	, _red( IO::UserLED::Setup( IO::UserLED::LED::Red ) )
 {
 	// Fill up the IO
 	IOFactory::fillInputList( _inputs );
