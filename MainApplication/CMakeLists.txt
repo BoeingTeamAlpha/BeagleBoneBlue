@@ -17,6 +17,7 @@ set( CMAKE_CXX_FLAGS "-Wall" )
 # Bring in the project headers
 include_directories( ${CMAKE_SOURCE_DIR}/Headers )
 include_directories( ${CMAKE_SOURCE_DIR}/Headers/IO )
+include_directories( ${CMAKE_SOURCE_DIR}/Headers/Bluetooth )
 include_directories( ${CMAKE_SOURCE_DIR}/Headers/ControlSoftware )
 
 # Add all of the files to the build
