@@ -120,7 +120,7 @@ void* Base::writeMessage( void* input )
 	return 0;
 }
 
-int Base::startThread( pthread_t* thread, StartRoutine startRoutine, bool* isRunningFlag, void* objectPointer )
+int Base::startDetachedThread( pthread_t* thread, StartRoutine startRoutine, bool* isRunningFlag, void* objectPointer )
 {
 	if ( *isRunningFlag )
 	{
@@ -164,12 +164,12 @@ int Base::startBothThreads()
 
 int Base::startReadThread()
 {
-	return startThread( &this->_readThread, readMessage, &_readThreadRunning, static_cast< void* >( this ) );
+	return startDetachedThread( &this->_readThread, readMessage, &_readThreadRunning, static_cast< void* >( this ) );
 }
 
 int Base::startWriteThread()
 {
-	return startThread( &this->_writeThread, writeMessage, &_writeThreadRunning, static_cast< void* >( this ) );
+	return startDetachedThread( &this->_writeThread, writeMessage, &_writeThreadRunning, static_cast< void* >( this ) );
 }
 
 int Base::setupSocket()

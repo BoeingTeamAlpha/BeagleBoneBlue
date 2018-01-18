@@ -49,7 +49,7 @@ protected:
 
 	static void* writeMessage( void* input );
 
-	static int startThread( pthread_t* thread, StartRoutine startRoutine, bool* isRunningFlag, void* objectPointer );
+	static int startDetachedThread( pthread_t* thread, StartRoutine startRoutine, bool* isRunningFlag, void* objectPointer );
 
 	virtual void handleConnectionLoss();
 

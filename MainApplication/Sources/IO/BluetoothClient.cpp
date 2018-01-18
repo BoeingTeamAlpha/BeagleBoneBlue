@@ -13,7 +13,7 @@ Client::Client( const std::string& peerAddress )
 	: Base( peerAddress )
 	, _isConnected( false )
 {
-	startThread( &this->_setupThread, tryToConnectToServer, &_setupThreadRunning, static_cast< void* >( this ) );
+	startDetachedThread( &this->_setupThread, tryToConnectToServer, &_setupThreadRunning, static_cast< void* >( this ) );
 }
 
 Client::~Client()
@@ -29,7 +29,7 @@ bool Client::isConnected() const
 void Client::handleConnectionLoss()
 {
 	printf("client handled\r\n");
-	startThread( &this->_setupThread, tryToConnectToServer, &_setupThreadRunning, static_cast< void* >( this ) );
+	startDetachedThread( &this->_setupThread, tryToConnectToServer, &_setupThreadRunning, static_cast< void* >( this ) );
 }
 
 void* Client::tryToConnectToServer( void* input )
