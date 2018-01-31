@@ -45,9 +45,9 @@ void* Client::tryToConnectToServer( void* input )
 	ba2str( &client->_peerAddress->rc_bdaddr, buff );
 
 	printf("connecting with:\r\n"
-		   "add:\t%s\r\n"
-		   "ch:\t%d\r\n"
-		   "fam:\t%d\r\n", buff, client->_peerAddress->rc_channel, client->_peerAddress->rc_family );
+		   "address:\t%s\r\n"
+		   "channel:\t%d\r\n"
+		   "family :\t%d\r\n", buff, client->_peerAddress->rc_channel, client->_peerAddress->rc_family );
 
 	while ( true )
 	{
@@ -56,7 +56,7 @@ void* Client::tryToConnectToServer( void* input )
 		returnValue |= connect( client->_socket, (sockaddr*)client->_peerAddress, sizeof( *client->_peerAddress ) );
 
 		int errsv = errno;
-		printf("client tried to connect %s %i\r\n", strerror( errsv ), errsv );
+		printf("BT client tried to connect with a status of: %s %i\r\n", strerror( errsv ), errsv );
 
 		if ( errsv )
 		{

@@ -6,6 +6,7 @@
 #include "Output.h"
 
 #define SixteenthSecondDebounceTime ( 62 )
+#define EighthSecondDebounceTime ( 125 )
 
 namespace VehicleControl {
 
@@ -41,7 +42,7 @@ IO::Input* createRisingEdgeThreadedInput( int number )
 {
 	Input::Setup setup;
 	setup.callback = &callback;
-	setup.debounceTime = SixteenthSecondDebounceTime;
+	setup.debounceTime = EighthSecondDebounceTime;
 	setup.desiredEdge = Input::Edge::RISING;
 	setup.isActiveLow = true;
 	setup.number = number;

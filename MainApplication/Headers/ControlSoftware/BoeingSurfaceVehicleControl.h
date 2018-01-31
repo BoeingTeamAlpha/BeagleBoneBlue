@@ -1,3 +1,7 @@
+/*
+ * Licensed under the 'LICENSE'.
+ * See LICENSE file in the project root for full license information.
+ */
 #ifndef BOEINGSURFACEVEHICLECONTROL_H_
 #define BOEINGSURFACEVEHICLECONTROL_H_
 
@@ -53,12 +57,15 @@ private:
 	// list of all of the outputs
 	OutputList _outputs;
 
+	// led that turns on when the bluetooth tablet is connected
 	IO::UserLED _bluetoothConnectedLED;
 
 	// this led is a status LED of the program. During normal operation,
 	// the led just blinks to signify the app is still running properly.
 	IO::UserLED _runningLED;
 
+	// bluetooth client and server
+	// @todo does these two classes need to be wrapped in a Device class?
 	Bluetooth::Client _client;
 	Bluetooth::Server _server;
 

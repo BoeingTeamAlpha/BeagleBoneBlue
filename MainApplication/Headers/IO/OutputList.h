@@ -1,3 +1,7 @@
+/*
+ * Licensed under the 'LICENSE'.
+ * See LICENSE file in the project root for full license information.
+ */
 #ifndef OUTPUTLIST_H
 #define OUTPUTLIST_H
 
