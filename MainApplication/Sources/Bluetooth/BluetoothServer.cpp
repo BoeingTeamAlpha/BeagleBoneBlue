@@ -3,6 +3,7 @@
 #include <bluetooth/bluetooth.h>
 #include <bluetooth/rfcomm.h>
 #include <unistd.h>
+#include "ThreadHelper.h"
 
 namespace VehicleControl {
 namespace Bluetooth {
@@ -24,7 +25,7 @@ Server::Server( const std::string& peerAddress, const std::string& localAddress 
 	// convert the string to the addresses
 	str2ba( localAddress.c_str(), &_localAddress->rc_bdaddr );
 
-	startDetachedThread( &this->_setupThread, waitForConnectionsConnections, &_setupThreadRunning, static_cast< void* >( this ) );
+	ThreadHelper::startDetachedThread( &this->_setupThread, waitForConnectionsConnections, &_setupThreadRunning, static_cast< void* >( this ) );
 //	printf("finished server const with local of %s\r\n", localAddress.c_str() );
 }
 
@@ -42,7 +43,7 @@ bool Server::isConnected() const
 void Server::handleConnectionLoss()
 {
 	printf("server handled\r\n");
-	startDetachedThread( &this->_setupThread, waitForConnectionsConnections, &_setupThreadRunning, static_cast< void* >( this ) );
+	ThreadHelper::startDetachedThread( &this->_setupThread, waitForConnectionsConnections, &_setupThreadRunning, static_cast< void* >( this ) );
 }
 
 void* Server::waitForConnectionsConnections( void* input )

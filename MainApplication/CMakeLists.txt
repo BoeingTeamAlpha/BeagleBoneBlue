@@ -19,6 +19,7 @@ include_directories( ${CMAKE_SOURCE_DIR}/Headers )
 include_directories( ${CMAKE_SOURCE_DIR}/Headers/IO )
 include_directories( ${CMAKE_SOURCE_DIR}/Headers/Bluetooth )
 include_directories( ${CMAKE_SOURCE_DIR}/Headers/ControlSoftware )
+include_directories( ${CMAKE_SOURCE_DIR}/Headers/Core )
 
 # Add all of the files to the build
 file( GLOB_RECURSE Headers "Headers/*.h" )

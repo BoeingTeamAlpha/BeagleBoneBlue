@@ -5,7 +5,6 @@
 #ifndef BLUETOOTHBASE_H
 #define BLUETOOTHBASE_H
 
-#include <pthread.h>
 #include <string>
 
 class sockaddr_rc;
@@ -42,11 +41,6 @@ protected:
 	sockaddr_rc* _peerAddress;
 
 protected:
-
-	/**
-	 * Typedef of the prototype necessary for pthread functions.
-	 */
-	typedef void* ( *StartRoutine )( void * );
 
 	/**
 	 * @brief Base constructor
@@ -95,16 +89,6 @@ protected:
 	 * @return
 	 */
 	static void* writeMessage( void* input );
-
-	/**
-	 * @brief startDetachedThread
-	 * @param thread
-	 * @param startRoutine
-	 * @param isRunningFlag
-	 * @param objectPointer
-	 * @return
-	 */
-	static int startDetachedThread( pthread_t* thread, StartRoutine startRoutine, bool* isRunningFlag, void* objectPointer );
 
 	/**
 	 * @brief handleConnectionLoss

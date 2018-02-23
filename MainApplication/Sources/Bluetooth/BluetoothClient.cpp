@@ -3,6 +3,7 @@
 #include <bluetooth/bluetooth.h>
 #include <bluetooth/rfcomm.h>
 #include <unistd.h>
+#include "ThreadHelper.h"
 
 namespace VehicleControl {
 namespace Bluetooth {
@@ -13,7 +14,7 @@ Client::Client( const std::string& peerAddress )
 	: Base( peerAddress )
 	, _isConnected( false )
 {
-	startDetachedThread( &this->_setupThread, tryToConnectToServer, &_setupThreadRunning, static_cast< void* >( this ) );
+	ThreadHelper::startDetachedThread( &this->_setupThread, tryToConnectToServer, &_setupThreadRunning, static_cast< void* >( this ) );
 }
 
 Client::~Client()
@@ -29,7 +30,7 @@ bool Client::isConnected() const
 void Client::handleConnectionLoss()
 {
 	printf("client handled\r\n");
-	startDetachedThread( &this->_setupThread, tryToConnectToServer, &_setupThreadRunning, static_cast< void* >( this ) );
+	ThreadHelper::startDetachedThread( &this->_setupThread, tryToConnectToServer, &_setupThreadRunning, static_cast< void* >( this ) );
 }
 
 void* Client::tryToConnectToServer( void* input )

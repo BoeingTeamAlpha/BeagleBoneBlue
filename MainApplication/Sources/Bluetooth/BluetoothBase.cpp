@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <bluetooth/bluetooth.h>
 #include <bluetooth/rfcomm.h>
+#include "ThreadHelper.h"
 
 namespace VehicleControl {
 namespace Bluetooth {
@@ -120,38 +121,6 @@ void* Base::writeMessage( void* input )
 	return 0;
 }
 
-int Base::startDetachedThread( pthread_t* thread, StartRoutine startRoutine, bool* isRunningFlag, void* objectPointer )
-{
-	if ( *isRunningFlag )
-	{
-		return -1;
-	}
-
-	int returnValue = 0;
-
-	pthread_attr_t attribute;
-
-	pthread_attr_init( &attribute );
-
-	pthread_attr_setdetachstate( &attribute, PTHREAD_CREATE_DETACHED );
-
-	returnValue |= pthread_create( thread, &attribute, startRoutine, objectPointer );
-
-	pthread_attr_destroy( &attribute );
-
-	if( returnValue )
-	{
-		perror("Bluetooth base: Failed to create the thread");
-		*isRunningFlag = false;
-		return -1;
-	}
-	else
-	{
-		*isRunningFlag = true;
-		return 0;
-	}
-}
-
 void Base::handleConnectionLoss()
 {
 
@@ -164,12 +133,12 @@ int Base::startBothThreads()
 
 int Base::startReadThread()
 {
-	return startDetachedThread( &this->_readThread, readMessage, &_readThreadRunning, static_cast< void* >( this ) );
+	return ThreadHelper::startDetachedThread( &this->_readThread, readMessage, &_readThreadRunning, static_cast< void* >( this ) );
 }
 
 int Base::startWriteThread()
 {
-	return startDetachedThread( &this->_writeThread, writeMessage, &_writeThreadRunning, static_cast< void* >( this ) );
+	return ThreadHelper::startDetachedThread( &this->_writeThread, writeMessage, &_writeThreadRunning, static_cast< void* >( this ) );
 }
 
 int Base::setupSocket()
