@@ -78,6 +78,8 @@ public:
 	 * @brief	instance method is the Singleton method of creating and accessing this
 	 *			class. This ensures there can only be ONE instance of this class.
 	 * @return reference to this class.
+	 *
+	 * @note	https://en.wikipedia.org/wiki/Singleton_pattern
 	 */
 	static Control& instance();
 

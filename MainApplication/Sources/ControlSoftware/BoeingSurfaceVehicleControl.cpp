@@ -33,7 +33,6 @@ Control::Control()
 
 	// set the running LED to its normal blinking
 	_runningLED.setState( IO::UserLED::State::Blinking, -1, 900 );
-//	printf("finished constructor\r\n");
 }
 
 Control& Control::instance()
