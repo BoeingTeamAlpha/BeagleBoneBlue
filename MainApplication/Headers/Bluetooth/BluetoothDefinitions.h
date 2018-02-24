@@ -18,7 +18,7 @@
 
 #if defined( BeagleBlue )
 	static const std::string localAdress( BeagleBlueBluetoothAddress );
-	static const std::string peerAdress( LGBluetoothAddress );
+	static const std::string peerAdress( Nexus7BluetoothAddress );
 #elif defined( BeagleBlack )
 	static const std::string localAdress( BeagleBlackBluetoothAddress );
 	static const std::string peerAdress( BeagleBlueBluetoothAddress );
