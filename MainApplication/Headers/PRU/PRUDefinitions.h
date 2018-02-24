@@ -1,0 +1,24 @@
+#ifndef PRUDEFINITIONS_H
+#define PRUDEFINITIONS_H
+
+#include <stdint.h>
+#include <cstddef>
+
+// PRU Definitions
+#define PRU_UNBIND_PATH	"/sys/bus/platform/drivers/pru-rproc/unbind"
+#define PRU_BIND_PATH	"/sys/bus/platform/drivers/pru-rproc/bind"
+#define PRU0_NAME		"4a334000.pru0"
+#define PRU1_NAME		"4a338000.pru1"
+#define PRU_NAME_LEN	13
+#define PRU0_UEVENT		"/sys/bus/platform/drivers/pru-rproc/4a334000.pru0/uevent"
+#define PRU1_UEVENT		"/sys/bus/platform/drivers/pru-rproc/4a338000.pru1/uevent"
+
+#define PRU_ADDR		0x4A300000		// Start of PRU memory Page 184 am335x TRM
+#define PRU_LEN			0x80000			// Length of PRU memory
+#define PRU_SHAREDMEM	0x10000			// Offset to shared memory
+#define CNT_OFFSET 		64
+#define PRU_SERVO_LOOP_INSTRUCTIONS	48	// instructions per PRU servo timer loop
+
+//static uint32_t* pruSharedMemoryPointer = NULL;
+
+#endif // PRUDEFINITIONS_H
