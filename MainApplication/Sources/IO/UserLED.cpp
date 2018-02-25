@@ -2,6 +2,7 @@
 
 #include <unistd.h>
 #include <sstream>
+#include "ThreadHelper.h"
 
 #define PathBase  ( "/sys/class/leds" )
 #define GreenPath ( "/green/" )
@@ -103,17 +104,12 @@ int UserLED::setState( State::Enum state, int numberOfBlinks /* = 0 */, int time
 	case State::Blinking:
 		this->_blinkNumber = numberOfBlinks;
 		this->_blinkPeriod = time;
-		this->_threadRunning = true;
 
-		pthread_attr_t attribute;
-
-		pthread_attr_init( &attribute );
-
-		pthread_attr_setdetachstate( &attribute, PTHREAD_CREATE_DETACHED );
-
-		returnValue |= pthread_create( &this->thread, &attribute, &handleBlinking, static_cast<void*>(this) );
-
-		pthread_attr_destroy( &attribute );
+		returnValue |= ThreadHelper::startDetachedThread(
+					&this->thread
+					, &handleBlinking
+					, &this->_threadRunning
+					, static_cast< void* >( this ) );
 
 		if( returnValue )
 		{
