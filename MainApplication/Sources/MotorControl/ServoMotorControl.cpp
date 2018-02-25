@@ -1,29 +1,73 @@
 #include "ServoMotorControl.h"
 
-#include "ManagerPRUs.h"
+#include <stdio.h>
+#include <unistd.h>
 
+#include "ManagerPRUs.h"
+#include "ThreadHelper.h"
+
+// Macros
 #define PRU_SERVO_LOOP_INSTRUCTIONS	48	// instructions per PRU servo timer loop
+#define PRU_FREQUENCY_IN_MHz ( 200 )
+#define TenHertz ( 10.0f )
+#define Microseconds ( 1000000.0f )
 
 namespace VehicleControl {
 namespace IO {
 
 ServoMotorControl::ServoMotorControl( const Motor::Enum motorNumber )
-    : _motorNumber( motorNumber )
+	: _threadRunning( false )
+	, _motorNumber( motorNumber )
+	, _numberOfLoops( 0 )
+	, _pruPointer( ManagerPRUs::instance().sharedMemoryPointer() )
 {
-
+	calculateThreadSleepTime( TenHertz );
+	ThreadHelper::startDetachedThread( &_thread, handleServoPulseWidth, &_threadRunning, static_cast< void* >( this ) );
 }
 
 ServoMotorControl::~ServoMotorControl()
 {
-
+	if ( this->_threadRunning )
+	{
+		pthread_cancel( this->_thread );
+	}
 }
 
-void ServoMotorControl::setServoPulseWidth( int microseconds )
+void ServoMotorControl::setServoPulseWidth(uint32_t pulseWidth, float frequency )
 {
-    uint32_t* const pruPointer = ManagerPRUs::instance().sharedMemoryPointer();
-	uint32_t numberOfLoops = ( microseconds * 200.0 ) / PRU_SERVO_LOOP_INSTRUCTIONS;
+	calculateThreadSleepTime( frequency );
 
-    pruPointer[ _motorNumber ] = numberOfLoops;
+	setServoPulseWidth( pulseWidth );
+}
+
+void ServoMotorControl::setServoPulseWidth( uint32_t pulseWidth )
+{
+	_numberOfLoops = ( pulseWidth * PRU_FREQUENCY_IN_MHz ) / PRU_SERVO_LOOP_INSTRUCTIONS;
+}
+
+void ServoMotorControl::setServoFrequency( float frequency )
+{
+	calculateThreadSleepTime( frequency );
+}
+
+void* ServoMotorControl::handleServoPulseWidth( void* objectPointer )
+{
+	// cast the void* to a pointer to this class
+	ServoMotorControl* motorControl = static_cast< ServoMotorControl* >( objectPointer );
+
+	while ( motorControl->_threadRunning )
+	{
+		motorControl->_pruPointer[ motorControl->_motorNumber ] = motorControl->_numberOfLoops;
+		usleep( motorControl->_sleepPeriod );
+	}
+
+	return NULL;
+}
+
+void ServoMotorControl::calculateThreadSleepTime( float frequency )
+{
+	// convert the frequency to time and convert it to microseconds
+	_sleepPeriod = uint32_t( ( 1 / frequency ) * Microseconds );
 }
 
 } // namespace IO
