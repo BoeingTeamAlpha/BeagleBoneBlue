@@ -5,6 +5,8 @@
 #include <fcntl.h>
 #include <fstream>
 
+#include "ThreadHelper.h"
+
 using namespace std;
 namespace VehicleControl {
 namespace IO {
@@ -159,22 +161,11 @@ int Input::waitForEdge()
 
 int Input::waitForEdgeThreaded()
 {
-	// set the flag to true
-	this->_threadRunning = true;
-
-	// create an attribute and init it
-	pthread_attr_t attribute;
-	pthread_attr_init( &attribute );
-
-	// set the thread to be detached, since the calling thread does not need to wait for this
-	// thread to join
-	pthread_attr_setdetachstate( &attribute, PTHREAD_CREATE_DETACHED );
-
-	// create the thread
-	int returnValue = pthread_create( &this->_thread, &attribute, &threadedPoll, static_cast< void* >( this ) );
-
-	// destroy the attribute
-	pthread_attr_destroy( &attribute );
+	int returnValue = ThreadHelper::startDetachedThread(
+				&this->_thread
+				, threadedPoll
+				, &this->_threadRunning
+				, static_cast< void* >( this ) );
 
 	// if the pthread was not created successfully, exit the thread
 	if ( returnValue )

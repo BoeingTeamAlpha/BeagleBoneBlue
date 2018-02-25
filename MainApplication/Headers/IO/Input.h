@@ -126,7 +126,7 @@ public:
 	 *			This allows the calling program to continue execution after this methods has been called.
 	 * @return	0 for success, and -1 for failure
 	 */
-	int waitForEdgeThreaded(); // threaded with callback
+	int waitForEdgeThreaded();
 
 	/**
 	 * @brief	cancelWaitForEdge method cancels waiting for the edge.
