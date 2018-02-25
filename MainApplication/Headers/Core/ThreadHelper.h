@@ -3,6 +3,10 @@
 
 #include <pthread.h>
 
+/**
+ * @brief The ThreadHelper class wraps the attributes
+ *		and other arguements necessary to create a pthread.
+ */
 class ThreadHelper
 {
 public:
