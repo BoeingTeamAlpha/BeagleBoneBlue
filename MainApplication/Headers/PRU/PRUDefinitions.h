@@ -1,9 +1,6 @@
 #ifndef PRUDEFINITIONS_H
 #define PRUDEFINITIONS_H
 
-#include <stdint.h>
-#include <cstddef>
-
 // PRU Definitions
 #define PRU_UNBIND_PATH	"/sys/bus/platform/drivers/pru-rproc/unbind"
 #define PRU_BIND_PATH	"/sys/bus/platform/drivers/pru-rproc/bind"
@@ -17,7 +14,5 @@
 #define PRU_LEN			0x80000			// Length of PRU memory
 #define PRU_SHAREDMEM	0x10000			// Offset to shared memory
 #define CNT_OFFSET 		64
-
-//static uint32_t* pruSharedMemoryPointer = NULL;
 
 #endif // PRUDEFINITIONS_H
