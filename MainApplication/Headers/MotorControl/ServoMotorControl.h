@@ -8,7 +8,6 @@ namespace VehicleControl {
 
 namespace IO {
 
-// TODO: add functionality somewhere to turn on the servo power rail.
 /**
  * @brief	The ServoMotorControl class controls a PRU controlled servo. It handles
  *			all control of the servo via this class's API. This class spawns a thread

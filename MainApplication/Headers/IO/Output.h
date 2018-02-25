@@ -64,7 +64,7 @@ public:
 	/**
 	 * @brief ~Output destroys the output. This automatically unexports the pin.
 	 */
-	~Output();  //destructor will unexport the pin
+	~Output();
 
 	/**
 	 * @brief setValue setter

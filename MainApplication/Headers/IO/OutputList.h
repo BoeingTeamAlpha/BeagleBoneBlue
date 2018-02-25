@@ -17,8 +17,9 @@ struct OutputList
 {
 	enum Enum
 	{
-		LeftDriveMotorForwardEnable = 0,
-//		LeftDriveMotorReverseEnable = 1,
+		ServoPowerEnable = 0,
+//		LeftDriveMotorForwardEnable,
+//		LeftDriveMotorReverseEnable,
 //		LeftDriveMotorPWMSignal,
 //		RightDriveMotorForwardEnable,
 //		RightDriveMotorReverseEnable,

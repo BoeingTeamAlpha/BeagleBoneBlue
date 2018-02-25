@@ -65,8 +65,8 @@ void Control::IOFactory::fillInputList( InputList& list )
 void Control::IOFactory::fillOutputList( OutputList& list )
 {
 	IO::Output::Setup setup;
-	setup.number = 49;
-	list[ IO::OutputList::LeftDriveMotorForwardEnable ] = new IO::Output( setup );
+	setup.number = 80;
+	list[ IO::OutputList::ServoPowerEnable ] = new IO::Output( setup );
 }
 
 void Control::IOFactory::fillServoList( ServoList& list )

@@ -136,6 +136,12 @@ private:
 	 * @param	signal to be received from Linux
 	 */
 	static void signalHandler( int signal );
+
+	/**
+	 * @brief setServoPower turns on and off the servo rail power
+	 * @param on true to run servos, falls to turn them off
+	 */
+	void setServoPower( bool on );
 };
 
 } // namespace VehicleControl

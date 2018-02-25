@@ -120,4 +120,9 @@ void Control::signalHandler( int signal )
 	}
 }
 
+void Control::setServoPower( bool on )
+{
+	_outputs[ IO::OutputList::ServoPowerEnable ]->setValue( ( IO::Output::Value::Enum ) on );
+}
+
 } // namespace VehicleControl
