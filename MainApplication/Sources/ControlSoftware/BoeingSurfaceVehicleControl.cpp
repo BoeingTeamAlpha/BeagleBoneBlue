@@ -14,6 +14,9 @@
 #include "IOFactory.h"
 #include "BluetoothDefinitions.h"
 
+
+// TODO: add logic to store the PID of our app, so we
+// can tell if there is another running instance of ourselves
 namespace VehicleControl {
 //std::string( "30:85:A9:E0:1F:9A" )
 Control::Control()
@@ -23,8 +26,10 @@ Control::Control()
 	, _servos( IO::ServoList::NUM_SERVOS )
 	, _bluetoothConnectedLED( IO::UserLED::Setup( IO::UserLED::LED::UserTwo ) )
 	, _runningLED( IO::UserLED::Setup( IO::UserLED::LED::UserThree ) )
+#if defined( RunBluetooth )
 	, _client( peerAdress )
 	, _server( peerAdress, localAdress )
+#endif
 	, _red( IO::UserLED::Setup( IO::UserLED::LED::Red ) )
 {
 	// Fill up the IO
@@ -38,6 +43,8 @@ Control::Control()
 
 	// set the running LED to its normal blinking
 	_runningLED.setState( IO::UserLED::State::Blinking, -1, 900 );
+
+	_servos[ IO::ServoList::LeftDriveMotor ]->setServoPulseWidth( 500000 );
 }
 
 Control& Control::instance()
@@ -55,8 +62,8 @@ Control::~Control()
 
 void Control::update()
 {
+#if defined( RunBluetooth )
 	static bool isBluetoothConnected = false;
-
 	if ( isBluetoothConnected != this->_server.isConnected() )
 	{
 		printf("BT changed states\r\n");
@@ -68,6 +75,7 @@ void Control::update()
 
 		_bluetoothConnectedLED.setState( state );
 	}
+#endif
 }
 
 bool Control::isRunning() const

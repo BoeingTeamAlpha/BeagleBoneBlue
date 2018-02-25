@@ -10,6 +10,8 @@
 #include "BluetoothServer.h"
 #include "UserLED.h"
 
+//#define RunBluetooth ( 1 )
+
 namespace VehicleControl {
 
 // Forwared declarations
@@ -69,10 +71,12 @@ private:
 	// the led just blinks to signify the app is still running properly.
 	IO::UserLED _runningLED;
 
+#if defined( RunBluetooth )
 	// bluetooth client and server
 	// @todo does these two classes need to be wrapped in a Device class?
 	Bluetooth::Client _client;
 	Bluetooth::Server _server;
+#endif
 
 public:
 
