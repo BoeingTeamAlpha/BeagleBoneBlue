@@ -2,8 +2,11 @@
 
 #include "InputList.h"
 #include "OutputList.h"
+#include "ServoList.h"
+
 #include "Input.h"
 #include "Output.h"
+#include "ServoMotorControl.h"
 
 #define SixteenthSecondDebounceTime ( 62 )
 #define EighthSecondDebounceTime ( 125 )
@@ -64,6 +67,12 @@ void Control::IOFactory::fillOutputList( OutputList& list )
 	IO::Output::Setup setup;
 	setup.number = 49;
 	list[ IO::OutputList::LeftDriveMotorForwardEnable ] = new IO::Output( setup );
+}
+
+void Control::IOFactory::fillServoList( ServoList& list )
+{
+	list[ IO::ServoList::LeftDriveMotor ]	= new ServoMotorControl( ServoMotorControl::Motor::One );
+	list[ IO::ServoList::RightDriveMotor ]	= new ServoMotorControl( ServoMotorControl::Motor::Two );
 }
 
 } // namespace VehicleControl

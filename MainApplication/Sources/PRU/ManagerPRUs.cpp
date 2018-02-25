@@ -92,12 +92,6 @@ int ManagerPRUs::mapVirtualAddressSpace()
 
 	memset( _pruSharedMemoryPointer, 0, 9 * 4 );
 
-	//////// Remove after testing
-	// PRU runs at 200Mhz. find #loops needed
-	unsigned int num_loops = ( ( 10000 * 200.0 ) / PRU_SERVO_LOOP_INSTRUCTIONS );
-	// write to PRU shared memory
-	_pruSharedMemoryPointer[ 1 - 1 ] = num_loops;
-
 	return 0;
 }
 

@@ -6,8 +6,11 @@
 
 #include "Input.h"
 #include "Output.h"
+#include "ServoMotorControl.h"
+
 #include "InputList.h"
 #include "OutputList.h"
+#include "ServoList.h"
 #include "IOFactory.h"
 #include "BluetoothDefinitions.h"
 
@@ -17,6 +20,7 @@ Control::Control()
 	: _isRunning( true )
 	, _inputs( IO::InputList::NUM_INPUTS )
 	, _outputs( IO::OutputList::NUM_OUTPUTS )
+	, _servos( IO::ServoList::NUM_SERVOS )
 	, _bluetoothConnectedLED( IO::UserLED::Setup( IO::UserLED::LED::UserTwo ) )
 	, _runningLED( IO::UserLED::Setup( IO::UserLED::LED::UserThree ) )
 	, _client( peerAdress )
@@ -26,6 +30,7 @@ Control::Control()
 	// Fill up the IO
 	IOFactory::fillInputList( _inputs );
 	IOFactory::fillOutputList( _outputs );
+	IOFactory::fillServoList( _servos );
 
 	// set up the signal handlers
 	signal( SIGINT, signalHandler );
@@ -101,6 +106,16 @@ void Control::destroyOutputs()
 	for ( ; loopVar > 0; loopVar-- )
 	{
 		delete _outputs[ loopVar - 1 ];
+	}
+}
+
+void Control::destroyServos()
+{
+	size_t loopVar = IO::ServoList::NUM_SERVOS;
+
+	for ( ; loopVar > 0; loopVar-- )
+	{
+		delete _servos[ loopVar - 1 ];
 	}
 }
 

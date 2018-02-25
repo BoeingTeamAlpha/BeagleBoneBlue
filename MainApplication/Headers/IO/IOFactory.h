@@ -33,6 +33,12 @@ public:
 	 */
 	static void fillOutputList( OutputList& list );
 
+	/**
+	 * @brief fillServoList
+	 * @param list
+	 */
+	static void fillServoList( ServoList& list );
+
 private:
 	/**
 	 * All methods that are in private HAVE to stay private,

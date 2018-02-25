@@ -17,7 +17,6 @@
 #define PRU_LEN			0x80000			// Length of PRU memory
 #define PRU_SHAREDMEM	0x10000			// Offset to shared memory
 #define CNT_OFFSET 		64
-#define PRU_SERVO_LOOP_INSTRUCTIONS	48	// instructions per PRU servo timer loop
 
 //static uint32_t* pruSharedMemoryPointer = NULL;
 

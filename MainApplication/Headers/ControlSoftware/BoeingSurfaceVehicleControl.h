@@ -16,6 +16,7 @@ namespace VehicleControl {
 namespace IO {
 class Input;
 class Output;
+class ServoMotorControl;
 }
 
 /**
@@ -44,6 +45,7 @@ public:
 	// Typedefs of the input and output lists
 	typedef std::vector< IO::Input* > InputList;
 	typedef std::vector< IO::Output* > OutputList;
+	typedef std::vector< IO::ServoMotorControl* > ServoList;
 
 private:
 
@@ -56,6 +58,9 @@ private:
 
 	// list of all of the outputs
 	OutputList _outputs;
+
+	// list of all of the servos
+	ServoList _servos;
 
 	// led that turns on when the bluetooth tablet is connected
 	IO::UserLED _bluetoothConnectedLED;
@@ -133,6 +138,14 @@ private:
 	 */
 	void destroyOutputs();
 
+
+	/**
+	 * @brief	destroyServos method loops through all of the servos,
+	 *			calling delete on all of them.
+	 * @note	this method should only be called by this class's destructor
+	 */
+	void destroyServos();
+
 	/**
 	 * @brief	signalHandler method handles all of the signals that come from Linux.
 	 *			For instance, this method catches when the user presses Ctrl + C or
@@ -143,6 +156,6 @@ private:
 	static void signalHandler( int signal );
 };
 
-}
+} // namespace VehicleControl
 
 #endif // BOEINGSURFACEVEHICLECONTROL_H_
