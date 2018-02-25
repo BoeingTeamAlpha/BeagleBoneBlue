@@ -125,28 +125,6 @@ public:
 private:
 
 	/**
-	 * @brief	destroyInputs method loops through all of the inputs,
-	 *			calling delete on all of them.
-	 * @note	this method should only be called by this class's destructor
-	 */
-	void destroyInputs();
-
-	/**
-	 * @brief	destroyOutputs method loops through all of the outputs,
-	 *			calling delete on all of them.
-	 * @note	this method should only be called by this class's destructor
-	 */
-	void destroyOutputs();
-
-
-	/**
-	 * @brief	destroyServos method loops through all of the servos,
-	 *			calling delete on all of them.
-	 * @note	this method should only be called by this class's destructor
-	 */
-	void destroyServos();
-
-	/**
 	 * @brief	signalHandler method handles all of the signals that come from Linux.
 	 *			For instance, this method catches when the user presses Ctrl + C or
 	 *			when the user presses X on the terminal window. This method sets the

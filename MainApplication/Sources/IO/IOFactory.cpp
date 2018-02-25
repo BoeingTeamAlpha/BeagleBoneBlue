@@ -75,4 +75,34 @@ void Control::IOFactory::fillServoList( ServoList& list )
 	list[ IO::ServoList::RightDriveMotor ]	= new ServoMotorControl( ServoMotorControl::Motor::Two );
 }
 
+void Control::IOFactory::destroyInputs( InputList& list )
+{
+	size_t loopVar = IO::InputList::NUM_INPUTS;
+
+	for ( ; loopVar > 0; loopVar-- )
+	{
+		delete list[ loopVar - 1 ];
+	}
+}
+
+void Control::IOFactory::destroyOutputs( OutputList& list )
+{
+	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
+
+	for ( ; loopVar > 0; loopVar-- )
+	{
+		delete list[ loopVar - 1 ];
+	}
+}
+
+void Control::IOFactory::destroyServos( ServoList& list )
+{
+	size_t loopVar = IO::ServoList::NUM_SERVOS;
+
+	for ( ; loopVar > 0; loopVar-- )
+	{
+		delete list[ loopVar - 1 ];
+	}
+}
+
 } // namespace VehicleControl

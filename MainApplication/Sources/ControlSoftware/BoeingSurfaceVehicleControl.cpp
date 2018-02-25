@@ -48,8 +48,9 @@ Control& Control::instance()
 
 Control::~Control()
 {
-	destroyInputs();
-	destroyOutputs();
+	IOFactory::destroyInputs( _inputs );
+	IOFactory::destroyOutputs( _outputs );
+	IOFactory::destroyServos( _servos );
 }
 
 void Control::update()
@@ -87,36 +88,6 @@ Control::OutputList& Control::outputs()
 const Control::OutputList& Control::outputs() const
 {
 	return _outputs;
-}
-
-void Control::destroyInputs()
-{
-	size_t loopVar = IO::InputList::NUM_INPUTS;
-
-	for ( ; loopVar > 0; loopVar-- )
-	{
-		delete _inputs[ loopVar - 1 ];
-	}
-}
-
-void Control::destroyOutputs()
-{
-	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
-
-	for ( ; loopVar > 0; loopVar-- )
-	{
-		delete _outputs[ loopVar - 1 ];
-	}
-}
-
-void Control::destroyServos()
-{
-	size_t loopVar = IO::ServoList::NUM_SERVOS;
-
-	for ( ; loopVar > 0; loopVar-- )
-	{
-		delete _servos[ loopVar - 1 ];
-	}
 }
 
 void Control::signalHandler( int signal )

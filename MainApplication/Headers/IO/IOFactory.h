@@ -34,10 +34,31 @@ public:
 	static void fillOutputList( OutputList& list );
 
 	/**
-	 * @brief fillServoList
-	 * @param list
+	 * @brief fillServoList fills in all of the app's servos
+	 * @param list reference to the complete list of servos
 	 */
 	static void fillServoList( ServoList& list );
+
+	/**
+	 * @brief	destroyInputs method loops through all of the inputs,
+	 *			calling delete on all of them.
+	 * @note	this method should only be called by control's destructor
+	 */
+	static void destroyInputs( InputList& list );
+
+	/**
+	 * @brief	destroyOutputs method loops through all of the outputs,
+	 *			calling delete on all of them.
+	 * @note	this method should only be called by this control's destructor
+	 */
+	static void destroyOutputs( OutputList& list );
+
+	/**
+	 * @brief	destroyServos method loops through all of the servos,
+	 *			calling delete on all of them.
+	 * @note	this method should only be called by this control's destructor
+	 */
+	static void destroyServos( ServoList& list );
 
 private:
 	/**
