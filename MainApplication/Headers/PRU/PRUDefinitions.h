@@ -6,7 +6,6 @@
 #define PRU_BIND_PATH	"/sys/bus/platform/drivers/pru-rproc/bind"
 #define PRU0_NAME		"4a334000.pru0"
 #define PRU1_NAME		"4a338000.pru1"
-#define PRU_NAME_LEN	13
 #define PRU0_UEVENT		"/sys/bus/platform/drivers/pru-rproc/4a334000.pru0/uevent"
 #define PRU1_UEVENT		"/sys/bus/platform/drivers/pru-rproc/4a338000.pru1/uevent"
 

@@ -61,24 +61,34 @@ int ManagerPRUs::bindOrUnbindPRU( bool bind )
 	if ( access( PRU0_UEVENT, F_OK ) != NULL )
 	{
 		// open the correct binding path, and check for success
-		if ( write( fileDescriptor, PRU0_NAME, PRU_NAME_LEN ) < 0 )
+		if ( write( fileDescriptor, PRU0_NAME, strlen( PRU0_NAME ) ) < 0 )
 		{
 			// if not, just throw because the app cannot run without the
 			// PRU, so the error needs fixed ASAP
 			throw std::invalid_argument( "Cannot access PRU0!!!!" );
 		}
 	}
+//	else TODO: Why is this getting here?
+//	{
+//		printf("0 access failed\n");
+//	}
 
 	// if the rproc is not running, this file may not exist,
 	// so test if the uevent file exist.
 	if ( access( PRU1_UEVENT, F_OK ) != NULL )
 	{
 		// open the correct binding path, and check for success
-		if ( write( fileDescriptor, PRU1_NAME, PRU_NAME_LEN ) < 0 )
+		if ( write( fileDescriptor, PRU1_NAME, strlen( PRU1_NAME ) ) < 0 )
 		{
+			// if not, just throw because the app cannot run without the
+			// PRU, so the error needs fixed ASAP
 			throw std::invalid_argument( "Cannot access PRU1!!!!" );
 		}
 	}
+//	else TODO: Why is this getting here?
+//	{
+//		printf("1 access failed\n" );
+//	}
 
 	// close the file
 	close( fileDescriptor );

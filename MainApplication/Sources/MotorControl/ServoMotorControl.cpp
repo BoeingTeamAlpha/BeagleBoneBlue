@@ -33,7 +33,7 @@ ServoMotorControl::~ServoMotorControl()
 	}
 }
 
-void ServoMotorControl::setServoPulseWidth(uint32_t pulseWidth, float frequency )
+void ServoMotorControl::setServoPulseWidth( uint32_t pulseWidth, float frequency )
 {
 	calculateThreadSleepTime( frequency );
 
@@ -54,10 +54,15 @@ void* ServoMotorControl::handleServoPulseWidth( void* objectPointer )
 {
 	// cast the void* to a pointer to this class
 	ServoMotorControl* motorControl = static_cast< ServoMotorControl* >( objectPointer );
+	uint32_t* const pruPointer = motorControl->_pruPointer;
 
 	while ( motorControl->_threadRunning )
 	{
-		motorControl->_pruPointer[ motorControl->_motorNumber ] = motorControl->_numberOfLoops;
+//		if ( pruPointer[ motorControl->_motorNumber ] == 0 )
+		{
+			pruPointer[ motorControl->_motorNumber ] = motorControl->_numberOfLoops;
+		}
+
 		usleep( motorControl->_sleepPeriod );
 	}
 
