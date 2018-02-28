@@ -11,6 +11,8 @@
 #define PRU_FREQUENCY_IN_MHz ( 200 )
 #define TenHertz ( 10.0f )
 #define Microseconds ( 1000000.0f )
+#define MaxPRUTime ( 12000000 )
+#define ThreadSubtractionTime ( 25 )
 
 namespace VehicleControl {
 namespace IO {
@@ -43,7 +45,6 @@ void ServoMotorControl::setServoPulseWidth( uint32_t pulseWidth, float frequency
 {
 	uint32_t sleepTime = calculateThreadSleepTime( frequency );
 
-	printf("width is %u, freq is %f\r\n", pulseWidth, frequency );
 	checkFor100PercentDutyCycle( pulseWidth, sleepTime );
 }
 
@@ -88,11 +89,9 @@ void ServoMotorControl::checkFor100PercentDutyCycle( uint32_t pulseWidth, uint32
 {
 	if ( pulseWidth >= sleepTime )
 	{
-		uint32_t max = 12000000;
-		printf("limit is %u\n", max );
+		uint32_t max = MaxPRUTime;
 		_numberOfLoops = calculateServoLoops( max );
-		_sleepTime = max - 25;
-		printf("loop is %u sleep is %u\n", _numberOfLoops, _sleepTime );
+		_sleepTime = max - ThreadSubtractionTime;
 	}
 	else
 	{
