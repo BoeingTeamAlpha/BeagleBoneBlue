@@ -44,7 +44,7 @@ private:
 	const Motor::Enum _motorNumber;
 	uint32_t _numberOfLoops;
 	uint32_t* const _pruPointer;
-	uint32_t _sleepPeriod;
+	uint32_t _sleepTime;
 	pthread_t _thread;
 
 public:
@@ -94,7 +94,23 @@ private:
 	 *			the frequency.
 	 * @param frequency in hz
 	 */
-	void calculateThreadSleepTime( float frequency );
+	uint32_t calculateThreadSleepTime( float frequency );
+
+	/**
+	 * @brief	checkFor100PercentDutyCycle method checks if the pulse width is >=,
+	 *			and, if so, assumes 100% duty cycle ( always on) is desired,
+	 *			and sets up the code accordingly
+	 * @param pulseWidth in microsecons
+	 * @param sleepTime in microsecons
+	 */
+	void checkFor100PercentDutyCycle( uint32_t pulseWidth, uint32_t sleepTime );
+
+	/**
+	 * @brief calculateServoLoops calculates the number of loops given the pulse width
+	 * @param pulseWidth in microsecons
+	 * @return number of PRU loops
+	 */
+	uint32_t calculateServoLoops( uint32_t pulseWidth );
 };
 
 } // namespace IO
