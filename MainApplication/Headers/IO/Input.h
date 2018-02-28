@@ -38,10 +38,10 @@ public:
 	{
 		enum Enum
 		{
-			NONE,
-			RISING,
-			FALLING,
-			BOTH
+			None	= 0,
+			Rising,
+			Falling,
+			Both
 		};
 	};
 
@@ -61,10 +61,15 @@ public:
 		Setup()
 		: isActiveLow( false )
 		, debounceTime( 0 )
-		, desiredEdge( Edge::NONE )
+		, desiredEdge( Edge::None )
 		, callback( NULL )
 		{}
 	};
+
+private:
+
+	// local copy of debounce time
+	int _debounceTime;
 
 public:
 
@@ -135,9 +140,6 @@ public:
 	void cancelWaitForEdge();
 
 private:
-
-	// local copy of debounce time
-	int _debounceTime;
 
 	/**
 	 * @brief	threadedPoll method is the method that is called whenever waiting on edge occurs.

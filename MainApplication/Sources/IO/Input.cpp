@@ -43,19 +43,19 @@ int Input::setEdgeType( Input::Edge::Enum edge )
 {
 	switch( edge )
 	{
-	case Edge::NONE:
+	case Edge::None:
 		return IOBase::write( "edge", "none" );
 		break;
 
-	case Edge::RISING:
+	case Edge::Rising:
 		return IOBase::write( "edge", "rising" );
 		break;
 
-	case Edge::FALLING:
+	case Edge::Falling:
 		return IOBase::write( "edge", "falling" );
 		break;
 
-	case Edge::BOTH:
+	case Edge::Both:
 		return IOBase::write( "edge", "both" );
 		break;
 	}
@@ -73,19 +73,19 @@ Input::Edge::Enum Input::getEdgeType()
 	string input = IOBase::read( "edge" );
 	if ( input == "rising" )
 	{
-		return Edge::RISING;
+		return Edge::Rising;
 	}
 	else if ( input == "falling" )
 	{
-		return Edge::FALLING;
+		return Edge::Falling;
 	}
 	else if ( input == "both" )
 	{
-		return Edge::BOTH;
+		return Edge::Both;
 	}
 	else
 	{
-		return Edge::NONE;
+		return Edge::None;
 	}
 }
 
@@ -137,7 +137,7 @@ int Input::waitForEdge()
 		if ( i == -1 )
 		{
 			// print error and leave the loop
-			perror( "GPIO: Poll Wait fail" );
+			printf( "GPIO: Poll Wait fail" );
 			count = LoopErrorValue;
 		}
 		else // no error in epoll_wait
@@ -151,12 +151,13 @@ int Input::waitForEdge()
 	close( fd );
 
 	// return -1 if there is an error
-	if ( count == LoopErrorValue )
-	{
-		return -1;
-	}
+//	if ( count == LoopErrorValue )
+//	{
+//		printf( "loop error\n" );
+//		return -1;
+//	}
 
-	return 0;
+	return IOBase::getValue();
 }
 
 int Input::waitForEdgeThreaded()
