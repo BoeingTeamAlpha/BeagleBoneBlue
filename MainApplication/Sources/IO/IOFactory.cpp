@@ -55,11 +55,7 @@ IO::Input* createRisingEdgeThreadedInput( int number )
 
 void Control::IOFactory::fillInputList( InputList& list )
 {
-	list[ IO::InputList::MetalDetector ] = createRisingEdgeThreadedInput( 68 );
 	list[ IO::InputList::Input1 ] = createRisingEdgeThreadedInput( 57 );
-	list[ IO::InputList::Input2 ] = createRisingEdgeThreadedInput( 116 );
-	list[ IO::InputList::Input3 ] = createRisingEdgeThreadedInput( 113 );
-	list[ IO::InputList::Input4 ] = createRisingEdgeThreadedInput( 98 );
 }
 
 void Control::IOFactory::fillOutputList( OutputList& list )
