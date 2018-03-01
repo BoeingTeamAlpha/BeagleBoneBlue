@@ -20,6 +20,7 @@ struct InputList
 		Input1 = 0,
 		NUM_INPUTS
 	};
+
 };
 
 } // namespace IO
