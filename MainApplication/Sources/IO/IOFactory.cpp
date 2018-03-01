@@ -46,7 +46,7 @@ IO::Input* createRisingEdgeThreadedInput( int number )
 	Input::Setup setup;
 	setup.callback = &callback;
 	setup.debounceTime = EighthSecondDebounceTime;
-	setup.desiredEdge = Input::Edge::RISING;
+	setup.desiredEdge = Input::Edge::Rising;
 	setup.isActiveLow = true;
 	setup.number = number;
 
