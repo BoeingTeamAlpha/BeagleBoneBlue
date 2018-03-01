@@ -53,6 +53,11 @@ void ServoMotorControl::setServoPulseWidth( uint32_t pulseWidth )
 	checkFor100PercentDutyCycle( pulseWidth, _sleepTime );
 }
 
+uint32_t ServoMotorControl::getServoPulseWidth() const
+{
+	return ( _numberOfLoops * PRU_SERVO_LOOP_INSTRUCTIONS ) / PRU_FREQUENCY_IN_MHz;
+}
+
 void ServoMotorControl::setServoFrequency( float frequency )
 {
 	_sleepTime = calculateThreadSleepTime( frequency );

@@ -75,6 +75,12 @@ public:
 	void setServoPulseWidth( uint32_t pulseWidth );
 
 	/**
+	 * @brief getServoPulseWidth getter
+	 * @return pulse width in microseconds
+	 */
+	uint32_t getServoPulseWidth() const;
+
+	/**
 	 * @brief setServoFrequency sets the frequency of the signal
 	 * @param frequency in hz
 	 */
