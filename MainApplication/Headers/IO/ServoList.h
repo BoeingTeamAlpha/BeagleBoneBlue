@@ -12,12 +12,12 @@ namespace IO {
  */
 struct ServoList
 {
-    enum Enum
-    {
-        LeftDriveMotor = 0,
-        RightDriveMotor,
-        NUM_SERVOS
-    };
+	enum Enum
+	{
+		LeftDriveMotor = 0,
+		RightDriveMotor,
+		NUM_SERVOS
+	};
 };
 
 } // namespace IO
