@@ -5,8 +5,9 @@
 #include <unistd.h>
 
 #include "Input.h"
+#include "MotorControl.h"
+#include "ServoControl.h"
 #include "Output.h"
-#include "ServoMotorControl.h"
 
 #include "InputList.h"
 #include "OutputList.h"
@@ -43,8 +44,6 @@ Control::Control()
 
 	// set the running LED to its normal blinking
 	_runningLED.setState( IO::UserLED::State::Blinking, -1, 900 );
-
-	_servos[ IO::ServoList::LeftDriveMotor ]->setServoPulseWidth( 500000 );
 }
 
 Control& Control::instance()
