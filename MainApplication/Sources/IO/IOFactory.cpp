@@ -6,7 +6,8 @@
 
 #include "Input.h"
 #include "Output.h"
-#include "ServoMotorControl.h"
+#include "MotorControl.h"
+#include "ServoControl.h"
 
 #define SixteenthSecondDebounceTime ( 62 )
 #define EighthSecondDebounceTime ( 125 )
@@ -48,9 +49,8 @@ IO::Input* createRisingEdgeThreadedInput( int number )
 	setup.debounceTime = EighthSecondDebounceTime;
 	setup.desiredEdge = Input::Edge::Rising;
 	setup.isActiveLow = true;
-	setup.number = number;
 
-	return new Input( setup );
+	return new Input( number, setup );
 }
 
 void Control::IOFactory::fillInputList( InputList& list )
@@ -60,15 +60,13 @@ void Control::IOFactory::fillInputList( InputList& list )
 
 void Control::IOFactory::fillOutputList( OutputList& list )
 {
-	IO::Output::Setup setup;
-	setup.number = 80;
-	list[ IO::OutputList::ServoPowerEnable ] = new IO::Output( setup );
+	list[ IO::OutputList::ServoPowerEnable ] = new IO::Output( 80, IO::Output::Setup() );
 }
 
 void Control::IOFactory::fillServoList( ServoList& list )
 {
-	list[ IO::ServoList::LeftDriveMotor ]	= new ServoMotorControl( ServoMotorControl::Motor::One );
-	list[ IO::ServoList::RightDriveMotor ]	= new ServoMotorControl( ServoMotorControl::Motor::Two );
+	list[ IO::ServoList::LeftDriveMotor ]	= new ServoControl( MotorControl::Motor::One, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
+	list[ IO::ServoList::RightDriveMotor ]	= new MotorControl( MotorControl::Motor::Two, 5.0f );
 }
 
 void Control::IOFactory::destroyInputs( InputList& list )

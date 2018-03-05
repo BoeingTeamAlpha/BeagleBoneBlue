@@ -18,7 +18,7 @@ namespace VehicleControl {
 namespace IO {
 class Input;
 class Output;
-class ServoMotorControl;
+class MotorControl;
 }
 
 /**
@@ -47,7 +47,7 @@ public:
 	// Typedefs of the input and output lists
 	typedef std::vector< IO::Input* > InputList;
 	typedef std::vector< IO::Output* > OutputList;
-	typedef std::vector< IO::ServoMotorControl* > ServoList;
+	typedef std::vector< IO::MotorControl* > ServoList;
 
 private:
 
