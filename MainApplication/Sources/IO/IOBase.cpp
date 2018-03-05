@@ -38,7 +38,6 @@ namespace IO {
 
 IOBase::IOBase( int number, Direction::Enum whatDirection  )
 	: _threadRunning( false )
-	, _callbackFunction( NULL )
 	, _number( number )
 {
 	// set up the name and path variables

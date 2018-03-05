@@ -44,11 +44,6 @@ public:
 		};
 	};
 
-	/**
-	 * Typedef of the callback function
-	 */
-	typedef int (*CallbackType)( int );
-
 public:
 
 	/**
@@ -155,9 +150,6 @@ protected:
 
 	// instance of the pthread struct
 	pthread_t _thread;
-
-	// callback function
-	CallbackType _callbackFunction;
 
 private:
 

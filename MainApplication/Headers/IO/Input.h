@@ -32,6 +32,12 @@ class Input : public IOBase
 public:
 
 	/**
+	 * Typedef of the callback function
+	 */
+	typedef int (*CallbackType)( int );
+
+
+	/**
 	 * @brief The Edge struct holds the enum that represents the edge events.
 	 */
 	struct Edge
@@ -69,6 +75,9 @@ private:
 
 	// local copy of debounce time
 	int _debounceTime;
+
+	// callback function
+	CallbackType _callbackFunction;
 
 public:
 

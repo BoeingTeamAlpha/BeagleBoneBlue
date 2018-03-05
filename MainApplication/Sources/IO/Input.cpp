@@ -14,8 +14,8 @@ namespace IO {
 Input::Input( int number, const Setup& setup )
 	: IOBase( number, Direction::Input )
 	, _debounceTime( setup.debounceTime )
+	, _callbackFunction( setup.callback )
 {
-	this->_callbackFunction = setup.callback;
 	this->setEdgeType( setup.desiredEdge );
 	IOBase::setActiveHighOrLow( setup.isActiveLow );
 	if ( this->_callbackFunction )
@@ -63,7 +63,7 @@ int Input::setEdgeType( Input::Edge::Enum edge )
 	return -1;
 }
 
-void Input::setEdgeCallback( IOBase::CallbackType callback /* = NULL */ )
+void Input::setEdgeCallback( CallbackType callback /* = NULL */ )
 {
 	this->_callbackFunction = callback;
 }
