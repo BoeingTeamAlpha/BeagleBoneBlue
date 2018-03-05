@@ -5,8 +5,8 @@
 namespace VehicleControl {
 namespace IO {
 
-Output::Output( const Setup& setup )
-	: IOBase( setup.number, Direction::Output )
+Output::Output( int number, const Setup& setup )
+	: IOBase( number, Direction::Output )
 	, _toggleNumber( setup.toggleNumber )
 	, _togglePeriod( setup.togglePeriod )
 {

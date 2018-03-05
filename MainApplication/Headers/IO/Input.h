@@ -53,7 +53,6 @@ public:
 	struct Setup
 	{
 		bool isActiveLow;
-		int number;
 		int debounceTime;
 		Input::Edge::Enum desiredEdge;
 		CallbackType callback;
@@ -78,7 +77,7 @@ public:
 	 *			export the pin, and do all the necessary Linux steps to create an input.
 	 * @param setup
 	 */
-	Input( const Setup& setup );
+	Input( int number, const Setup& setup );
 
 	/**
 	 * @brief ~Input destroys the input. This automatically unexports the pin.

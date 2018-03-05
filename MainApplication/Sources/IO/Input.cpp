@@ -11,8 +11,8 @@ using namespace std;
 namespace VehicleControl {
 namespace IO {
 
-Input::Input( const Setup& setup )
-	: IOBase( setup.number, Direction::Input )
+Input::Input( int number, const Setup& setup )
+	: IOBase( number, Direction::Input )
 	, _debounceTime( setup.debounceTime )
 {
 	this->_callbackFunction = setup.callback;

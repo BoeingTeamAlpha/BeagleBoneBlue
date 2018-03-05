@@ -31,7 +31,6 @@ public:
 	 */
 	struct Setup
 	{
-		int number;
 		int toggleNumber;
 		int togglePeriod;
 
@@ -59,7 +58,7 @@ public:
 	 *			export the pin, and do all the necessary Linux steps to create an output.
 	 * @param setup
 	 */
-	Output( const Setup& setup );
+	Output( int number, const Setup& setup );
 
 	/**
 	 * @brief ~Output destroys the output. This automatically unexports the pin.
