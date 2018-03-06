@@ -44,6 +44,7 @@ private:
 	float _frequency;
 	uint32_t _numberOfLoops;
 	uint32_t _sleepTime;
+	uint32_t _currentPulseWidth;
 	uint32_t _finalRampedPulseWidth;
 	uint32_t* const _pruPointer;
 	int32_t _rampRate;
@@ -97,6 +98,7 @@ public:
 	/**
 	 * @brief setPulseWidth sets the pulse width of the signal
 	 * @param pulseWidth width of the pulse in microsecond
+	 * @note if this method is called, it will cancel ramping functionality
 	 */
 	void setPulseWidth( uint32_t pulseWidth );
 
@@ -114,22 +116,29 @@ public:
 	void setFrequency( float frequency );
 
 	/**
-	 * @brief isRamping getter
-	 * @return true if the servo is ramping, false if it is not
-	 */
-	bool isRamping() const;
-
-	/**
 	 * @brief frequency getter
 	 * @return freqency in hertz
 	 */
 	float frequency() const;
 
 	/**
+	 * @brief isRamping getter
+	 * @return true if the servo is ramping, false if it is not
+	 */
+	bool isRamping() const;
+
+	/**
 	 * @brief setDutyCycle setter
 	 * @param dutyCycle in percent * 10, so 100% is 1000
 	 */
 	void setDutyCycle( uint32_t dutyCycle );
+
+	/**
+	 * @brief setDutyCycle
+	 * @param dutyCycle
+	 * @param rampTime
+	 */
+	void setDutyCycle( uint32_t dutyCycle, uint32_t rampTime );
 
 	/**
 	 * @brief dutyCycle getter
