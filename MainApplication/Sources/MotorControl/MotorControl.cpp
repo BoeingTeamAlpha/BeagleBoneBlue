@@ -82,48 +82,77 @@ void MotorControl::setPulseWidth( uint32_t pulseWidth )
 
 void MotorControl::setPulseWidth( uint32_t finalPulseWidth, uint32_t rampTime )
 {
-	// calculate the relevant values to do error checking
+	// get a local copy of the pulse width, so this method
+	// is not called multiple times
 	uint32_t currentPulseWidth = pulseWidth();
+
+	// check if the desired pulse width is the current pulse width
+	if ( finalPulseWidth == currentPulseWidth )
+	{
+		// it is, so ignore the call
+		return;
+	}
+
+	// calculate the delta of the final pulse width - the current pulse width
 	int32_t pulseDelta = finalPulseWidth - currentPulseWidth;
+
+	/**
+	 * calculate the number of loops to achieve the desired ramp
+	 *
+	 * The formula is: rampTime * 1000 <-- this is done because ramp time is in milliseconds, not micro
+	 *				   --------------
+	 *				          1
+	 *                      -----      <-- this is the formula for the thread sleep time or period
+	 *				          f
+	 */
 	uint32_t numberOfThreadLoops = ( rampTime * 1000 ) / _sleepTime;
 
-	printf("num loops is %u\n", numberOfThreadLoops );
-
-	// if the position is too close, or the ramp time is less than the frequency
-	if ( std::abs( pulseDelta ) <= 10 || numberOfThreadLoops == 0 )
+	// if the ramp time is less than the frequency
+	if ( numberOfThreadLoops == 0 )
 	{
+		// so just set the desired pulse width and leave the method
 		setPulseWidth( finalPulseWidth );
 		return;
 	}
 
-
-//	int32_t loopRemainder = ( rampTime * 1000 ) % _sleepTime;
-	float integerPart;
-	int32_t loopRemainder = int32_t( modf( float( rampTime * 1000.0f ) / float( _sleepTime ), &integerPart ) * 10 );
-
-	printf("loop rem is %i\n", loopRemainder );
-	// everything was set to valid values
-	// set the ramping flag and final pulse width
+	// store a member copy of the final pulse width for checking
+	// if the ramp is complete in the thread
 	_finalRampedPulseWidth = finalPulseWidth;
 
-	// calculate the pulse width adder per thread run
+	/**
+	 * calculate the per thread run adder
+	 *
+	 * The formula is:     pulseDelta		<-- number of pulses for the ramp
+	 *				   -------------------
+	 *				   numberOfThreadLoops  <-- number of times the thread will run for the ramp
+	 */
 	_rampRate = pulseDelta / (int32_t)numberOfThreadLoops;
-	printf("set ramp rate to %d delta is %d cur is %u final is %u ", _rampRate, pulseDelta, currentPulseWidth, _finalRampedPulseWidth );
+	printf("loop number is %i set ramp rate to %d delta is %d cur is %u final is %u ", numberOfThreadLoops, _rampRate, pulseDelta, currentPulseWidth, _finalRampedPulseWidth );
 
-	if ( float( finalPulseWidth % _rampRate ) == 0 )
-	{
-		// set the new pulse width
-		printf( "in perfect divisor, setting %d\n", currentPulseWidth + _rampRate );
-		setPulseWidth( currentPulseWidth + _rampRate + loopRemainder );
-		_isRamping = true; // be wary...
-	}
-	else
-	{
-		int32_t remainder = finalPulseWidth - ( ( finalPulseWidth / _rampRate ) * _rampRate );
-		printf("in imperfect divisor setting width of %d\n", remainder + currentPulseWidth + 1/* + loopRemainder */);
-		setPulseWidth( currentPulseWidth + 1 );
-		_isRamping = true; // be wary...
-	}
+	/**
+	 * This variable represents the pulse width that will not be achieved by the
+	 * _rampRate * numberOfThreadLoops. This forces the first pulse width of the
+	 * ramp to possibly be a different adder than the rest of the pulse widths.
+	 *
+	 * For example, the final pulse width is 1500, the number of loops is 10, and
+	 * the _rampRate is 145. If the _rampRate is just added 10 times, the
+	 * final pulse width would be 1450 NOT 1500. The remainderPulses variable
+	 * IS the 50 that the final pulse would be missing. Therefore, the 50
+	 * is added on the first ramped pulse so subsequent pulse additions
+	 * will be even, making a perfect ramp to the final pulse width at the cost
+	 * of the first pulse being a different adder than the rest.
+	 */
+	int32_t remainderPulses = finalPulseWidth - ( currentPulseWidth + ( numberOfThreadLoops * _rampRate ) );
+	printf("rem is %i setting width of %d\n", remainderPulses, remainderPulses + currentPulseWidth );
+
+	// FINALLY, set the first pulse width of the ramp
+	setPulseWidth( currentPulseWidth + remainderPulses );
+
+	// set the ramp flag. This has to be last
+	// because the thread is running at a very high
+	// rate for some motors, and it seems to cause the
+	// thread issues to assign it earlier in the method
+	_isRamping = true; // be wary...
 }
 
 uint32_t MotorControl::pulseWidth() const
@@ -153,19 +182,30 @@ void MotorControl::setDutyCycle( uint32_t dutyCycle )
 	if ( dutyCycle >= OneHundredPercentDutyCycle )
 	{
 		// hack the PRU since it cannot set a constant high value
-		calculateLoops( _sleepTime - MaxPulseWidthSubtractor );
+		setPulseWidth( _sleepTime - MaxPulseWidthSubtractor );
 	}
 	else // 100% duty is not desired
 	{
 		// calculate the pulse width for the given duty cycle
-		uint32_t pulseWidth = ( dutyCycle / _frequency ) * 1000;
-		calculateLoops( pulseWidth );
+		uint32_t pulseWidth = calculatePulseWidthFromDutyCycle( dutyCycle );
+		setPulseWidth( pulseWidth );
 	}
 }
 
 void MotorControl::setDutyCycle( uint32_t dutyCycle, uint32_t rampTime )
 {
-
+	// check if 100% duty cycle is desired
+	if ( dutyCycle >= OneHundredPercentDutyCycle )
+	{
+		// hack the PRU since it cannot set a constant high value
+		setPulseWidth( _sleepTime - MaxPulseWidthSubtractor, rampTime );
+	}
+	else // 100% duty is not desired
+	{
+		// calculate the pulse width for the given duty cycle
+		uint32_t pulseWidth = calculatePulseWidthFromDutyCycle( dutyCycle );
+		setPulseWidth( pulseWidth, rampTime );
+	}
 }
 
 uint32_t MotorControl::dutyCycle() const
@@ -183,49 +223,49 @@ uint32_t MotorControl::dutyCycle() const
 
 void* MotorControl::handleWaveform( void* objectPointer )
 {
+	// create local variables for the thread to use
 	// cast the void* to a pointer to this class
 	MotorControl* motorControl = static_cast< MotorControl* >( objectPointer );
 	uint32_t* const pruPointer = motorControl->_pruPointer;
 
+	// while the thread should run
 	while ( motorControl->_threadRunning )
 	{
-//		printf("in thread ramp is%i\n", motorControl->isRamping() );
-//		printf("!!!in thread %i\n", pruPointer[ motorControl->_motorNumber ] );
 		// check if the PRU is done. basically, a mutex for the PRU
 		if ( pruPointer[ motorControl->_motorNumber ] == 0 )
 		{
-//			printf("@@@@in thread %i\n", pruPointer[ motorControl->_motorNumber ] );
-			// TODO: fix this! there has to be a better way of doing this...
 			// check if the servo is ramping
 			if ( motorControl->_isRamping )
 			{
 				// get a local copy of the current pulse width
 				uint32_t currentPulseWidth = motorControl->pulseWidth();
+
+				// calculate the next pulse width
 				int32_t nextPulseWidth = currentPulseWidth + motorControl->_rampRate;
 
+				// if the next pulse width will finish the ramp, set the flag to false
 				if ( nextPulseWidth == (int32_t)motorControl->_finalRampedPulseWidth )
 				{
 					motorControl->_isRamping = false;
 				}
 
-				printf("next is %i final is %i ramp is %u\n", nextPulseWidth, (int32_t)motorControl->_finalRampedPulseWidth, motorControl->_isRamping );
+				// calculate the PRU loops necessary to achive the desired
+				// pulse width
 				motorControl->calculateLoops( nextPulseWidth );
-
-				if ( !motorControl->_isRamping )
-				{
-					printf("ramp complete\n");
-//					motorControl->calculateLoops( motorControl->_finalRampedPulseWidth );
-				}
 			}
 
+			// set the PRU to the number of loops desired
 			pruPointer[ motorControl->_motorNumber ] = motorControl->_numberOfLoops;
-//			printf("thread called update %i\n", motorControl->_pruPointer[ motorControl->_motorNumber ] );
-//			printf("thread called update %i loop %i\n", motorControl->_pruPointer[ motorControl->_motorNumber ], motorControl->_numberOfLoops );
 		}
 
+		// sleep for the period ( 1 / frequency )
 		usleep( motorControl->_sleepTime );
 	}
 
+	// app is shutting down, so exit the thread
+	pthread_exit( NULL );
+
+	// return nothing of value
 	return NULL;
 }
 
@@ -240,7 +280,12 @@ void MotorControl::calculateLoops( uint32_t pulseWidth )
 {
 	_currentPulseWidth = pulseWidth;
 	_numberOfLoops = ( pulseWidth * PRU_FREQUENCY_IN_MHz ) / PRU_SERVO_LOOP_INSTRUCTIONS;
-//	printf("calc loop = %u\n", _numberOfLoops );
+	//	printf("calc loop = %u\n", _numberOfLoops );
+}
+
+uint32_t MotorControl::calculatePulseWidthFromDutyCycle( uint32_t dutyCycle )
+{
+	return ( dutyCycle / _frequency ) * 1000;
 }
 
 } // namespace IO

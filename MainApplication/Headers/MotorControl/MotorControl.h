@@ -168,6 +168,15 @@ private:
 	 * @return number of PRU loops
 	 */
 	void calculateLoops( uint32_t pulseWidth );
+
+	/**
+	 * @brief calculatePulseWidthFromDutyCycle calculates the pulse
+	 *		  width for a given duty cycle.
+	 * @param dutyCycle to be calculated. Duty cycles is in the scale of
+	 *		  100.0%, so 100% is 1000;
+	 * @return pulse width
+	 */
+	uint32_t calculatePulseWidthFromDutyCycle( uint32_t dutyCycle );
 };
 
 } // namespace IO
