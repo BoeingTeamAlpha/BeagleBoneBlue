@@ -36,7 +36,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BluetoothBase_8cpp.html",
-"hierarchy.html"
+"namespacemembers_func.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
