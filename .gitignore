@@ -14,3 +14,4 @@
 *.opt
 makefile
 .DS_Store
+html/
