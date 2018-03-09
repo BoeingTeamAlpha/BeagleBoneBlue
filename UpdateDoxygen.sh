@@ -18,6 +18,9 @@ fi
 echo Changing to html directory.
 cd ../html/
 
-echo Pushing to git.
+echo Commiting changes.
 
+git commit --all -m "Updated doxygen files."
+
+echo Pushing to git.
 git push origin gh-pages
