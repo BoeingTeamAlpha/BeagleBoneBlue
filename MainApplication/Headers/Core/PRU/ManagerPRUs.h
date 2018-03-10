@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-namespace VehicleControl {
+namespace Core {
 
 /**
  * @brief	The ManagerPRUs class manages BOTH PRUs for the application. This ensures
@@ -89,5 +89,5 @@ private:
 	int mapVirtualAddressSpace();
 };
 
-} // namespace VehicleControl
+} // namespace Core
 #endif // MANAGERPRUS_h

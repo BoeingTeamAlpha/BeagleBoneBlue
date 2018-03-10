@@ -5,7 +5,7 @@
 #include <pthread.h>
 #include "LinearConverter.h"
 
-namespace VehicleControl {
+namespace Core {
 namespace IO {
 
 /**
@@ -195,5 +195,5 @@ private:
 };
 
 } // namespace IO
-} // namespace VehicleControl
+} // namespace Core
 #endif // MOTORCONTROL_H

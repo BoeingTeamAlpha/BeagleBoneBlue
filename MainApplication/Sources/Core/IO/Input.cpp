@@ -8,7 +8,7 @@
 #include "ThreadHelper.h"
 
 using namespace std;
-namespace VehicleControl {
+namespace Core {
 namespace IO {
 
 Input::Input( int number, const Setup& setup )
@@ -210,4 +210,4 @@ void* Input::threadedPoll( void* value )
 }
 
 } // namespace IO
-} // namespace VehicleControl
+} // namespace Core

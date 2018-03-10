@@ -3,7 +3,7 @@
 
 #include "MotorControl.h"
 
-namespace VehicleControl {
+namespace Core {
 namespace IO {
 
 /**
@@ -63,5 +63,5 @@ public:
 };
 
 } // namespace IO
-} // namespace VehicleControl
+} // namespace Core
 #endif // SERVOCONTROL_H

@@ -25,13 +25,13 @@ Control::Control()
 	, _inputs( IO::InputList::NUM_INPUTS )
 	, _outputs( IO::OutputList::NUM_OUTPUTS )
 	, _servos( IO::ServoList::NUM_SERVOS )
-	, _bluetoothConnectedLED( IO::UserLED::Setup( IO::UserLED::LED::UserTwo ) )
-	, _runningLED( IO::UserLED::Setup( IO::UserLED::LED::UserThree ) )
+	, _bluetoothConnectedLED( Core::IO::UserLED::Setup( Core::IO::UserLED::LED::UserTwo ) )
+	, _runningLED( Core::IO::UserLED::Setup( Core::IO::UserLED::LED::UserThree ) )
 #if defined( RunBluetooth )
 	, _client( peerAdress )
 	, _server( peerAdress, localAdress )
 #endif
-	, _red( IO::UserLED::Setup( IO::UserLED::LED::Red ) )
+	, _red( Core::IO::UserLED::Setup( Core::IO::UserLED::LED::Red ) )
 {
 	// Fill up the IO
 	IOFactory::fillInputList( _inputs );
@@ -43,7 +43,7 @@ Control::Control()
 	signal( SIGTERM, signalHandler );
 
 	// set the running LED to its normal blinking
-	_runningLED.setState( IO::UserLED::State::Blinking, -1, 900 );
+	_runningLED.setState( Core::IO::UserLED::State::Blinking, -1, 900 );
 
 //	_servos[ IO::ServoList::LeftDriveMotor ]->setPulseWidth( 99999 );
 //	printf("pulse is %u\n", _servos[ IO::ServoList::LeftDriveMotor ]->pulseWidth() );
@@ -179,7 +179,7 @@ void Control::signalHandler( int signal )
 
 void Control::setServoPower( bool on )
 {
-	_outputs[ IO::OutputList::ServoPowerEnable ]->setValue( ( IO::Output::Value::Enum ) on );
+	_outputs[ IO::OutputList::ServoPowerEnable ]->setValue( ( Core::IO::Output::Value::Enum ) on );
 }
 
 } // namespace VehicleControl

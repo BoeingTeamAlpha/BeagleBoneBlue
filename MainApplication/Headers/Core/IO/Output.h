@@ -7,7 +7,7 @@
 
 #include "IOBase.h"
 
-namespace VehicleControl {
+namespace Core {
 namespace IO {
 
 /**
@@ -145,6 +145,6 @@ private:
 };
 
 } // namespace IO
-} // namespace VehicleControl
+} // namespace Core
 
 #endif // OUTPUT_H_

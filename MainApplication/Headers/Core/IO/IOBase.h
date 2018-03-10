@@ -8,7 +8,7 @@
 #include <string>
 #include <fstream>
 
-namespace VehicleControl {
+namespace Core {
 namespace IO {
 
 /**
@@ -181,6 +181,6 @@ private:
 };
 
 } // namespace IO
-} // namespace VehicleControl
+} // namespace Core
 
 #endif // IOBASE_H_

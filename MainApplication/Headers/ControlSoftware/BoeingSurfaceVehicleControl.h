@@ -11,15 +11,16 @@
 #include "UserLED.h"
 
 //#define RunBluetooth ( 1 )
-
-namespace VehicleControl {
-
 // Forwared declarations
+namespace Core {
 namespace IO {
 class Input;
 class Output;
 class MotorControl;
 }
+}
+
+namespace VehicleControl {
 
 /**
  * @brief	The Control class is the main object of the application. This object wraps all of the
@@ -45,9 +46,9 @@ private:
 public:
 
 	// Typedefs of the input and output lists
-	typedef std::vector< IO::Input* > InputList;
-	typedef std::vector< IO::Output* > OutputList;
-	typedef std::vector< IO::MotorControl* > ServoList;
+	typedef std::vector< Core::IO::Input* > InputList;
+	typedef std::vector< Core::IO::Output* > OutputList;
+	typedef std::vector< Core::IO::MotorControl* > ServoList;
 
 private:
 
@@ -65,11 +66,11 @@ private:
 	ServoList _servos;
 
 	// led that turns on when the bluetooth tablet is connected
-	IO::UserLED _bluetoothConnectedLED;
+	Core::IO::UserLED _bluetoothConnectedLED;
 
 	// this led is a status LED of the program. During normal operation,
 	// the led just blinks to signify the app is still running properly.
-	IO::UserLED _runningLED;
+	Core::IO::UserLED _runningLED;
 
 #if defined( RunBluetooth )
 	// bluetooth client and server
@@ -81,7 +82,7 @@ private:
 public:
 
 	// TODO: Remove after testing!!
-	IO::UserLED _red;
+	Core::IO::UserLED _red;
 
 	/**
 	 * @brief	instance method is the Singleton method of creating and accessing this

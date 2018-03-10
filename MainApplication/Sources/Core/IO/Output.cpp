@@ -2,7 +2,7 @@
 
 #include <unistd.h>
 
-namespace VehicleControl {
+namespace Core {
 namespace IO {
 
 Output::Output( int number, const Setup& setup )
@@ -126,4 +126,4 @@ void* Output::threadedToggle( void* value )
 }
 
 } // namespace IO
-} // namespace VehicleControl
+} // namespace Core

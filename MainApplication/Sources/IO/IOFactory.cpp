@@ -12,9 +12,8 @@
 #define SixteenthSecondDebounceTime ( 62 )
 #define EighthSecondDebounceTime ( 125 )
 
+using namespace Core::IO;
 namespace VehicleControl {
-
-using namespace IO;
 
 int callback( int /* message */ )
 {
@@ -42,7 +41,7 @@ int callback( int /* message */ )
 //	printf("left callback\r\n");
 }
 
-IO::Input* createRisingEdgeThreadedInput( int number )
+Input* createRisingEdgeThreadedInput( int number )
 {
 	Input::Setup setup;
 	setup.callback = &callback;
@@ -60,7 +59,7 @@ void Control::IOFactory::fillInputList( InputList& list )
 
 void Control::IOFactory::fillOutputList( OutputList& list )
 {
-	list[ IO::OutputList::ServoPowerEnable ] = new IO::Output( 80, IO::Output::Setup() );
+	list[ IO::OutputList::ServoPowerEnable ] = new Output( 80, Output::Setup() );
 }
 
 void Control::IOFactory::fillServoList( ServoList& list )
