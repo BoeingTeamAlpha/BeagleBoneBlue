@@ -18,8 +18,10 @@ fi
 echo Changing to html directory.
 cd ../html/
 
-echo Commiting changes.
+echo Adding any untracked files.
+git add --all
 
+echo Commiting changes.
 git commit --all -m "Updated doxygen files."
 
 echo Pushing to git.
