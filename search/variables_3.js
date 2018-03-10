@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['debouncetime',['debounceTime',['../structVehicleControl_1_1IO_1_1Input_1_1Setup.html#a38155f585fbc05eed778ea6dd6cbf17f',1,'VehicleControl::IO::Input::Setup']]],
-  ['desirededge',['desiredEdge',['../structVehicleControl_1_1IO_1_1Input_1_1Setup.html#af951842953de67d26c90279b01e6c61f',1,'VehicleControl::IO::Input::Setup']]]
+  ['debouncetime',['debounceTime',['../structCore_1_1IO_1_1Input_1_1Setup.html#a0ee66c113b94a556d43c0246c9c4cf1e',1,'Core::IO::Input::Setup']]],
+  ['desirededge',['desiredEdge',['../structCore_1_1IO_1_1Input_1_1Setup.html#a8adf04f344f489aeba2201234aeaca21',1,'Core::IO::Input::Setup']]]
 ];

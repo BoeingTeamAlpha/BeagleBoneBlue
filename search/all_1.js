@@ -4,9 +4,9 @@ var searchData=
   ['beagleblackbluetoothaddress',['BeagleBlackBluetoothAddress',['../BluetoothDefinitions_8h.html#a691b53595a6664fd962a2dbb0b4325db',1,'BluetoothDefinitions.h']]],
   ['beagleblue',['BeagleBlue',['../BluetoothDefinitions_8h.html#a0b0f56aa6dd85a933a745d6fe4934aca',1,'BluetoothDefinitions.h']]],
   ['beaglebluebluetoothaddress',['BeagleBlueBluetoothAddress',['../BluetoothDefinitions_8h.html#ab8e857e740d3878ff22556bca0a25542',1,'BluetoothDefinitions.h']]],
-  ['blinking',['Blinking',['../structVehicleControl_1_1IO_1_1UserLED_1_1State.html#ab1df541c4492538d435284625c3a9cc6ae85e5f8f24d55a5befbc3029c3ec7415',1,'VehicleControl::IO::UserLED::State']]],
-  ['blinknumber',['blinkNumber',['../structVehicleControl_1_1IO_1_1UserLED_1_1Setup.html#a6838836e4eb2774036cd20267e7a642d',1,'VehicleControl::IO::UserLED::Setup']]],
-  ['blinkperiod',['blinkPeriod',['../structVehicleControl_1_1IO_1_1UserLED_1_1Setup.html#aa9fc1997c68a8e2b19015e9a8ea1d26e',1,'VehicleControl::IO::UserLED::Setup']]],
+  ['blinking',['Blinking',['../structCore_1_1IO_1_1UserLED_1_1State.html#a0b645de2a55245a39d37442d0f0e0a85a934733ddf33686422f8fd724a9caa6d9',1,'Core::IO::UserLED::State']]],
+  ['blinknumber',['blinkNumber',['../structCore_1_1IO_1_1UserLED_1_1Setup.html#a0005615f1214dbafd2114d6c4899be64',1,'Core::IO::UserLED::Setup']]],
+  ['blinkperiod',['blinkPeriod',['../structCore_1_1IO_1_1UserLED_1_1Setup.html#af06a81acf4e058d50f02ad79bc63e749',1,'Core::IO::UserLED::Setup']]],
   ['bluetoothbase_2ecpp',['BluetoothBase.cpp',['../BluetoothBase_8cpp.html',1,'']]],
   ['bluetoothbase_2eh',['BluetoothBase.h',['../BluetoothBase_8h.html',1,'']]],
   ['bluetoothclient_2ecpp',['BluetoothClient.cpp',['../BluetoothClient_8cpp.html',1,'']]],
@@ -17,5 +17,5 @@ var searchData=
   ['bluetoothserver_2eh',['BluetoothServer.h',['../BluetoothServer_8h.html',1,'']]],
   ['boeingsurfacevehiclecontrol_2ecpp',['BoeingSurfaceVehicleControl.cpp',['../BoeingSurfaceVehicleControl_8cpp.html',1,'']]],
   ['boeingsurfacevehiclecontrol_2eh',['BoeingSurfaceVehicleControl.h',['../BoeingSurfaceVehicleControl_8h.html',1,'']]],
-  ['both',['Both',['../structVehicleControl_1_1IO_1_1Input_1_1Edge.html#a114a6e2d91817b670408ba6aff712efaada81b74135a680bf53bcdf3fcd1c948c',1,'VehicleControl::IO::Input::Edge']]]
+  ['both',['Both',['../structCore_1_1IO_1_1Input_1_1Edge.html#a2e53ea28b8f8931cab264e9f9832877aa09da03d1375b5193ec154e47d228992b',1,'Core::IO::Input::Edge']]]
 ];

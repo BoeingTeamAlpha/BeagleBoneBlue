@@ -19,18 +19,18 @@ var files =
     ] ],
     [ "Input.cpp", "Input_8cpp.html", "Input_8cpp" ],
     [ "Input.h", "Input_8h.html", [
-      [ "Input", "classVehicleControl_1_1IO_1_1Input.html", "classVehicleControl_1_1IO_1_1Input" ],
-      [ "Edge", "structVehicleControl_1_1IO_1_1Input_1_1Edge.html", "structVehicleControl_1_1IO_1_1Input_1_1Edge" ],
-      [ "Setup", "structVehicleControl_1_1IO_1_1Input_1_1Setup.html", "structVehicleControl_1_1IO_1_1Input_1_1Setup" ]
+      [ "Input", "classCore_1_1IO_1_1Input.html", "classCore_1_1IO_1_1Input" ],
+      [ "Edge", "structCore_1_1IO_1_1Input_1_1Edge.html", "structCore_1_1IO_1_1Input_1_1Edge" ],
+      [ "Setup", "structCore_1_1IO_1_1Input_1_1Setup.html", "structCore_1_1IO_1_1Input_1_1Setup" ]
     ] ],
     [ "InputList.h", "InputList_8h.html", [
       [ "InputList", "structVehicleControl_1_1IO_1_1InputList.html", "structVehicleControl_1_1IO_1_1InputList" ]
     ] ],
     [ "IOBase.cpp", "IOBase_8cpp.html", "IOBase_8cpp" ],
     [ "IOBase.h", "IOBase_8h.html", [
-      [ "IOBase", "classVehicleControl_1_1IO_1_1IOBase.html", "classVehicleControl_1_1IO_1_1IOBase" ],
-      [ "Direction", "structVehicleControl_1_1IO_1_1IOBase_1_1Direction.html", "structVehicleControl_1_1IO_1_1IOBase_1_1Direction" ],
-      [ "Value", "structVehicleControl_1_1IO_1_1IOBase_1_1Value.html", "structVehicleControl_1_1IO_1_1IOBase_1_1Value" ]
+      [ "IOBase", "classCore_1_1IO_1_1IOBase.html", "classCore_1_1IO_1_1IOBase" ],
+      [ "Direction", "structCore_1_1IO_1_1IOBase_1_1Direction.html", "structCore_1_1IO_1_1IOBase_1_1Direction" ],
+      [ "Value", "structCore_1_1IO_1_1IOBase_1_1Value.html", "structCore_1_1IO_1_1IOBase_1_1Value" ]
     ] ],
     [ "IOFactory.cpp", "IOFactory_8cpp.html", "IOFactory_8cpp" ],
     [ "IOFactory.h", "IOFactory_8h.html", [
@@ -42,17 +42,17 @@ var files =
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "ManagerPRUs.cpp", "ManagerPRUs_8cpp.html", "ManagerPRUs_8cpp" ],
     [ "ManagerPRUs.h", "ManagerPRUs_8h.html", [
-      [ "ManagerPRUs", "classVehicleControl_1_1ManagerPRUs.html", "classVehicleControl_1_1ManagerPRUs" ]
+      [ "ManagerPRUs", "classCore_1_1ManagerPRUs.html", "classCore_1_1ManagerPRUs" ]
     ] ],
     [ "MotorControl.cpp", "MotorControl_8cpp.html", "MotorControl_8cpp" ],
     [ "MotorControl.h", "MotorControl_8h.html", [
-      [ "MotorControl", "classVehicleControl_1_1IO_1_1MotorControl.html", "classVehicleControl_1_1IO_1_1MotorControl" ],
-      [ "Motor", "structVehicleControl_1_1IO_1_1MotorControl_1_1Motor.html", "structVehicleControl_1_1IO_1_1MotorControl_1_1Motor" ]
+      [ "MotorControl", "classCore_1_1IO_1_1MotorControl.html", "classCore_1_1IO_1_1MotorControl" ],
+      [ "Motor", "structCore_1_1IO_1_1MotorControl_1_1Motor.html", "structCore_1_1IO_1_1MotorControl_1_1Motor" ]
     ] ],
     [ "Output.cpp", "Output_8cpp.html", null ],
     [ "Output.h", "Output_8h.html", [
-      [ "Output", "classVehicleControl_1_1IO_1_1Output.html", "classVehicleControl_1_1IO_1_1Output" ],
-      [ "Setup", "structVehicleControl_1_1IO_1_1Output_1_1Setup.html", "structVehicleControl_1_1IO_1_1Output_1_1Setup" ]
+      [ "Output", "classCore_1_1IO_1_1Output.html", "classCore_1_1IO_1_1Output" ],
+      [ "Setup", "structCore_1_1IO_1_1Output_1_1Setup.html", "structCore_1_1IO_1_1Output_1_1Setup" ]
     ] ],
     [ "OutputList.h", "OutputList_8h.html", [
       [ "OutputList", "structVehicleControl_1_1IO_1_1OutputList.html", "structVehicleControl_1_1IO_1_1OutputList" ]
@@ -63,7 +63,7 @@ var files =
     ] ],
     [ "ServoControl.cpp", "ServoControl_8cpp.html", null ],
     [ "ServoControl.h", "ServoControl_8h.html", [
-      [ "ServoControl", "classVehicleControl_1_1IO_1_1ServoControl.html", "classVehicleControl_1_1IO_1_1ServoControl" ]
+      [ "ServoControl", "classCore_1_1IO_1_1ServoControl.html", "classCore_1_1IO_1_1ServoControl" ]
     ] ],
     [ "ServoList.h", "ServoList_8h.html", [
       [ "ServoList", "structVehicleControl_1_1IO_1_1ServoList.html", "structVehicleControl_1_1IO_1_1ServoList" ]
@@ -74,9 +74,9 @@ var files =
     ] ],
     [ "UserLED.cpp", "UserLED_8cpp.html", "UserLED_8cpp" ],
     [ "UserLED.h", "UserLED_8h.html", [
-      [ "UserLED", "classVehicleControl_1_1IO_1_1UserLED.html", "classVehicleControl_1_1IO_1_1UserLED" ],
-      [ "LED", "structVehicleControl_1_1IO_1_1UserLED_1_1LED.html", "structVehicleControl_1_1IO_1_1UserLED_1_1LED" ],
-      [ "State", "structVehicleControl_1_1IO_1_1UserLED_1_1State.html", "structVehicleControl_1_1IO_1_1UserLED_1_1State" ],
-      [ "Setup", "structVehicleControl_1_1IO_1_1UserLED_1_1Setup.html", "structVehicleControl_1_1IO_1_1UserLED_1_1Setup" ]
+      [ "UserLED", "classCore_1_1IO_1_1UserLED.html", "classCore_1_1IO_1_1UserLED" ],
+      [ "LED", "structCore_1_1IO_1_1UserLED_1_1LED.html", "structCore_1_1IO_1_1UserLED_1_1LED" ],
+      [ "State", "structCore_1_1IO_1_1UserLED_1_1State.html", "structCore_1_1IO_1_1UserLED_1_1State" ],
+      [ "Setup", "structCore_1_1IO_1_1UserLED_1_1Setup.html", "structCore_1_1IO_1_1UserLED_1_1Setup" ]
     ] ]
 ];

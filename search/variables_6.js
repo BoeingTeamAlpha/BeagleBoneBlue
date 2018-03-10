@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['whatled',['whatLED',['../structVehicleControl_1_1IO_1_1UserLED_1_1Setup.html#ab60fb63401ed849e25b459c1587a7608',1,'VehicleControl::IO::UserLED::Setup']]]
+  ['whatled',['whatLED',['../structCore_1_1IO_1_1UserLED_1_1Setup.html#acfe05df97f0d88a57cce5580d01a3252',1,'Core::IO::UserLED::Setup']]]
 ];

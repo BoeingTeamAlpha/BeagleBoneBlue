@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['toggleoutput',['toggleOutput',['../classVehicleControl_1_1IO_1_1Output.html#a0ff845e3963d2a3e19080b402edfaaf6',1,'VehicleControl::IO::Output::toggleOutput()'],['../classVehicleControl_1_1IO_1_1Output.html#a08adbcc38e67222f17a35847e72f6ba7',1,'VehicleControl::IO::Output::toggleOutput(int time)'],['../classVehicleControl_1_1IO_1_1Output.html#a393463f472e2f223d19611cb82c70328',1,'VehicleControl::IO::Output::toggleOutput(int numberOfTimes, int time)']]]
+  ['toggleoutput',['toggleOutput',['../classCore_1_1IO_1_1Output.html#a9fff26b25ba74b5ddbd4781f90d11c88',1,'Core::IO::Output::toggleOutput()'],['../classCore_1_1IO_1_1Output.html#a22eae1b59ff21d5534d4d03acaa1dc74',1,'Core::IO::Output::toggleOutput(int time)'],['../classCore_1_1IO_1_1Output.html#ad9c42acc335466a06713874b8fc8aa39',1,'Core::IO::Output::toggleOutput(int numberOfTimes, int time)']]]
 ];

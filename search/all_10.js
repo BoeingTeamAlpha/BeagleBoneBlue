@@ -3,10 +3,10 @@ var searchData=
   ['threadhelper',['ThreadHelper',['../classThreadHelper.html',1,'']]],
   ['threadhelper_2ecpp',['ThreadHelper.cpp',['../ThreadHelper_8cpp.html',1,'']]],
   ['threadhelper_2eh',['ThreadHelper.h',['../ThreadHelper_8h.html',1,'']]],
-  ['three',['Three',['../structVehicleControl_1_1IO_1_1MotorControl_1_1Motor.html#a51619f88c9584b5e386b183fdea4f3c7ad0def0f26d17f0a78a24532f58e0c970',1,'VehicleControl::IO::MotorControl::Motor']]],
+  ['three',['Three',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a623764be8e77450606390480c15a907a',1,'Core::IO::MotorControl::Motor']]],
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
-  ['togglenumber',['toggleNumber',['../structVehicleControl_1_1IO_1_1Output_1_1Setup.html#a30a09068747694b8f57195adedbd05c0',1,'VehicleControl::IO::Output::Setup']]],
-  ['toggleoutput',['toggleOutput',['../classVehicleControl_1_1IO_1_1Output.html#a0ff845e3963d2a3e19080b402edfaaf6',1,'VehicleControl::IO::Output::toggleOutput()'],['../classVehicleControl_1_1IO_1_1Output.html#a08adbcc38e67222f17a35847e72f6ba7',1,'VehicleControl::IO::Output::toggleOutput(int time)'],['../classVehicleControl_1_1IO_1_1Output.html#a393463f472e2f223d19611cb82c70328',1,'VehicleControl::IO::Output::toggleOutput(int numberOfTimes, int time)']]],
-  ['toggleperiod',['togglePeriod',['../structVehicleControl_1_1IO_1_1Output_1_1Setup.html#a25d9feaf05f045e8ba1d6426963618db',1,'VehicleControl::IO::Output::Setup']]],
-  ['two',['Two',['../structVehicleControl_1_1IO_1_1MotorControl_1_1Motor.html#a51619f88c9584b5e386b183fdea4f3c7abab0bf947096a3143c2ca09db0ee3531',1,'VehicleControl::IO::MotorControl::Motor']]]
+  ['togglenumber',['toggleNumber',['../structCore_1_1IO_1_1Output_1_1Setup.html#a8d24d1e57e6e0f22c564049d29a09133',1,'Core::IO::Output::Setup']]],
+  ['toggleoutput',['toggleOutput',['../classCore_1_1IO_1_1Output.html#a9fff26b25ba74b5ddbd4781f90d11c88',1,'Core::IO::Output::toggleOutput()'],['../classCore_1_1IO_1_1Output.html#a22eae1b59ff21d5534d4d03acaa1dc74',1,'Core::IO::Output::toggleOutput(int time)'],['../classCore_1_1IO_1_1Output.html#ad9c42acc335466a06713874b8fc8aa39',1,'Core::IO::Output::toggleOutput(int numberOfTimes, int time)']]],
+  ['toggleperiod',['togglePeriod',['../structCore_1_1IO_1_1Output_1_1Setup.html#a55de6b678820bd90869d32e1cbf4082b',1,'Core::IO::Output::Setup']]],
+  ['two',['Two',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a684756b18d0e2d94f32bf8f198b8842e',1,'Core::IO::MotorControl::Motor']]]
 ];

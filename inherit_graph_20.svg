@@ -12,10 +12,10 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="structVehicleControl_1_1IO_1_1UserLED_1_1Setup.html" target="_top" xlink:title="The Setup struct represents the settings that an LED can have. This struct makes it easier to create ...">
+<g id="a_node1"><a xlink:href="structVehicleControl_1_1IO_1_1InputList.html" target="_top" xlink:title="The InputList struct wraps the enum of all of the inputs used in the application. ...">
 <polygon fill="#ffffff" stroke="#000000" points="0,-.5 0,-32.5 97.123,-32.5 97.123,-.5 0,-.5"/>
 <text text-anchor="start" x="8" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::IO</text>
-<text text-anchor="middle" x="48.5615" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::UserLED::Setup</text>
+<text text-anchor="middle" x="48.5615" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::InputList</text>
 </a>
 </g>
 </g>
