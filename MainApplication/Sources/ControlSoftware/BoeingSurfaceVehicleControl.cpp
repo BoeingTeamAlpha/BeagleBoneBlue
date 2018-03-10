@@ -44,6 +44,12 @@ Control::Control()
 
 	// set the running LED to its normal blinking
 	_runningLED.setState( IO::UserLED::State::Blinking, -1, 900 );
+
+//	_servos[ IO::ServoList::LeftDriveMotor ]->setPulseWidth( 99999 );
+//	printf("pulse is %u\n", _servos[ IO::ServoList::LeftDriveMotor ]->pulseWidth() );
+//	_servos[ IO::ServoList::LeftDriveMotor ]->setPulseWidth( 2500, 1000 );
+//	printf("duty is %i\n"
+//		   , _servos[ IO::ServoList::LeftDriveMotor ]->dutyCycle() );
 }
 
 Control& Control::instance()
@@ -75,6 +81,58 @@ void Control::update()
 		_bluetoothConnectedLED.setState( state );
 	}
 #endif
+
+//	static uint32_t width = 0;
+
+	static bool firstRun = true;
+	static uint32_t counter = 1;
+
+
+	if ( !_servos[ IO::ServoList::LeftDriveMotor ]->isRamping() )
+	{
+		printf("counter is %u\n", counter );
+		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( counter, 5000 );
+		counter += 100;
+	}
+//	if ( firstRun )
+//	{
+//		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 1000 );
+//		printf("first %u\n", _servos[ IO::ServoList::LeftDriveMotor ]->dutyCycle() );
+
+//		firstRun = false;
+//	}
+
+//	if ( counter == 10 )
+//	{
+//		printf("switching to duty cycle\n");
+//		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 1000 );
+//	}
+
+//	if ( counter == 10 )
+//	{
+//		_servos[ IO::ServoList::LeftDriveMotor ]->setDesiredDegree( 5 );
+//		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 500 );
+//		printf("50%% %u\n", _servos[ IO::ServoList::LeftDriveMotor ]->dutyCycle() );
+//		counter = 0;
+//	}
+//	++counter;
+//	duty += 100;
+
+//	_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( duty );
+//	printf("duty is %i\n", _servos[ IO::ServoList::LeftDriveMotor ]->dutyCycle() );
+
+//	if ( duty >= 1000 )
+//	{
+//		sleep( 4 );
+//		duty = 0;
+//	}
+
+//	if ( !_servos[ IO::ServoList::LeftDriveMotor ]->isRamping() )
+//	{
+//		printf("deg %u\n", width );
+//		_servos[ IO::ServoList::LeftDriveMotor ]->setDesiredDegree( width, 1500 );
+//		width += 20;
+//	}
 }
 
 bool Control::isRunning() const

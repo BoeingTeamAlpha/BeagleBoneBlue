@@ -2,7 +2,6 @@
 #define SERVOCONTROL_H
 
 #include "MotorControl.h"
-#include "LinearConverter.h"
 
 namespace VehicleControl {
 namespace IO {
@@ -17,18 +16,9 @@ namespace IO {
  */
 class ServoControl : public MotorControl
 {
-public:
-
-	// typedef the appropriate range for the class
-	typedef Math::Range< int32_t > RangeType;
-
 private:
 
-	// typedef the converter for easier instantiation
-	typedef Math::LinearConverter< int32_t > Converter;
-
-	// member converter
-	Converter _pulseWidthConverter;
+	Converter _degreeConverter;
 
 public:
 
@@ -42,6 +32,8 @@ public:
 	 *			of 1500 us and a maximum pulse width of 2500 us would take
 	 *			arguments of MotorControl( xxx, xxx, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 1500, 2500 ) ).
 	 *			Where the xxx's are the motor number and desired frequency.
+	 *
+	 * @note This class sets the motor control class's dutyCyclePulseWidthRange to this class's pulsRange
 	 */
 	ServoControl( const Motor::Enum motorNumber
 				  , float frequency

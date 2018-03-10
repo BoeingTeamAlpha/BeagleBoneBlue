@@ -12,13 +12,13 @@
 #define PRU_SERVO_LOOP_INSTRUCTIONS	( 48 )	// instructions per PRU servo timer loop
 #define PRU_FREQUENCY_IN_MHz ( 200 )
 #define Microseconds ( 1000000.0f )
-#define MaxPulseWidthSubtractor ( 50 )
-#define OneHundredPercentDutyCycle ( 1000 )
 
 namespace VehicleControl {
 namespace IO {
 
-MotorControl::MotorControl( const Motor::Enum motorNumber, float frequency )
+MotorControl::MotorControl( const Motor::Enum motorNumber
+							, float frequency
+							, const RangeType& dutyCyclePulseWidthRange )
 	: _threadRunning( false )
 	, _isRamping( false )
 	, _motorNumber( motorNumber )
@@ -28,6 +28,7 @@ MotorControl::MotorControl( const Motor::Enum motorNumber, float frequency )
 	, _finalRampedPulseWidth( 0 )
 	, _pruPointer( ManagerPRUs::instance().sharedMemoryPointer() )
 	, _rampRate( 0 )
+	, _dutyCycleConverter( RangeType( 1, 1000 ), dutyCyclePulseWidthRange )
 {
 	_pruPointer[ _motorNumber ] = 0;
 	calculateThreadSleepTime( frequency );
@@ -178,47 +179,37 @@ bool MotorControl::isRamping() const
 
 void MotorControl::setDutyCycle( uint32_t dutyCycle )
 {
-	// check if 100% duty cycle is desired
-	if ( dutyCycle >= OneHundredPercentDutyCycle )
+	// check if 0% duty cycle is desired
+	if ( dutyCycle == 0 )
 	{
-		// hack the PRU since it cannot set a constant high value
-		setPulseWidth( _sleepTime - MaxPulseWidthSubtractor );
+		// set the pulse width to 0
+		setPulseWidth( 0 );
 	}
-	else // 100% duty is not desired
+	else // 0% duty is not desired
 	{
 		// calculate the pulse width for the given duty cycle
-		uint32_t pulseWidth = calculatePulseWidthFromDutyCycle( dutyCycle );
-		setPulseWidth( pulseWidth );
+		setPulseWidth( _dutyCycleConverter.convertXtoY( dutyCycle ) );
 	}
 }
 
 void MotorControl::setDutyCycle( uint32_t dutyCycle, uint32_t rampTime )
 {
-	// check if 100% duty cycle is desired
-	if ( dutyCycle >= OneHundredPercentDutyCycle )
+	// check if 0% duty cycle is desired
+	if ( dutyCycle == 0 )
 	{
-		// hack the PRU since it cannot set a constant high value
-		setPulseWidth( _sleepTime - MaxPulseWidthSubtractor, rampTime );
+		// set the pulse width to 0
+		setPulseWidth( 0, rampTime );
 	}
-	else // 100% duty is not desired
+	else // 0% duty is not desired
 	{
 		// calculate the pulse width for the given duty cycle
-		uint32_t pulseWidth = calculatePulseWidthFromDutyCycle( dutyCycle );
-		setPulseWidth( pulseWidth, rampTime );
+		setPulseWidth( _dutyCycleConverter.convertXtoY( dutyCycle ), rampTime );
 	}
 }
 
 uint32_t MotorControl::dutyCycle() const
 {
-	// add the subtractor back to the pulse width to check for 100% duty cycle
-	uint32_t width = pulseWidth() + MaxPulseWidthSubtractor;
-
-	// the _sleepTime is used because it is 1/f or the time it take for one period
-	// if the width is within the bounds of one period, return 100% duty cycle
-	// otherwise, return the formula pulse width * frequency
-	return width >= _sleepTime - 5 && width <= _sleepTime + 5
-			? OneHundredPercentDutyCycle
-			: ( pulseWidth() * _frequency ) / 1000;
+	return _dutyCycleConverter.convertYtoX( pulseWidth() );
 }
 
 void* MotorControl::handleWaveform( void* objectPointer )

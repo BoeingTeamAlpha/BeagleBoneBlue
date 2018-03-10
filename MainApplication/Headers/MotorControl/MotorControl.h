@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <pthread.h>
+#include "LinearConverter.h"
 
 namespace VehicleControl {
 namespace IO {
@@ -20,6 +21,9 @@ class MotorControl
 {
 public:
 
+	// typedef the appropriate range for the class
+	typedef Math::Range< int32_t > RangeType;
+
 	/**
 	 * @brief	The Servo struct holds all of the allowable motor channels.
 	 * @note	This class also accounts for the motor's being zero based
@@ -35,6 +39,11 @@ public:
 		};
 	};
 
+protected:
+
+	// typedef the converter for easier instantiation
+	typedef Math::LinearConverter< int32_t > Converter;
+
 private:
 
 	// Member variables
@@ -49,15 +58,21 @@ private:
 	uint32_t* const _pruPointer;
 	int32_t _rampRate;
 	pthread_t _thread;
+	Converter _dutyCycleConverter;
 
 public:
 
 	/**
-	 * @brief	ServoControl constructor creates the class, and spawns the
+	 * @brief	MotorControl ServoControl constructor creates the class, and spawns the
 	 *			frequency control thread.
-	 * @param	motorNumber
+	 * @param	motorNumber the pin of the motor
+	 * @param	frequency of the motor
+	 * @param	dutyCyclePulseWidthRange the minimum and maximum pulse width used
+	 *			in the duty cycle calculation.
 	 */
-	MotorControl( const Motor::Enum motorNumber, float frequency );
+	MotorControl( const Motor::Enum motorNumber
+				  , float frequency
+				  , const RangeType& dutyCyclePulseWidthRange );
 
 	/**
 	 * @brief	ServoMotorControl destructor stops the thread

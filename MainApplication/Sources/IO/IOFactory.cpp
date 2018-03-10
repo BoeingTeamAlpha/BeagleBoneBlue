@@ -66,7 +66,7 @@ void Control::IOFactory::fillOutputList( OutputList& list )
 void Control::IOFactory::fillServoList( ServoList& list )
 {
 	list[ IO::ServoList::LeftDriveMotor ]	= new ServoControl( MotorControl::Motor::One, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
-	list[ IO::ServoList::RightDriveMotor ]	= new MotorControl( MotorControl::Motor::Two, 5.0f );
+	list[ IO::ServoList::RightDriveMotor ]	= new MotorControl( MotorControl::Motor::Two, 5.0f, MotorControl::RangeType( 2500, 150000 ) );
 }
 
 void Control::IOFactory::destroyInputs( InputList& list )
