@@ -7,6 +7,8 @@
 
 #include <pthread.h>
 
+namespace Core {
+
 /**
  * @brief The ThreadHelper class wraps the attributes
  *		and other arguements necessary to create a pthread.
@@ -69,5 +71,5 @@ private:
 	 */
 	ThreadHelper& operator=( const ThreadHelper& threadHelper );
 };
-
+} // namespace Core
 #endif // THREADHELPER_H

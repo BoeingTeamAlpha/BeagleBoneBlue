@@ -133,12 +133,12 @@ int Base::startBothThreads()
 
 int Base::startReadThread()
 {
-	return ThreadHelper::startDetachedThread( &this->_readThread, readMessage, &_readThreadRunning, static_cast< void* >( this ) );
+	return Core::ThreadHelper::startDetachedThread( &this->_readThread, readMessage, &_readThreadRunning, static_cast< void* >( this ) );
 }
 
 int Base::startWriteThread()
 {
-	return ThreadHelper::startDetachedThread( &this->_writeThread, writeMessage, &_writeThreadRunning, static_cast< void* >( this ) );
+	return Core::ThreadHelper::startDetachedThread( &this->_writeThread, writeMessage, &_writeThreadRunning, static_cast< void* >( this ) );
 }
 
 int Base::setupSocket()

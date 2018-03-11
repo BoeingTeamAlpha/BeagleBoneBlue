@@ -1,6 +1,8 @@
 #include "ThreadHelper.h"
 #include <stdio.h>
 
+namespace Core {
+
 int ThreadHelper::startDetachedThread( pthread_t* thread, StartRoutine startRoutine, bool* isRunningFlag, void* objectPointer )
 {
 	if ( *isRunningFlag )
@@ -64,3 +66,5 @@ int ThreadHelper::startJoinableThread( pthread_t* thread, StartRoutine startRout
 		return 0;
 	}
 }
+
+} // namespace Core

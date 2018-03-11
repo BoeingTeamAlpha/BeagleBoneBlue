@@ -7,6 +7,7 @@
 
 #include "Range.h"
 
+namespace Core {
 namespace Math {
 
 /**
@@ -96,4 +97,5 @@ private:
 };
 
 } // namespace Math
+} // namespace Core
 #endif // LINEARCONVERTER_H
