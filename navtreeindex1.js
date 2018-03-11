@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"namespaceVehicleControl_1_1Bluetooth.html":[2,0,2,0],
 "namespaceVehicleControl_1_1IO.html":[2,0,2,1],
 "namespaceVehicleControl_1_1IO.html":[1,0,2,1],
 "namespacemembers.html":[1,1,0],

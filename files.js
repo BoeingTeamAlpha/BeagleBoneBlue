@@ -14,9 +14,7 @@ var files =
       [ "Server", "classVehicleControl_1_1Bluetooth_1_1Server.html", "classVehicleControl_1_1Bluetooth_1_1Server" ]
     ] ],
     [ "BoeingSurfaceVehicleControl.cpp", "BoeingSurfaceVehicleControl_8cpp.html", null ],
-    [ "BoeingSurfaceVehicleControl.h", "BoeingSurfaceVehicleControl_8h.html", [
-      [ "Control", "classVehicleControl_1_1Control.html", "classVehicleControl_1_1Control" ]
-    ] ],
+    [ "BoeingSurfaceVehicleControl.h", "BoeingSurfaceVehicleControl_8h.html", "BoeingSurfaceVehicleControl_8h" ],
     [ "Input.cpp", "Input_8cpp.html", "Input_8cpp" ],
     [ "Input.h", "Input_8h.html", [
       [ "Input", "classCore_1_1IO_1_1Input.html", "classCore_1_1IO_1_1Input" ],
