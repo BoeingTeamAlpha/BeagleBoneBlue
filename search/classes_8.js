@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['range',['Range',['../classMath_1_1Range.html',1,'Math']]]
+  ['range',['Range',['../classCore_1_1Math_1_1Range.html',1,'Core::Math']]]
 ];

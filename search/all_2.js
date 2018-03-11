@@ -10,9 +10,10 @@ var searchData=
   ['cnt_5foffset',['CNT_OFFSET',['../PRUDefinitions_8h.html#a40f7e656758a0c6789535c6fb1531ca0',1,'PRUDefinitions.h']]],
   ['control',['Control',['../classVehicleControl_1_1Control.html',1,'VehicleControl']]],
   ['converter',['Converter',['../classCore_1_1IO_1_1MotorControl.html#a762113779384427d7f9717330ddab7ef',1,'Core::IO::MotorControl']]],
-  ['convertxtoy',['convertXtoY',['../classMath_1_1LinearConverter.html#a0b41880c7734a6edf56ccf798dfc693b',1,'Math::LinearConverter']]],
-  ['convertytox',['convertYtoX',['../classMath_1_1LinearConverter.html#a273d07db25141b970ca038d0826e83be',1,'Math::LinearConverter']]],
+  ['convertxtoy',['convertXtoY',['../classCore_1_1Math_1_1LinearConverter.html#a9c23dfff74ecda38d7187d10fef90774',1,'Core::Math::LinearConverter']]],
+  ['convertytox',['convertYtoX',['../classCore_1_1Math_1_1LinearConverter.html#a0edafa0346e994028957ac9f88dacc7e',1,'Core::Math::LinearConverter']]],
   ['core',['Core',['../namespaceCore.html',1,'']]],
   ['createrisingedgethreadedinput',['createRisingEdgeThreadedInput',['../namespaceVehicleControl.html#ab876bdb990021d96b1452a85b59f99d8',1,'VehicleControl']]],
-  ['io',['IO',['../namespaceCore_1_1IO.html',1,'Core']]]
+  ['io',['IO',['../namespaceCore_1_1IO.html',1,'Core']]],
+  ['math',['Math',['../namespaceCore_1_1Math.html',1,'Core']]]
 ];

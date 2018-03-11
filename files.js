@@ -35,7 +35,7 @@ var files =
       [ "IOFactory", "classVehicleControl_1_1Control_1_1IOFactory.html", null ]
     ] ],
     [ "LinearConverter.h", "LinearConverter_8h.html", [
-      [ "LinearConverter", "classMath_1_1LinearConverter.html", "classMath_1_1LinearConverter" ]
+      [ "LinearConverter", "classCore_1_1Math_1_1LinearConverter.html", "classCore_1_1Math_1_1LinearConverter" ]
     ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "ManagerPRUs.cpp", "ManagerPRUs_8cpp.html", "ManagerPRUs_8cpp" ],
@@ -57,7 +57,7 @@ var files =
     ] ],
     [ "PRUDefinitions.h", "PRUDefinitions_8h.html", "PRUDefinitions_8h" ],
     [ "Range.h", "Range_8h.html", [
-      [ "Range", "classMath_1_1Range.html", "classMath_1_1Range" ]
+      [ "Range", "classCore_1_1Math_1_1Range.html", "classCore_1_1Math_1_1Range" ]
     ] ],
     [ "ServoControl.cpp", "ServoControl_8cpp.html", null ],
     [ "ServoControl.h", "ServoControl_8h.html", [
@@ -68,7 +68,7 @@ var files =
     ] ],
     [ "ThreadHelper.cpp", "ThreadHelper_8cpp.html", null ],
     [ "ThreadHelper.h", "ThreadHelper_8h.html", [
-      [ "ThreadHelper", "classThreadHelper.html", "classThreadHelper" ]
+      [ "ThreadHelper", "classCore_1_1ThreadHelper.html", "classCore_1_1ThreadHelper" ]
     ] ],
     [ "UserLED.cpp", "UserLED_8cpp.html", "UserLED_8cpp" ],
     [ "UserLED.h", "UserLED_8h.html", [

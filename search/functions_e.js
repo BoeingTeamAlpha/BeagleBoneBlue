@@ -18,8 +18,8 @@ var searchData=
   ['setvalue',['setValue',['../classCore_1_1IO_1_1Output.html#a07bdc8e3bbaedf9113bd56fe50c85131',1,'Core::IO::Output']]],
   ['sharedmemorypointer',['sharedMemoryPointer',['../classCore_1_1ManagerPRUs.html#a37cc0dc9399c97db8b2767e56ccbff34',1,'Core::ManagerPRUs::sharedMemoryPointer()'],['../classCore_1_1ManagerPRUs.html#a1f1ad1b102d20c105f8c0d4681e9f254',1,'Core::ManagerPRUs::sharedMemoryPointer() const']]],
   ['startboththreads',['startBothThreads',['../classVehicleControl_1_1Bluetooth_1_1Base.html#a6c41447b1283d1b90459cbdae3a54480',1,'VehicleControl::Bluetooth::Base']]],
-  ['startdetachedthread',['startDetachedThread',['../classThreadHelper.html#a4426e115e7858a4b6f6eedbc77302756',1,'ThreadHelper']]],
-  ['startjoinablethread',['startJoinableThread',['../classThreadHelper.html#a72a59017668c01cbbfa3dd21935737e4',1,'ThreadHelper']]],
+  ['startdetachedthread',['startDetachedThread',['../classCore_1_1ThreadHelper.html#a138066760eabf36c1681bbd177db0446',1,'Core::ThreadHelper']]],
+  ['startjoinablethread',['startJoinableThread',['../classCore_1_1ThreadHelper.html#a2b0da5295a7f195cee5614acf97533c2',1,'Core::ThreadHelper']]],
   ['startreadthread',['startReadThread',['../classVehicleControl_1_1Bluetooth_1_1Base.html#a0d454a071fb0e38cf668cb82d5f93a3c',1,'VehicleControl::Bluetooth::Base']]],
   ['startwritethread',['startWriteThread',['../classVehicleControl_1_1Bluetooth_1_1Base.html#a73cb44dceb3bf46a3fb2acce2091be2a',1,'VehicleControl::Bluetooth::Base']]],
   ['state',['state',['../classCore_1_1IO_1_1UserLED.html#a5d7887f070c9ce082f8be1d3aae448d2',1,'Core::IO::UserLED']]]

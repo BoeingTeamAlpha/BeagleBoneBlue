@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['threadhelper',['ThreadHelper',['../classThreadHelper.html',1,'']]],
+  ['threadhelper',['ThreadHelper',['../classCore_1_1ThreadHelper.html',1,'Core']]],
   ['threadhelper_2ecpp',['ThreadHelper.cpp',['../ThreadHelper_8cpp.html',1,'']]],
   ['threadhelper_2eh',['ThreadHelper.h',['../ThreadHelper_8h.html',1,'']]],
   ['three',['Three',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a623764be8e77450606390480c15a907a',1,'Core::IO::MotorControl::Motor']]],

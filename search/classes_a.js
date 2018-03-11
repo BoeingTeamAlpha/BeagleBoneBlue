@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['threadhelper',['ThreadHelper',['../classThreadHelper.html',1,'']]]
+  ['threadhelper',['ThreadHelper',['../classCore_1_1ThreadHelper.html',1,'Core']]]
 ];
