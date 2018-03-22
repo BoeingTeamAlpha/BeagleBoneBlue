@@ -6,11 +6,12 @@
 #define BOEINGSURFACEVEHICLECONTROL_H_
 
 #include <vector>
-#include "BluetoothClient.h"
-#include "BluetoothServer.h"
+#include "BluetoothInterface.h"
+#include "BluetoothDefinitions.h"
+//#include "BluetoothServer.h"
 #include "UserLED.h"
 
-//#define RunBluetooth ( 1 )
+#define RunBluetooth ( 1 )
 // Forwared declarations
 namespace Core {
 namespace IO {
@@ -26,7 +27,7 @@ namespace VehicleControl {
  * @brief	The Control class is the main object of the application. This object wraps all of the
  *			IO and vehicle control logic.
  */
-class Control
+class Control : public Bluetooth::Manager::Interface
 {
 private:
 
@@ -72,13 +73,20 @@ private:
 	// the led just blinks to signify the app is still running properly.
 	Core::IO::UserLED _runningLED;
 
+	uint8_t _receiveMessage[ NumberOfBytesPerReceiveMessage ];
+	uint8_t _sendMessage[ NumberOfBytesPerSendMessage ];
+
+	size_t _receiveMessageSize;
+	size_t _sendMessageSize;
+
 #if defined( RunBluetooth )
 	// bluetooth client and server
 	// @todo does these two classes need to be wrapped in a Device class?
-	Bluetooth::Client _client;
-	Bluetooth::Server _server;
+//	Bluetooth::Client _client;
+	Bluetooth::Manager _manager;
 #endif
 
+	int stateChange( Bluetooth::Manager::State::Enum newState );
 public:
 
 	// TODO: Remove after testing!!
@@ -143,6 +151,11 @@ private:
 	 * @param on true to run servos, falls to turn them off
 	 */
 	void setServoPower( bool on );
+
+	/**
+	 * @brief addPIDFile method adds the pid to the file
+	 */
+	void addPIDFile();
 };
 
 } // namespace VehicleControl
