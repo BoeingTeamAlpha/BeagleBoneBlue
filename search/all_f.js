@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['server',['Server',['../classVehicleControl_1_1Bluetooth_1_1Server.html',1,'VehicleControl::Bluetooth::Server'],['../classVehicleControl_1_1Bluetooth_1_1Server.html#a71e526977ad6225f87b2b962820931a9',1,'VehicleControl::Bluetooth::Server::Server()']]],
+  ['senddata',['sendData',['../classVehicleControl_1_1Bluetooth_1_1Manager.html#a01832c6e997c7a249c84e50fb1e1fd09',1,'VehicleControl::Bluetooth::Manager']]],
   ['servocontrol',['ServoControl',['../classCore_1_1IO_1_1ServoControl.html',1,'Core::IO::ServoControl'],['../classCore_1_1IO_1_1ServoControl.html#a412496bdd5277be241f38e2dc5847551',1,'Core::IO::ServoControl::ServoControl()']]],
   ['servocontrol_2ecpp',['ServoControl.cpp',['../ServoControl_8cpp.html',1,'']]],
   ['servocontrol_2eh',['ServoControl.h',['../ServoControl_8h.html',1,'']]],
@@ -18,18 +18,15 @@ var searchData=
   ['setprustate',['setPRUState',['../classCore_1_1ManagerPRUs.html#a3303f0d20e87b425a1f083240a8ee63b',1,'Core::ManagerPRUs']]],
   ['setpulsewidth',['setPulseWidth',['../classCore_1_1IO_1_1MotorControl.html#ac8c377620913c11472dc67a4bb9622b6',1,'Core::IO::MotorControl::setPulseWidth(uint32_t pulseWidth)'],['../classCore_1_1IO_1_1MotorControl.html#af0424b335abad2270205f6fb4c4350d5',1,'Core::IO::MotorControl::setPulseWidth(uint32_t finalPulseWidth, uint32_t rampTime)']]],
   ['setstate',['setState',['../classCore_1_1IO_1_1UserLED.html#ac39c3ed451b83046ff37ecb4ccff142c',1,'Core::IO::UserLED']]],
-  ['setup',['Setup',['../structCore_1_1IO_1_1Output_1_1Setup.html',1,'Core::IO::Output::Setup'],['../structCore_1_1IO_1_1UserLED_1_1Setup.html',1,'Core::IO::UserLED::Setup'],['../structCore_1_1IO_1_1Input_1_1Setup.html',1,'Core::IO::Input::Setup'],['../structCore_1_1IO_1_1Input_1_1Setup.html#a493b98ee230283215bd55b7ba739f60a',1,'Core::IO::Input::Setup::Setup()'],['../structCore_1_1IO_1_1Output_1_1Setup.html#aa94d399cf6e529ff662a8d31f38bd35c',1,'Core::IO::Output::Setup::Setup()'],['../structCore_1_1IO_1_1UserLED_1_1Setup.html#a72bdd70912a6322aba2da15c28a84fbe',1,'Core::IO::UserLED::Setup::Setup()']]],
-  ['setupsocket',['setupSocket',['../classVehicleControl_1_1Bluetooth_1_1Base.html#aa491a785ca4b2feee3bc3d8ea876c59e',1,'VehicleControl::Bluetooth::Base']]],
+  ['setup',['Setup',['../structCore_1_1IO_1_1UserLED_1_1Setup.html',1,'Core::IO::UserLED::Setup'],['../structCore_1_1IO_1_1Input_1_1Setup.html',1,'Core::IO::Input::Setup'],['../structCore_1_1IO_1_1Output_1_1Setup.html',1,'Core::IO::Output::Setup'],['../structCore_1_1IO_1_1Input_1_1Setup.html#a493b98ee230283215bd55b7ba739f60a',1,'Core::IO::Input::Setup::Setup()'],['../structCore_1_1IO_1_1Output_1_1Setup.html#aa94d399cf6e529ff662a8d31f38bd35c',1,'Core::IO::Output::Setup::Setup()'],['../structCore_1_1IO_1_1UserLED_1_1Setup.html#a72bdd70912a6322aba2da15c28a84fbe',1,'Core::IO::UserLED::Setup::Setup()']]],
   ['setvalue',['setValue',['../classCore_1_1IO_1_1Output.html#a07bdc8e3bbaedf9113bd56fe50c85131',1,'Core::IO::Output']]],
   ['seven',['Seven',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a1ab71bcc37950c5ab1985dcf06bb95a4',1,'Core::IO::MotorControl::Motor']]],
   ['sharedmemorypointer',['sharedMemoryPointer',['../classCore_1_1ManagerPRUs.html#a37cc0dc9399c97db8b2767e56ccbff34',1,'Core::ManagerPRUs::sharedMemoryPointer()'],['../classCore_1_1ManagerPRUs.html#a1f1ad1b102d20c105f8c0d4681e9f254',1,'Core::ManagerPRUs::sharedMemoryPointer() const']]],
   ['six',['Six',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a161b31d40930fd9d8682d1b1ef521c9c',1,'Core::IO::MotorControl::Motor']]],
   ['sixteenthseconddebouncetime',['SixteenthSecondDebounceTime',['../IOFactory_8cpp.html#a55bf770e523650f8740e9be621f2a726',1,'IOFactory.cpp']]],
-  ['startboththreads',['startBothThreads',['../classVehicleControl_1_1Bluetooth_1_1Base.html#a6c41447b1283d1b90459cbdae3a54480',1,'VehicleControl::Bluetooth::Base']]],
   ['startdetachedthread',['startDetachedThread',['../classCore_1_1ThreadHelper.html#a138066760eabf36c1681bbd177db0446',1,'Core::ThreadHelper']]],
   ['startjoinablethread',['startJoinableThread',['../classCore_1_1ThreadHelper.html#a2b0da5295a7f195cee5614acf97533c2',1,'Core::ThreadHelper']]],
-  ['startreadthread',['startReadThread',['../classVehicleControl_1_1Bluetooth_1_1Base.html#a0d454a071fb0e38cf668cb82d5f93a3c',1,'VehicleControl::Bluetooth::Base']]],
   ['startroutine',['StartRoutine',['../classCore_1_1ThreadHelper.html#a80b11534e1793349fc4666aed731cc51',1,'Core::ThreadHelper']]],
-  ['startwritethread',['startWriteThread',['../classVehicleControl_1_1Bluetooth_1_1Base.html#a73cb44dceb3bf46a3fb2acce2091be2a',1,'VehicleControl::Bluetooth::Base']]],
-  ['state',['State',['../structCore_1_1IO_1_1UserLED_1_1State.html',1,'Core::IO::UserLED::State'],['../classCore_1_1IO_1_1UserLED.html#a5d7887f070c9ce082f8be1d3aae448d2',1,'Core::IO::UserLED::state() const']]]
+  ['state',['State',['../structVehicleControl_1_1Bluetooth_1_1Manager_1_1State.html',1,'VehicleControl::Bluetooth::Manager::State'],['../structCore_1_1IO_1_1UserLED_1_1State.html',1,'Core::IO::UserLED::State'],['../classCore_1_1IO_1_1UserLED.html#a5d7887f070c9ce082f8be1d3aae448d2',1,'Core::IO::UserLED::state() const']]],
+  ['statechange',['stateChange',['../classVehicleControl_1_1Bluetooth_1_1Manager.html#a6c4f1ace33ee61455961e225cb90cde9',1,'VehicleControl::Bluetooth::Manager::stateChange()'],['../classVehicleControl_1_1Bluetooth_1_1Manager_1_1Interface.html#adf1d527fd5918781dc1e157325501dc0',1,'VehicleControl::Bluetooth::Manager::Interface::stateChange()']]]
 ];

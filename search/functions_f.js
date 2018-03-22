@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['toggleoutput',['toggleOutput',['../classCore_1_1IO_1_1Output.html#a9fff26b25ba74b5ddbd4781f90d11c88',1,'Core::IO::Output::toggleOutput()'],['../classCore_1_1IO_1_1Output.html#a22eae1b59ff21d5534d4d03acaa1dc74',1,'Core::IO::Output::toggleOutput(int time)'],['../classCore_1_1IO_1_1Output.html#ad9c42acc335466a06713874b8fc8aa39',1,'Core::IO::Output::toggleOutput(int numberOfTimes, int time)']]]
+  ['update',['update',['../classVehicleControl_1_1Control.html#af677fb9565407041290bbf7b681802e5',1,'VehicleControl::Control']]],
+  ['userled',['UserLED',['../classCore_1_1IO_1_1UserLED.html#a05d1f33cbf17cdb0974a06a03f5fbd01',1,'Core::IO::UserLED']]]
 ];

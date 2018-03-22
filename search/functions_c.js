@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['path',['path',['../classCore_1_1IO_1_1IOBase.html#adb7dec70c1c39b19d2166c8fdea6b1f9',1,'Core::IO::IOBase']]],
-  ['pulsewidth',['pulseWidth',['../classCore_1_1IO_1_1MotorControl.html#a97ccba74028ff6057d25fe794350ab7f',1,'Core::IO::MotorControl']]]
+  ['range',['Range',['../classCore_1_1Math_1_1Range.html#ac9e923afd780b6ff7b1cb2ef64cc2865',1,'Core::Math::Range::Range(const DataType &amp;lowValue, const DataType &amp;highValue)'],['../classCore_1_1Math_1_1Range.html#a6bbda5ee43af803f4bb933396d48c85a',1,'Core::Math::Range::range() const']]],
+  ['read',['read',['../classCore_1_1IO_1_1IOBase.html#ab27139c5454e00719c3b5d8d17d6a8e8',1,'Core::IO::IOBase']]],
+  ['receivedata',['receiveData',['../classVehicleControl_1_1Bluetooth_1_1Manager.html#ae92751dc904b98458bf42aebe57fffe7',1,'VehicleControl::Bluetooth::Manager']]],
+  ['restartprus',['restartPRUs',['../classCore_1_1ManagerPRUs.html#aea4054de5437c5ff8775633ca1ef1308',1,'Core::ManagerPRUs']]]
 ];

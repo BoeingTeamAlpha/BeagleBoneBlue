@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['client',['Client',['../classVehicleControl_1_1Bluetooth_1_1Client.html',1,'VehicleControl::Bluetooth']]],
-  ['control',['Control',['../classVehicleControl_1_1Control.html',1,'VehicleControl']]]
+  ['direction',['Direction',['../structCore_1_1IO_1_1IOBase_1_1Direction.html',1,'Core::IO::IOBase']]]
 ];

@@ -1,19 +1,19 @@
 var files =
 [
-    [ "BluetoothBase.cpp", "BluetoothBase_8cpp.html", null ],
-    [ "BluetoothBase.h", "BluetoothBase_8h.html", [
-      [ "Base", "classVehicleControl_1_1Bluetooth_1_1Base.html", "classVehicleControl_1_1Bluetooth_1_1Base" ]
-    ] ],
-    [ "BluetoothClient.cpp", "BluetoothClient_8cpp.html", "BluetoothClient_8cpp" ],
-    [ "BluetoothClient.h", "BluetoothClient_8h.html", [
-      [ "Client", "classVehicleControl_1_1Bluetooth_1_1Client.html", "classVehicleControl_1_1Bluetooth_1_1Client" ]
-    ] ],
+    [ "BluetoothClient.cpp", "BluetoothClient_8cpp.html", null ],
+    [ "BluetoothClient.h", "BluetoothClient_8h.html", null ],
     [ "BluetoothDefinitions.h", "BluetoothDefinitions_8h.html", "BluetoothDefinitions_8h" ],
-    [ "BluetoothServer.cpp", "BluetoothServer_8cpp.html", null ],
-    [ "BluetoothServer.h", "BluetoothServer_8h.html", [
-      [ "Server", "classVehicleControl_1_1Bluetooth_1_1Server.html", "classVehicleControl_1_1Bluetooth_1_1Server" ]
+    [ "BluetoothInterface.h", "BluetoothInterface_8h.html", [
+      [ "Interface", "classVehicleControl_1_1Bluetooth_1_1Manager_1_1Interface.html", "classVehicleControl_1_1Bluetooth_1_1Manager_1_1Interface" ]
     ] ],
-    [ "BoeingSurfaceVehicleControl.cpp", "BoeingSurfaceVehicleControl_8cpp.html", null ],
+    [ "BluetoothManager.cpp", "BluetoothManager_8cpp.html", null ],
+    [ "BluetoothManager.h", "BluetoothManager_8h.html", [
+      [ "Manager", "classVehicleControl_1_1Bluetooth_1_1Manager.html", "classVehicleControl_1_1Bluetooth_1_1Manager" ],
+      [ "State", "structVehicleControl_1_1Bluetooth_1_1Manager_1_1State.html", "structVehicleControl_1_1Bluetooth_1_1Manager_1_1State" ]
+    ] ],
+    [ "BluetoothServer.cpp", "BluetoothServer_8cpp.html", null ],
+    [ "BluetoothServer.h", "BluetoothServer_8h.html", null ],
+    [ "BoeingSurfaceVehicleControl.cpp", "BoeingSurfaceVehicleControl_8cpp.html", "BoeingSurfaceVehicleControl_8cpp" ],
     [ "BoeingSurfaceVehicleControl.h", "BoeingSurfaceVehicleControl_8h.html", "BoeingSurfaceVehicleControl_8h" ],
     [ "Input.cpp", "Input_8cpp.html", "Input_8cpp" ],
     [ "Input.h", "Input_8h.html", [

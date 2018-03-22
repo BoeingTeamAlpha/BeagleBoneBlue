@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['three',['Three',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a623764be8e77450606390480c15a907a',1,'Core::IO::MotorControl::Motor']]],
-  ['two',['Two',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a684756b18d0e2d94f32bf8f198b8842e',1,'Core::IO::MotorControl::Motor']]]
+  ['servopowerenable',['ServoPowerEnable',['../structVehicleControl_1_1IO_1_1OutputList.html#a371729ed6a94a1deaed1cea3404a9a5fabb4b63113da82cea56157cc239eeaf01',1,'VehicleControl::IO::OutputList']]],
+  ['seven',['Seven',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a1ab71bcc37950c5ab1985dcf06bb95a4',1,'Core::IO::MotorControl::Motor']]],
+  ['six',['Six',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a161b31d40930fd9d8682d1b1ef521c9c',1,'Core::IO::MotorControl::Motor']]]
 ];

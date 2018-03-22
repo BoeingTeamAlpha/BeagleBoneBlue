@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['userone',['UserOne',['../structCore_1_1IO_1_1UserLED_1_1LED.html#a4c6f93e30c9e9dc2a36fb1d643f006f5acca62a441435ddc6bf338a0dae5acc2a',1,'Core::IO::UserLED::LED']]],
-  ['userthree',['UserThree',['../structCore_1_1IO_1_1UserLED_1_1LED.html#a4c6f93e30c9e9dc2a36fb1d643f006f5a30a08c562cab02ca21299598f6042d11',1,'Core::IO::UserLED::LED']]],
-  ['usertwo',['UserTwo',['../structCore_1_1IO_1_1UserLED_1_1LED.html#a4c6f93e30c9e9dc2a36fb1d643f006f5a6353956af498ebfaebd5667c887e10c8',1,'Core::IO::UserLED::LED']]],
-  ['userzero',['UserZero',['../structCore_1_1IO_1_1UserLED_1_1LED.html#a4c6f93e30c9e9dc2a36fb1d643f006f5a0d562c28f86c31d375589a07ee0c859e',1,'Core::IO::UserLED::LED']]]
+  ['three',['Three',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a623764be8e77450606390480c15a907a',1,'Core::IO::MotorControl::Motor']]],
+  ['two',['Two',['../structCore_1_1IO_1_1MotorControl_1_1Motor.html#ad57aaa2c69eae2d1729d2135f480a791a684756b18d0e2d94f32bf8f198b8842e',1,'Core::IO::MotorControl::Motor']]]
 ];
