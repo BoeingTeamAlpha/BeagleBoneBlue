@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "Boeing Surface Vehicle", "index.html", [
+    [ "BeagleBoneBlueLibrary", "md__home_jc_Documents_School_SeniorDesign_ControlCode_MainApplication_BBBLibrary_README.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
@@ -36,7 +37,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BluetoothClient_8cpp.html",
-"structCore_1_1IO_1_1IOBase_1_1Value.html#ad969d8eeefcce7e43b935445fab56c9ead45e97f98b818508f68048ce7c7048ee"
+"structLibBBB_1_1IO_1_1IOBase_1_1Value.html#a1d784148a69f20fdf131756e88a0aeefa44cfa4bb598b1c892380c45b967b8650"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

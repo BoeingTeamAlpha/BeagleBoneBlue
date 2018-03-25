@@ -2,9 +2,9 @@ var searchData=
 [
   ['beagleblue',['BeagleBlue',['../BluetoothDefinitions_8h.html#a0b0f56aa6dd85a933a745d6fe4934aca',1,'BluetoothDefinitions.h']]],
   ['beaglebluebluetoothaddress',['BeagleBlueBluetoothAddress',['../BluetoothDefinitions_8h.html#ab8e857e740d3878ff22556bca0a25542',1,'BluetoothDefinitions.h']]],
-  ['blinking',['Blinking',['../structCore_1_1IO_1_1UserLED_1_1State.html#a0b645de2a55245a39d37442d0f0e0a85a934733ddf33686422f8fd724a9caa6d9',1,'Core::IO::UserLED::State']]],
-  ['blinknumber',['blinkNumber',['../structCore_1_1IO_1_1UserLED_1_1Setup.html#a0005615f1214dbafd2114d6c4899be64',1,'Core::IO::UserLED::Setup']]],
-  ['blinkperiod',['blinkPeriod',['../structCore_1_1IO_1_1UserLED_1_1Setup.html#af06a81acf4e058d50f02ad79bc63e749',1,'Core::IO::UserLED::Setup']]],
+  ['blinking',['Blinking',['../structLibBBB_1_1IO_1_1UserLED_1_1State.html#a248d1dd9a0eae7250ecaf7b11773695ba6debe78bd9e78b55e4c789f9c427105d',1,'LibBBB::IO::UserLED::State']]],
+  ['blinknumber',['blinkNumber',['../structLibBBB_1_1IO_1_1UserLED_1_1Setup.html#a87f0dd905fe6dec631989ed41103cf93',1,'LibBBB::IO::UserLED::Setup']]],
+  ['blinkperiod',['blinkPeriod',['../structLibBBB_1_1IO_1_1UserLED_1_1Setup.html#ae1495ad46ece352cd74d4a6ccce72b17',1,'LibBBB::IO::UserLED::Setup']]],
   ['bluetoothclient_2ecpp',['BluetoothClient.cpp',['../BluetoothClient_8cpp.html',1,'']]],
   ['bluetoothclient_2eh',['BluetoothClient.h',['../BluetoothClient_8h.html',1,'']]],
   ['bluetoothdefinitions_2eh',['BluetoothDefinitions.h',['../BluetoothDefinitions_8h.html',1,'']]],
@@ -15,5 +15,6 @@ var searchData=
   ['bluetoothserver_2eh',['BluetoothServer.h',['../BluetoothServer_8h.html',1,'']]],
   ['boeingsurfacevehiclecontrol_2ecpp',['BoeingSurfaceVehicleControl.cpp',['../BoeingSurfaceVehicleControl_8cpp.html',1,'']]],
   ['boeingsurfacevehiclecontrol_2eh',['BoeingSurfaceVehicleControl.h',['../BoeingSurfaceVehicleControl_8h.html',1,'']]],
-  ['both',['Both',['../structCore_1_1IO_1_1Input_1_1Edge.html#a2e53ea28b8f8931cab264e9f9832877aa09da03d1375b5193ec154e47d228992b',1,'Core::IO::Input::Edge']]]
+  ['both',['Both',['../structLibBBB_1_1IO_1_1Input_1_1Edge.html#a72e10b0719bf2d5fac5723efd655508baf9ce3b3d042e66bbcda142327113faf9',1,'LibBBB::IO::Input::Edge']]],
+  ['beaglebonebluelibrary',['BeagleBoneBlueLibrary',['../md__home_jc_Documents_School_SeniorDesign_ControlCode_MainApplication_BBBLibrary_README.html',1,'']]]
 ];

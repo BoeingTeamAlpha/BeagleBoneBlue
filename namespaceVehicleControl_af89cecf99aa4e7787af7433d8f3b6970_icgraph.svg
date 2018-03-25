@@ -18,33 +18,33 @@
 <!-- Node5 -->
 <g id="node2" class="node">
 <title>Node5</title>
-<g id="a_node2"><a xlink:href="classCore_1_1IO_1_1Input.html#af505f10ed01aa26257a8709ba7211ba6" target="_top" xlink:title="setEdgeCallback setter ">
-<polygon fill="#ffffff" stroke="#000000" points="167.834,-90.5 167.834,-122.5 291.651,-122.5 291.651,-90.5 167.834,-90.5"/>
-<text text-anchor="start" x="175.834" y="-109.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Core::IO::Input::setEdge</text>
-<text text-anchor="middle" x="229.7425" y="-97.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Callback</text>
+<g id="a_node2"><a xlink:href="classLibBBB_1_1IO_1_1Input.html#ab581bd59f9ca5bfb2e45ebdc81b5e3cc" target="_top" xlink:title="setEdgeCallback setter ">
+<polygon fill="#ffffff" stroke="#000000" points="180.337,-90.5 180.337,-122.5 279.148,-122.5 279.148,-90.5 180.337,-90.5"/>
+<text text-anchor="start" x="188.337" y="-109.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
+<text text-anchor="middle" x="229.7425" y="-97.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">setEdgeCallback</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge1" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M108.9691,-74.2273C127.8114,-79.2623 149.6863,-85.1076 169.601,-90.4292"/>
+<path fill="none" stroke="#191970" d="M109.0325,-74.2442C131.2894,-80.1917 157.7669,-87.2669 180.245,-93.2734"/>
 <polygon fill="#191970" stroke="#191970" points="109.6974,-70.7992 99.1328,-71.5989 107.8903,-77.5619 109.6974,-70.7992"/>
 </g>
 <!-- Node6 -->
 <g id="node3" class="node">
 <title>Node6</title>
-<g id="a_node3"><a xlink:href="structCore_1_1IO_1_1Input_1_1Setup.html#a493b98ee230283215bd55b7ba739f60a" target="_top" xlink:title="Core::IO::Input::Setup\l::Setup">
-<polygon fill="#ffffff" stroke="#000000" points="339.57,-70.5 339.57,-102.5 452.828,-102.5 452.828,-70.5 339.57,-70.5"/>
-<text text-anchor="start" x="347.57" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Core::IO::Input::Setup</text>
-<text text-anchor="middle" x="396.199" y="-77.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::Setup</text>
+<g id="a_node3"><a xlink:href="structLibBBB_1_1IO_1_1Input_1_1Setup.html#a1ad926b46c1818dd934b0b99ddb63386" target="_top" xlink:title="LibBBB::IO::Input::\lSetup::Setup">
+<polygon fill="#ffffff" stroke="#000000" points="346.7935,-70.5 346.7935,-102.5 445.6045,-102.5 445.6045,-70.5 346.7935,-70.5"/>
+<text text-anchor="start" x="354.7935" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
+<text text-anchor="middle" x="396.199" y="-77.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Setup::Setup</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node6 -->
 <g id="edge3" class="edge">
 <title>Node4&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M132.8044,-66.8354C194.4761,-71.4397 282.3738,-78.002 339.3562,-82.2562"/>
+<path fill="none" stroke="#191970" d="M132.8318,-66.8375C197.1861,-71.642 290.0814,-78.5774 346.6149,-82.7981"/>
 <polygon fill="#191970" stroke="#191970" points="132.9912,-63.3397 122.7583,-66.0854 132.4699,-70.3203 132.9912,-63.3397"/>
 </g>
 <!-- Node7 -->
@@ -66,8 +66,8 @@
 <!-- Node5&#45;&gt;Node6 -->
 <g id="edge2" class="edge">
 <title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M301.7303,-97.8506C314.3282,-96.3369 327.276,-94.7812 339.3906,-93.3256"/>
-<polygon fill="#191970" stroke="#191970" points="301.2358,-94.3847 291.7248,-99.0527 302.0709,-101.3347 301.2358,-94.3847"/>
+<path fill="none" stroke="#191970" d="M289.1791,-99.3586C307.9884,-97.0986 328.5675,-94.626 346.6105,-92.4581"/>
+<polygon fill="#191970" stroke="#191970" points="288.7453,-95.8855 279.2343,-100.5535 289.5804,-102.8355 288.7453,-95.8855"/>
 </g>
 <!-- Node8 -->
 <g id="node5" class="node">

@@ -97,28 +97,29 @@ Include dependency graph for Input.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="Input_8h__dep__incl.svg" width="560" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="Input_8h__dep__incl.svg" width="560" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="Input_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore_1_1IO_1_1Input.html">Core::IO::Input</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classCore_1_1IO_1_1Input.html" title="The Input class represents a GPIO pin that is set up as an input. This class allows the user to add a...">Input</a> class represents a GPIO pin that is set up as an input. This class allows the user to add a callback function to either the rising, falling, or both edges of the input. This means that the function will automatically be called when its respective edge event happens. There are two different ways to use the edge callback: 1) <a class="el" href="classCore_1_1IO_1_1Input.html#a6ebaffcb31befe3e8ad3f1c753875499" title="waitForEdge method is a blocking wait for edge. Therefore, the callee will halt its thread until this...">waitForEdge()</a> - where it blocks until the edge event happens. 2) waitForEdgeThreaded - which does the same thing, without blocking. If edge events are undesired, there are standard methods to just query the state of the input.  <a href="classCore_1_1IO_1_1Input.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLibBBB_1_1IO_1_1Input.html">LibBBB::IO::Input</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classLibBBB_1_1IO_1_1Input.html" title="The Input class represents a GPIO pin that is set up as an input. This class allows the user to add a...">Input</a> class represents a GPIO pin that is set up as an input. This class allows the user to add a callback function to either the rising, falling, or both edges of the input. This means that the function will automatically be called when its respective edge event happens. There are two different ways to use the edge callback: 1) <a class="el" href="classLibBBB_1_1IO_1_1Input.html#a0934c43a3f6be5e62dfc733552e5074d" title="waitForEdge method is a blocking wait for edge. Therefore, the callee will halt its thread until this...">waitForEdge()</a> - where it blocks until the edge event happens. 2) waitForEdgeThreaded - which does the same thing, without blocking. If edge events are undesired, there are standard methods to just query the state of the input.  <a href="classLibBBB_1_1IO_1_1Input.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCore_1_1IO_1_1Input_1_1Edge.html">Core::IO::Input::Edge</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structCore_1_1IO_1_1Input_1_1Edge.html" title="The Edge struct holds the enum that represents the edge events. ">Edge</a> struct holds the enum that represents the edge events.  <a href="structCore_1_1IO_1_1Input_1_1Edge.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLibBBB_1_1IO_1_1Input_1_1Edge.html">LibBBB::IO::Input::Edge</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structLibBBB_1_1IO_1_1Input_1_1Edge.html" title="The Edge struct holds the enum that represents the edge events. ">Edge</a> struct holds the enum that represents the edge events.  <a href="structLibBBB_1_1IO_1_1Input_1_1Edge.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCore_1_1IO_1_1Input_1_1Setup.html">Core::IO::Input::Setup</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structCore_1_1IO_1_1Input_1_1Setup.html" title="The Setup struct represents the settings that an input can have. This struct makes it easier to creat...">Setup</a> struct represents the settings that an input can have. This struct makes it easier to create an input because it allows the input's constructor to have a single arguement instead of an arguement for each setting.  <a href="structCore_1_1IO_1_1Input_1_1Setup.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLibBBB_1_1IO_1_1Input_1_1Setup.html">LibBBB::IO::Input::Setup</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structLibBBB_1_1IO_1_1Input_1_1Setup.html" title="The Setup struct represents the settings that an input can have. This struct makes it easier to creat...">Setup</a> struct represents the settings that an input can have. This struct makes it easier to create an input because it allows the input's constructor to have a single arguement instead of an arguement for each setting.  <a href="structLibBBB_1_1IO_1_1Input_1_1Setup.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespaceCore"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCore.html">Core</a></td></tr>
+<tr class="memitem:namespaceLibBBB"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLibBBB.html">LibBBB</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceCore_1_1IO"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCore_1_1IO.html">Core::IO</a></td></tr>
+<tr class="memitem:namespaceLibBBB_1_1IO"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceLibBBB_1_1IO.html">LibBBB::IO</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -126,7 +127,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_1b81b61ac01831e6061e0ad968e64f03.html">MainApplication</a></li><li class="navelem"><a class="el" href="dir_a54a9d1e3981ccde17cbf064713c5f47.html">Headers</a></li><li class="navelem"><a class="el" href="dir_587822e9450c57c1a0a775b467122bbe.html">Core</a></li><li class="navelem"><a class="el" href="dir_603d4fcf0b1278ffc5d1fb3e6da40016.html">IO</a></li><li class="navelem"><a class="el" href="Input_8h.html">Input.h</a></li>
+    <li class="navelem"><a class="el" href="dir_1b81b61ac01831e6061e0ad968e64f03.html">MainApplication</a></li><li class="navelem"><a class="el" href="dir_987148c65bc53438ab99c2dd2af7d909.html">BBBLibrary</a></li><li class="navelem"><a class="el" href="dir_586f5b2a9f6dd58bc54f17b6475358e1.html">Headers</a></li><li class="navelem"><a class="el" href="dir_5b9f316a7023f874b09d502e0bf491b2.html">IO</a></li><li class="navelem"><a class="el" href="Input_8h.html">Input.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>

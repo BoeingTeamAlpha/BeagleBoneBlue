@@ -1,5 +1,5 @@
 var annotated_dup =
 [
-    [ "Core", "namespaceCore.html", "namespaceCore" ],
+    [ "LibBBB", "namespaceLibBBB.html", "namespaceLibBBB" ],
     [ "VehicleControl", "namespaceVehicleControl.html", "namespaceVehicleControl" ]
 ];
