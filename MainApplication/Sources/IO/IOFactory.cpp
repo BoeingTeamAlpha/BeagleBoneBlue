@@ -12,7 +12,7 @@
 #define SixteenthSecondDebounceTime ( 62 )
 #define EighthSecondDebounceTime ( 125 )
 
-using namespace Core::IO;
+using namespace LibBBB::IO;
 namespace VehicleControl {
 
 int callback( int /* message */ )

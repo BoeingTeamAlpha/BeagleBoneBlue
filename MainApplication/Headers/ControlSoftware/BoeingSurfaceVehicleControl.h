@@ -13,7 +13,7 @@
 
 #define RunBluetooth ( 1 )
 // Forwared declarations
-namespace Core {
+namespace LibBBB {
 namespace IO {
 class Input;
 class Output;
@@ -47,9 +47,9 @@ private:
 public:
 
 	// Typedefs of the input and output lists
-	typedef std::vector< Core::IO::Input* > InputList;
-	typedef std::vector< Core::IO::Output* > OutputList;
-	typedef std::vector< Core::IO::MotorControl* > ServoList;
+	typedef std::vector< LibBBB::IO::Input* > InputList;
+	typedef std::vector< LibBBB::IO::Output* > OutputList;
+	typedef std::vector< LibBBB::IO::MotorControl* > ServoList;
 
 private:
 
@@ -67,11 +67,11 @@ private:
 	ServoList _servos;
 
 	// led that turns on when the bluetooth tablet is connected
-	Core::IO::UserLED _bluetoothConnectedLED;
+	LibBBB::IO::UserLED _bluetoothConnectedLED;
 
 	// this led is a status LED of the program. During normal operation,
 	// the led just blinks to signify the app is still running properly.
-	Core::IO::UserLED _runningLED;
+	LibBBB::IO::UserLED _runningLED;
 
 	uint8_t _receiveMessage[ NumberOfBytesPerReceiveMessage ];
 	uint8_t _sendMessage[ NumberOfBytesPerSendMessage ];
@@ -90,7 +90,7 @@ private:
 public:
 
 	// TODO: Remove after testing!!
-	Core::IO::UserLED _red;
+	LibBBB::IO::UserLED _red;
 
 	/**
 	 * @brief	instance method is the Singleton method of creating and accessing this

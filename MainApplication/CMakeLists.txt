@@ -14,20 +14,24 @@ set( CMAKE_BUILD_TYPE Release )
 # Add compiler flags
 set( CMAKE_CXX_FLAGS "-Wall" )
 
+# Bring in the Beagle Bone Blue library
+include_directories( ${CMAKE_SOURCE_DIR}/BBBLibrary/Headers )
+include_directories( ${CMAKE_SOURCE_DIR}/BBBLibrary/Headers/IO )
+include_directories( ${CMAKE_SOURCE_DIR}/BBBLibrary/Headers/Bluetooth )
+include_directories( ${CMAKE_SOURCE_DIR}/BBBLibrary/Headers/Math )
+include_directories( ${CMAKE_SOURCE_DIR}/BBBLibrary/Headers/MotorControl )
+include_directories( ${CMAKE_SOURCE_DIR}/BBBLibrary/Headers/PRU )
+
 # Bring in the project headers
 include_directories( ${CMAKE_SOURCE_DIR}/Headers )
 include_directories( ${CMAKE_SOURCE_DIR}/Headers/Bluetooth )
 include_directories( ${CMAKE_SOURCE_DIR}/Headers/ControlSoftware )
-include_directories( ${CMAKE_SOURCE_DIR}/Headers/Core )
-include_directories( ${CMAKE_SOURCE_DIR}/Headers/Core/IO )
-include_directories( ${CMAKE_SOURCE_DIR}/Headers/Core/MotorControl )
-include_directories( ${CMAKE_SOURCE_DIR}/Headers/Core/PRU )
 include_directories( ${CMAKE_SOURCE_DIR}/Headers/IO )
 
 # Add all of the files to the build
-file( GLOB_RECURSE Headers "Headers/*.h" )
-file( GLOB_RECURSE Sources "Sources/*.c" "Sources/*.cpp" )
-file( GLOB_RECURSE Sources "*.cpp" )
+file( GLOB_RECURSE Headers ${CMAKE_SOURCE_DIR}/Headers/*.h )
+file( GLOB_RECURSE Headers ${CMAKE_SOURCE_DIR}/*.h )
+file( GLOB_RECURSE Sources ${CMAKE_SOURCE_DIR}/*.cpp ${CMAKE_SOURCE_DIR}/Sources/*.cpp )
 
 # Add the executable output
 add_executable( ${PROJECT_NAME} ${Headers} ${Sources} )

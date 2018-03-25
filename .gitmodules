@@ -1,0 +1,3 @@
+[submodule "MainApplication/BBBLibrary"]
+	path = MainApplication/BBBLibrary
+	url = git@github.com:jdickerson80/BeagleBoneBlueLibrary.git

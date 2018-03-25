@@ -8,7 +8,7 @@
 #define PRU_NUM 	0
 
 using namespace VehicleControl;
-using namespace Core::IO;
+using namespace LibBBB::IO;
 
 int main()
 {
@@ -29,7 +29,7 @@ int main()
 	 * manager::instance to allow Linux to catch up after we set up
 	 * the OCP port mem map.
 	 */
-	Core::ManagerPRUs::instance();
+	LibBBB::ManagerPRUs::instance();
 
 	usleep( 500000 );
 	Control& control = Control::instance();

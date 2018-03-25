@@ -29,8 +29,8 @@ Control::Control()
 	, _inputs( IO::InputList::NUM_INPUTS )
 	, _outputs( IO::OutputList::NUM_OUTPUTS )
 	, _servos( IO::ServoList::NUM_SERVOS )
-	, _bluetoothConnectedLED( Core::IO::UserLED::Setup( Core::IO::UserLED::LED::UserTwo ) )
-	, _runningLED( Core::IO::UserLED::Setup( Core::IO::UserLED::LED::UserThree ) )
+	, _bluetoothConnectedLED( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::UserTwo ) )
+	, _runningLED( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::UserThree ) )
 #if defined( RunBluetooth )
 //	, _client( peerAdress )
 	, _manager( peerAdress
@@ -38,7 +38,7 @@ Control::Control()
 				, (Bluetooth::Manager::Interface*)this
 				, (Bluetooth::Manager::stateChange)&VehicleControl::Control::stateChange )
 #endif
-	, _red( Core::IO::UserLED::Setup( Core::IO::UserLED::LED::Red ) )
+	, _red( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::Red ) )
 {
 	// check if the file exists
 	if ( access( PID_PATH, F_OK ) == 0 )
@@ -78,7 +78,7 @@ Control::Control()
 	signal( SIGTERM, signalHandler );
 
 	// set the running LED to its normal blinking
-	_runningLED.setState( Core::IO::UserLED::State::Blinking, -1, 900 );
+	_runningLED.setState( LibBBB::IO::UserLED::State::Blinking, -1, 900 );
 
 	_receiveMessageSize = sizeof( _receiveMessage ) / sizeof( _receiveMessage[ 0 ] );
 	_sendMessageSize = sizeof( _sendMessage ) / sizeof( _sendMessage[ 0 ] );
@@ -93,11 +93,11 @@ int Control::stateChange(Bluetooth::Manager::State::Enum newState)
 
 	if ( newState == Bluetooth::Manager::State::Connected )
 	{
-		_red.setState( Core::IO::UserLED::State::On );
+		_red.setState( LibBBB::IO::UserLED::State::On );
 	}
 	else
 	{
-		_red.setState( Core::IO::UserLED::State::Off );
+		_red.setState( LibBBB::IO::UserLED::State::Off );
 	}
 
 	return 0;
@@ -233,7 +233,7 @@ void Control::signalHandler( int signal )
 
 void Control::setServoPower( bool on )
 {
-	_outputs[ IO::OutputList::ServoPowerEnable ]->setValue( ( Core::IO::Output::Value::Enum ) on );
+	_outputs[ IO::OutputList::ServoPowerEnable ]->setValue( ( LibBBB::IO::Output::Value::Enum ) on );
 }
 
 void Control::addPIDFile()
