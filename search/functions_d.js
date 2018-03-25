@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['senddata',['sendData',['../classVehicleControl_1_1Bluetooth_1_1Manager.html#a01832c6e997c7a249c84e50fb1e1fd09',1,'VehicleControl::Bluetooth::Manager']]],
+  ['senddata',['sendData',['../classLibBBB_1_1Bluetooth_1_1Manager.html#ab5be022ea6825ad678443bfba58294fb',1,'LibBBB::Bluetooth::Manager']]],
   ['servocontrol',['ServoControl',['../classLibBBB_1_1IO_1_1ServoControl.html#aa3b9715605e607c96eda2ec4e5514b14',1,'LibBBB::IO::ServoControl']]],
   ['setactivehighorlow',['setActiveHighOrLow',['../classLibBBB_1_1IO_1_1IOBase.html#aa98e79cb377720c663e79411a32a5678',1,'LibBBB::IO::IOBase']]],
   ['setdebouncetime',['setDebounceTime',['../classLibBBB_1_1IO_1_1Input.html#a042ab20fe19f0ca17d09bf22bb16b2bf',1,'LibBBB::IO::Input']]],
@@ -19,5 +19,5 @@ var searchData=
   ['startdetachedthread',['startDetachedThread',['../classLibBBB_1_1ThreadHelper.html#a6999e18135496ef252b1c43c374c20f9',1,'LibBBB::ThreadHelper']]],
   ['startjoinablethread',['startJoinableThread',['../classLibBBB_1_1ThreadHelper.html#a068eff4b68a89c09c63d8780621b431a',1,'LibBBB::ThreadHelper']]],
   ['state',['state',['../classLibBBB_1_1IO_1_1UserLED.html#a98c0a865b590a4149e3b5a8d8c97d6cd',1,'LibBBB::IO::UserLED']]],
-  ['statechange',['stateChange',['../classVehicleControl_1_1Bluetooth_1_1Manager_1_1Interface.html#adf1d527fd5918781dc1e157325501dc0',1,'VehicleControl::Bluetooth::Manager::Interface']]]
+  ['statechange',['stateChange',['../classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html#a4d89d1228bf44378c0caf37fddac40dc',1,'LibBBB::Bluetooth::Manager::Interface']]]
 ];

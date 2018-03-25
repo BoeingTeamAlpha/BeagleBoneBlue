@@ -5,10 +5,10 @@
  -->
 <!-- Title: LibBBB::ThreadHelper::startDetachedThread Pages: 1 -->
 <svg width="780pt" height="362pt"
- viewBox="0.00 0.00 780.42 362.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ viewBox="0.00 0.00 780.41 362.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 358)">
 <title>LibBBB::ThreadHelper::startDetachedThread</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-358 776.419,-358 776.419,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-358 776.409,-358 776.409,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
@@ -19,249 +19,249 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="classVehicleControl_1_1Bluetooth_1_1Manager.html#a7f49ac22adfb97732952694307580f68" target="_top" xlink:title="Base constructor. ">
-<polygon fill="#ffffff" stroke="#000000" points="152.02,-321.5 152.02,-353.5 280.826,-353.5 280.826,-321.5 152.02,-321.5"/>
-<text text-anchor="start" x="160.02" y="-340.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::Bluetooth</text>
-<text text-anchor="middle" x="216.423" y="-328.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::Manager::Manager</text>
+<g id="a_node2"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#a45351ad3dd38356327e9b4785874fdff" target="_top" xlink:title="Base constructor. ">
+<polygon fill="#ffffff" stroke="#000000" points="165.0675,-321.5 165.0675,-353.5 267.7685,-353.5 267.7685,-321.5 165.0675,-321.5"/>
+<text text-anchor="start" x="173.0675" y="-340.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::Bluetooth::</text>
+<text text-anchor="middle" x="216.418" y="-328.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Manager::Manager</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="#191970" d="M75.7084,-236.8154C93.0098,-259.1041 121.1876,-291.7096 152.02,-312.5 156.8927,-315.7857 162.2596,-318.7295 167.753,-321.3419"/>
-<polygon fill="#191970" stroke="#191970" points="78.4683,-234.6625 69.6271,-228.8243 72.8978,-238.9017 78.4683,-234.6625"/>
+<path fill="none" stroke="#191970" d="M75.7085,-236.8152C93.01,-259.1038 121.1878,-291.7092 152.02,-312.5 156.8924,-315.7855 162.2588,-318.7292 167.7518,-321.3416"/>
+<polygon fill="#191970" stroke="#191970" points="78.4684,-234.6623 69.6272,-228.8242 72.898,-238.9015 78.4684,-234.6623"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="classVehicleControl_1_1Bluetooth_1_1Manager.html#a01832c6e997c7a249c84e50fb1e1fd09" target="_top" xlink:title="VehicleControl::Bluetooth\l::Manager::sendData">
-<polygon fill="#ffffff" stroke="#000000" points="152.02,-270.5 152.02,-302.5 280.826,-302.5 280.826,-270.5 152.02,-270.5"/>
-<text text-anchor="start" x="160.02" y="-289.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::Bluetooth</text>
-<text text-anchor="middle" x="216.423" y="-277.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::Manager::sendData</text>
+<g id="a_node3"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#ab5be022ea6825ad678443bfba58294fb" target="_top" xlink:title="LibBBB::Bluetooth::\lManager::sendData">
+<polygon fill="#ffffff" stroke="#000000" points="164.516,-270.5 164.516,-302.5 268.32,-302.5 268.32,-270.5 164.516,-270.5"/>
+<text text-anchor="start" x="172.516" y="-289.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::Bluetooth::</text>
+<text text-anchor="middle" x="216.418" y="-277.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Manager::sendData</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="#191970" d="M95.8601,-233.4422C112.8226,-242.5104 133.2066,-252.9768 152.02,-261.5 158.7935,-264.5687 166.0637,-267.6173 173.1926,-270.4757"/>
-<polygon fill="#191970" stroke="#191970" points="97.2835,-230.2334 86.8202,-228.5693 93.962,-236.3952 97.2835,-230.2334"/>
+<path fill="none" stroke="#191970" d="M95.8602,-233.4419C112.8228,-242.5101 133.2067,-252.9766 152.02,-261.5 158.793,-264.5686 166.0626,-267.6172 173.191,-270.4755"/>
+<polygon fill="#191970" stroke="#191970" points="97.2836,-230.2331 86.8203,-228.5691 93.9622,-236.395 97.2836,-230.2331"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="classVehicleControl_1_1Bluetooth_1_1Manager.html#ae92751dc904b98458bf42aebe57fffe7" target="_top" xlink:title="VehicleControl::Bluetooth\l::Manager::receiveData">
-<polygon fill="#ffffff" stroke="#000000" points="152.02,-219.5 152.02,-251.5 280.826,-251.5 280.826,-219.5 152.02,-219.5"/>
-<text text-anchor="start" x="160.02" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::Bluetooth</text>
-<text text-anchor="middle" x="216.423" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::Manager::receiveData</text>
+<g id="a_node4"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#abeb866a806df04176dc152b157907fe9" target="_top" xlink:title="LibBBB::Bluetooth::\lManager::receiveData">
+<polygon fill="#ffffff" stroke="#000000" points="159.242,-219.5 159.242,-251.5 273.594,-251.5 273.594,-219.5 159.242,-219.5"/>
+<text text-anchor="start" x="167.242" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::Bluetooth::</text>
+<text text-anchor="middle" x="216.418" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Manager::receiveData</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M126.0638,-222.3807C134.6443,-223.6265 143.403,-224.8982 151.9261,-226.1357"/>
-<polygon fill="#191970" stroke="#191970" points="126.4968,-218.907 116.0976,-220.9338 125.491,-225.8344 126.4968,-218.907"/>
+<path fill="none" stroke="#191970" d="M126.0998,-222.3863C137.1098,-223.9849 148.4121,-225.6259 159.1329,-227.1825"/>
+<polygon fill="#191970" stroke="#191970" points="126.495,-218.907 116.0958,-220.9338 125.4891,-225.8344 126.495,-218.907"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:href="classLibBBB_1_1IO_1_1Input.html#a3a448ebc4e13f3813b6b80566af3fe79" target="_top" xlink:title="waitForEdgeThreaded does the same thing as waitForEdge(), but does so in a threaded manner...">
-<polygon fill="#ffffff" stroke="#000000" points="320.7105,-185.5 320.7105,-217.5 435.6215,-217.5 435.6215,-185.5 320.7105,-185.5"/>
-<text text-anchor="start" x="328.7105" y="-204.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
-<text text-anchor="middle" x="378.166" y="-192.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">waitForEdgeThreaded</text>
+<polygon fill="#ffffff" stroke="#000000" points="320.7005,-185.5 320.7005,-217.5 435.6115,-217.5 435.6115,-185.5 320.7005,-185.5"/>
+<text text-anchor="start" x="328.7005" y="-204.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
+<text text-anchor="middle" x="378.156" y="-192.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">waitForEdgeThreaded</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M126.4938,-210.147C184.2598,-208.1623 266.0089,-205.3535 320.4875,-203.4817"/>
-<polygon fill="#191970" stroke="#191970" points="126.2332,-206.6538 116.3593,-210.4952 126.4736,-213.6497 126.2332,-206.6538"/>
+<path fill="none" stroke="#191970" d="M126.4917,-210.147C184.2558,-208.1623 266.0024,-205.3535 320.4793,-203.4817"/>
+<polygon fill="#191970" stroke="#191970" points="126.2313,-206.6538 116.3575,-210.4952 126.4718,-213.6497 126.2313,-206.6538"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
 <g id="a_node8"><a xlink:href="classLibBBB_1_1IO_1_1MotorControl.html#a55cb5ace57f63ba73e679b5f79c3459a" target="_top" xlink:title="MotorControl ServoControl constructor creates the class, and spawns the frequency control thread...">
-<polygon fill="#ffffff" stroke="#000000" points="152.025,-129.5 152.025,-161.5 280.821,-161.5 280.821,-129.5 152.025,-129.5"/>
-<text text-anchor="start" x="160.025" y="-148.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::MotorControl</text>
-<text text-anchor="middle" x="216.423" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::MotorControl</text>
+<polygon fill="#ffffff" stroke="#000000" points="152.02,-129.5 152.02,-161.5 280.816,-161.5 280.816,-129.5 152.02,-129.5"/>
+<text text-anchor="start" x="160.02" y="-148.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::MotorControl</text>
+<text text-anchor="middle" x="216.418" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::MotorControl</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="#191970" d="M105.3392,-192.4824C128.7239,-182.5919 156.5582,-170.8195 178.5145,-161.5332"/>
-<polygon fill="#191970" stroke="#191970" points="103.8006,-189.3329 95.9539,-196.4518 106.5274,-195.7799 103.8006,-189.3329"/>
+<path fill="none" stroke="#191970" d="M105.3377,-192.4824C128.7217,-182.5919 156.5551,-170.8195 178.5107,-161.5332"/>
+<polygon fill="#191970" stroke="#191970" points="103.7993,-189.3328 95.9527,-196.4518 106.5262,-195.7798 103.7993,-189.3328"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
 <g id="a_node9"><a xlink:href="classLibBBB_1_1IO_1_1UserLED.html#a5d6714d1ddc854308c1d4cc5448ded07" target="_top" xlink:title="setState method sets the state of the LED ">
-<polygon fill="#ffffff" stroke="#000000" points="160.637,-69.5 160.637,-101.5 272.209,-101.5 272.209,-69.5 160.637,-69.5"/>
-<text text-anchor="start" x="168.637" y="-88.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::UserLED</text>
-<text text-anchor="middle" x="216.423" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::setState</text>
+<polygon fill="#ffffff" stroke="#000000" points="160.632,-69.5 160.632,-101.5 272.204,-101.5 272.204,-69.5 160.632,-69.5"/>
+<text text-anchor="start" x="168.632" y="-88.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::UserLED</text>
+<text text-anchor="middle" x="216.418" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::setState</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node9 -->
 <g id="edge9" class="edge">
 <title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="#191970" d="M78.7384,-188.8262C96.8195,-169.0494 124.4134,-140.8917 152.02,-120.5 161.437,-113.5441 172.4033,-107.0675 182.589,-101.624"/>
-<polygon fill="#191970" stroke="#191970" points="75.9319,-186.7119 71.8315,-196.4811 81.1291,-191.4013 75.9319,-186.7119"/>
+<path fill="none" stroke="#191970" d="M78.7386,-188.8264C96.8197,-169.0497 124.4137,-140.8921 152.02,-120.5 161.4364,-113.5444 172.4017,-107.0678 182.5867,-101.6244"/>
+<polygon fill="#191970" stroke="#191970" points="75.9321,-186.7121 71.8316,-196.4813 81.1293,-191.4015 75.9321,-186.7121"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:href="classLibBBB_1_1IO_1_1Input.html#a4e59f6e2c64f7a85adff569daf35b3d3" target="_top" xlink:title="Input constructs an input based on the given setup. The constructor will automatically export the pin...">
-<polygon fill="#ffffff" stroke="#000000" points="497.163,-230.5 497.163,-262.5 595.974,-262.5 595.974,-230.5 497.163,-230.5"/>
-<text text-anchor="start" x="505.163" y="-249.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
-<text text-anchor="middle" x="546.5685" y="-237.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Input</text>
+<polygon fill="#ffffff" stroke="#000000" points="497.153,-230.5 497.153,-262.5 595.964,-262.5 595.964,-230.5 497.153,-230.5"/>
+<text text-anchor="start" x="505.153" y="-249.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
+<text text-anchor="middle" x="546.5585" y="-237.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Input</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M445.608,-219.5217C462.7496,-224.1022 480.8569,-228.9408 496.9308,-233.236"/>
-<polygon fill="#191970" stroke="#191970" points="446.2142,-216.0609 435.6496,-216.8606 444.407,-222.8236 446.2142,-216.0609"/>
+<path fill="none" stroke="#191970" d="M445.598,-219.5217C462.7396,-224.1022 480.8469,-228.9408 496.9208,-233.236"/>
+<polygon fill="#191970" stroke="#191970" points="446.2042,-216.0609 435.6396,-216.8606 444.397,-222.8236 446.2042,-216.0609"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:href="structLibBBB_1_1IO_1_1Input_1_1Setup.html#a1ad926b46c1818dd934b0b99ddb63386" target="_top" xlink:title="LibBBB::IO::Input::\lSetup::Setup">
-<polygon fill="#ffffff" stroke="#000000" points="663.6195,-166.5 663.6195,-198.5 762.4305,-198.5 762.4305,-166.5 663.6195,-166.5"/>
-<text text-anchor="start" x="671.6195" y="-185.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
-<text text-anchor="middle" x="713.025" y="-173.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Setup::Setup</text>
+<polygon fill="#ffffff" stroke="#000000" points="663.6095,-166.5 663.6095,-198.5 762.4205,-198.5 762.4205,-166.5 663.6095,-166.5"/>
+<text text-anchor="start" x="671.6095" y="-185.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
+<text text-anchor="middle" x="713.015" y="-173.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Setup::Setup</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node5&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M445.804,-197.6622C510.3007,-194.0026 605.9047,-188.578 663.564,-185.3064"/>
-<polygon fill="#191970" stroke="#191970" points="445.516,-194.1728 435.7303,-198.2338 445.9126,-201.1616 445.516,-194.1728"/>
+<path fill="none" stroke="#191970" d="M445.794,-197.6622C510.2907,-194.0026 605.8947,-188.578 663.554,-185.3064"/>
+<polygon fill="#191970" stroke="#191970" points="445.506,-194.1728 435.7203,-198.2338 445.9026,-201.1616 445.506,-194.1728"/>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M598.0499,-226.7062C621.5868,-217.6566 649.1083,-207.075 671.323,-198.5338"/>
-<polygon fill="#191970" stroke="#191970" points="596.6503,-223.4945 588.5725,-230.3501 599.1625,-230.0282 596.6503,-223.4945"/>
+<path fill="none" stroke="#191970" d="M598.0399,-226.7062C621.5768,-217.6566 649.0983,-207.075 671.313,-198.5338"/>
+<polygon fill="#191970" stroke="#191970" points="596.6403,-223.4945 588.5625,-230.3501 599.1525,-230.0282 596.6403,-223.4945"/>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
 <g id="a_node10"><a xlink:href="namespaceVehicleControl.html#af89cecf99aa4e7787af7433d8f3b6970" target="_top" xlink:title="VehicleControl::callback">
-<polygon fill="#ffffff" stroke="#000000" points="316.826,-102.5 316.826,-122.5 439.506,-122.5 439.506,-102.5 316.826,-102.5"/>
-<text text-anchor="middle" x="378.166" y="-109.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::callback</text>
+<polygon fill="#ffffff" stroke="#000000" points="316.816,-102.5 316.816,-122.5 439.496,-122.5 439.496,-102.5 316.816,-102.5"/>
+<text text-anchor="middle" x="378.156" y="-109.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::callback</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node10 -->
 <g id="edge10" class="edge">
 <title>Node9&#45;&gt;Node10</title>
-<path fill="none" stroke="#191970" d="M282.6834,-96.5609C294.3799,-98.5135 306.4981,-100.5364 318.0152,-102.4589"/>
-<polygon fill="#191970" stroke="#191970" points="282.9788,-93.0619 272.5389,-94.8675 281.8261,-99.9664 282.9788,-93.0619"/>
+<path fill="none" stroke="#191970" d="M282.6763,-96.5609C294.3724,-98.5135 306.4903,-100.5364 318.0071,-102.4589"/>
+<polygon fill="#191970" stroke="#191970" points="282.972,-93.0619 272.5322,-94.8675 281.8194,-99.9664 282.972,-93.0619"/>
 </g>
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
 <g id="a_node14"><a xlink:href="classLibBBB_1_1IO_1_1UserLED.html#a3ae6a5944f06980dee85eb4504ec9eb0" target="_top" xlink:title="changeBlinkTime method changes the time of the blink ">
-<polygon fill="#ffffff" stroke="#000000" points="322.38,-50.5 322.38,-82.5 433.952,-82.5 433.952,-50.5 322.38,-50.5"/>
-<text text-anchor="start" x="330.38" y="-69.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::UserLED</text>
-<text text-anchor="middle" x="378.166" y="-57.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::changeBlinkTime</text>
+<polygon fill="#ffffff" stroke="#000000" points="322.37,-50.5 322.37,-82.5 433.942,-82.5 433.942,-50.5 322.37,-50.5"/>
+<text text-anchor="start" x="330.37" y="-69.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::UserLED</text>
+<text text-anchor="middle" x="378.156" y="-57.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::changeBlinkTime</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node14 -->
 <g id="edge16" class="edge">
 <title>Node9&#45;&gt;Node14</title>
-<path fill="none" stroke="#191970" d="M282.4787,-77.7404C295.6468,-76.1936 309.3575,-74.583 322.1493,-73.0803"/>
-<polygon fill="#191970" stroke="#191970" points="282.0623,-74.2652 272.5389,-78.908 282.879,-81.2174 282.0623,-74.2652"/>
+<path fill="none" stroke="#191970" d="M282.4716,-77.7404C295.6393,-76.1936 309.3496,-74.583 322.141,-73.0803"/>
+<polygon fill="#191970" stroke="#191970" points="282.0555,-74.2651 272.5322,-78.908 282.8723,-81.2173 282.0555,-74.2651"/>
 </g>
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
 <g id="a_node15"><a xlink:href="structLibBBB_1_1IO_1_1UserLED_1_1Setup.html#a25c259e98aa65d6594d0031eb0463b01" target="_top" xlink:title="LibBBB::IO::UserLED\l::Setup::Setup">
-<polygon fill="#ffffff" stroke="#000000" points="490.7825,-.5 490.7825,-32.5 602.3545,-32.5 602.3545,-.5 490.7825,-.5"/>
-<text text-anchor="start" x="498.7825" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::UserLED</text>
-<text text-anchor="middle" x="546.5685" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::Setup::Setup</text>
+<polygon fill="#ffffff" stroke="#000000" points="490.7725,-.5 490.7725,-32.5 602.3445,-32.5 602.3445,-.5 490.7725,-.5"/>
+<text text-anchor="start" x="498.7725" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::UserLED</text>
+<text text-anchor="middle" x="546.5585" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::Setup::Setup</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node15 -->
 <g id="edge18" class="edge">
 <title>Node9&#45;&gt;Node15</title>
-<path fill="none" stroke="#191970" d="M254.9589,-64.767C273.2124,-55.8587 295.6199,-46.2031 316.826,-40.5 374.7227,-24.9296 443.3487,-19.36 490.4276,-17.4207"/>
-<polygon fill="#191970" stroke="#191970" points="253.2021,-61.7321 245.8205,-69.3324 256.3305,-67.9942 253.2021,-61.7321"/>
+<path fill="none" stroke="#191970" d="M254.9519,-64.7669C273.2044,-55.8587 295.6108,-46.203 316.816,-40.5 374.7125,-24.929 443.3386,-19.3595 490.4175,-17.4204"/>
+<polygon fill="#191970" stroke="#191970" points="253.1953,-61.732 245.814,-69.3324 256.3239,-67.9939 253.1953,-61.732"/>
 </g>
 <!-- Node10&#45;&gt;Node7 -->
 <g id="edge13" class="edge">
 <title>Node10&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M414.6875,-126.0346C432.7852,-132.3476 455.0856,-139.5433 475.506,-144.5 539.6254,-160.064 615.0733,-170.8912 663.4416,-176.8999"/>
-<polygon fill="#191970" stroke="#191970" points="415.699,-122.6798 405.1043,-122.638 413.3605,-129.2777 415.699,-122.6798"/>
+<path fill="none" stroke="#191970" d="M414.6775,-126.0346C432.7752,-132.3476 455.0756,-139.5433 475.496,-144.5 539.6154,-160.064 615.0633,-170.8912 663.4316,-176.8999"/>
+<polygon fill="#191970" stroke="#191970" points="415.689,-122.6798 405.0943,-122.638 413.3505,-129.2777 415.689,-122.6798"/>
 </g>
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
 <g id="a_node11"><a xlink:href="classLibBBB_1_1IO_1_1Input.html#ab581bd59f9ca5bfb2e45ebdc81b5e3cc" target="_top" xlink:title="setEdgeCallback setter ">
-<polygon fill="#ffffff" stroke="#000000" points="497.163,-102.5 497.163,-134.5 595.974,-134.5 595.974,-102.5 497.163,-102.5"/>
-<text text-anchor="start" x="505.163" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
-<text text-anchor="middle" x="546.5685" y="-109.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">setEdgeCallback</text>
+<polygon fill="#ffffff" stroke="#000000" points="497.153,-102.5 497.153,-134.5 595.964,-134.5 595.964,-102.5 497.153,-102.5"/>
+<text text-anchor="start" x="505.153" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
+<text text-anchor="middle" x="546.5585" y="-109.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">setEdgeCallback</text>
 </a>
 </g>
 </g>
 <!-- Node10&#45;&gt;Node11 -->
 <g id="edge11" class="edge">
 <title>Node10&#45;&gt;Node11</title>
-<path fill="none" stroke="#191970" d="M450.1688,-115.0654C465.934,-115.6271 482.282,-116.2095 496.9388,-116.7317"/>
-<polygon fill="#191970" stroke="#191970" points="450.035,-111.5585 439.9166,-114.7001 449.7856,-118.554 450.035,-111.5585"/>
+<path fill="none" stroke="#191970" d="M450.1588,-115.0654C465.924,-115.6271 482.272,-116.2095 496.9288,-116.7317"/>
+<polygon fill="#191970" stroke="#191970" points="450.025,-111.5585 439.9066,-114.7001 449.7756,-118.554 450.025,-111.5585"/>
 </g>
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
 <g id="a_node12"><a xlink:href="namespaceVehicleControl.html#ab876bdb990021d96b1452a85b59f99d8" target="_top" xlink:title="VehicleControl::createRising\lEdgeThreadedInput">
-<polygon fill="#ffffff" stroke="#000000" points="475.506,-51.5 475.506,-83.5 617.631,-83.5 617.631,-51.5 475.506,-51.5"/>
-<text text-anchor="start" x="483.506" y="-70.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::createRising</text>
-<text text-anchor="middle" x="546.5685" y="-58.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">EdgeThreadedInput</text>
+<polygon fill="#ffffff" stroke="#000000" points="475.496,-51.5 475.496,-83.5 617.621,-83.5 617.621,-51.5 475.496,-51.5"/>
+<text text-anchor="start" x="483.496" y="-70.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::createRising</text>
+<text text-anchor="middle" x="546.5585" y="-58.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">EdgeThreadedInput</text>
 </a>
 </g>
 </g>
 <!-- Node10&#45;&gt;Node12 -->
 <g id="edge14" class="edge">
 <title>Node10&#45;&gt;Node12</title>
-<path fill="none" stroke="#191970" d="M425.7951,-99.7727C444.6374,-94.7377 466.5123,-88.8924 486.427,-83.5708"/>
-<polygon fill="#191970" stroke="#191970" points="424.7163,-96.4381 415.9588,-102.4011 426.5234,-103.2008 424.7163,-96.4381"/>
+<path fill="none" stroke="#191970" d="M425.7851,-99.7727C444.6274,-94.7377 466.5023,-88.8924 486.417,-83.5708"/>
+<polygon fill="#191970" stroke="#191970" points="424.7063,-96.4381 415.9488,-102.4011 426.5134,-103.2008 424.7063,-96.4381"/>
 </g>
 <!-- Node11&#45;&gt;Node7 -->
 <g id="edge12" class="edge">
 <title>Node11&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M598.0499,-138.2938C621.5868,-147.3434 649.1083,-157.925 671.323,-166.4662"/>
-<polygon fill="#191970" stroke="#191970" points="599.1625,-134.9718 588.5725,-134.6499 596.6503,-141.5055 599.1625,-134.9718"/>
+<path fill="none" stroke="#191970" d="M598.0399,-138.2938C621.5768,-147.3434 649.0983,-157.925 671.313,-166.4662"/>
+<polygon fill="#191970" stroke="#191970" points="599.1525,-134.9718 588.5625,-134.6499 596.6403,-141.5055 599.1525,-134.9718"/>
 </g>
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
 <g id="a_node13"><a xlink:href="classVehicleControl_1_1Control_1_1IOFactory.html#a4d4de0203bf577352199f49c67f49d98" target="_top" xlink:title="fillInputList method fills in all of the app&#39;s inputs ">
-<polygon fill="#ffffff" stroke="#000000" points="653.631,-51.5 653.631,-83.5 772.419,-83.5 772.419,-51.5 653.631,-51.5"/>
-<text text-anchor="start" x="661.631" y="-70.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::Control</text>
-<text text-anchor="middle" x="713.025" y="-58.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::IOFactory::fillInputList</text>
+<polygon fill="#ffffff" stroke="#000000" points="653.621,-51.5 653.621,-83.5 772.409,-83.5 772.409,-51.5 653.621,-51.5"/>
+<text text-anchor="start" x="661.621" y="-70.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::Control</text>
+<text text-anchor="middle" x="713.015" y="-58.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::IOFactory::fillInputList</text>
 </a>
 </g>
 </g>
 <!-- Node12&#45;&gt;Node13 -->
 <g id="edge15" class="edge">
 <title>Node12&#45;&gt;Node13</title>
-<path fill="none" stroke="#191970" d="M627.7674,-67.5C636.4218,-67.5 645.1054,-67.5 653.4437,-67.5"/>
-<polygon fill="#191970" stroke="#191970" points="627.6439,-64.0001 617.6439,-67.5 627.6438,-71.0001 627.6439,-64.0001"/>
+<path fill="none" stroke="#191970" d="M627.7574,-67.5C636.4118,-67.5 645.0954,-67.5 653.4337,-67.5"/>
+<polygon fill="#191970" stroke="#191970" points="627.6339,-64.0001 617.6339,-67.5 627.6338,-71.0001 627.6339,-64.0001"/>
 </g>
 <!-- Node14&#45;&gt;Node15 -->
 <g id="edge17" class="edge">
 <title>Node14&#45;&gt;Node15</title>
-<path fill="none" stroke="#191970" d="M442.0141,-47.543C458.6396,-42.6068 476.3913,-37.3362 492.4595,-32.5654"/>
-<polygon fill="#191970" stroke="#191970" points="440.9667,-44.2029 432.3766,-50.4045 442.9592,-50.9134 440.9667,-44.2029"/>
+<path fill="none" stroke="#191970" d="M442.0041,-47.543C458.6296,-42.6068 476.3813,-37.3362 492.4495,-32.5654"/>
+<polygon fill="#191970" stroke="#191970" points="440.9567,-44.2029 432.3666,-50.4045 442.9492,-50.9134 440.9567,-44.2029"/>
 </g>
 </g>
 </svg>

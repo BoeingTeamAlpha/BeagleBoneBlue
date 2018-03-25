@@ -4,12 +4,12 @@ var files =
     [ "BluetoothClient.h", "BluetoothClient_8h.html", null ],
     [ "BluetoothDefinitions.h", "BluetoothDefinitions_8h.html", "BluetoothDefinitions_8h" ],
     [ "BluetoothInterface.h", "BluetoothInterface_8h.html", [
-      [ "Interface", "classVehicleControl_1_1Bluetooth_1_1Manager_1_1Interface.html", "classVehicleControl_1_1Bluetooth_1_1Manager_1_1Interface" ]
+      [ "Interface", "classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html", "classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface" ]
     ] ],
     [ "BluetoothManager.cpp", "BluetoothManager_8cpp.html", null ],
     [ "BluetoothManager.h", "BluetoothManager_8h.html", [
-      [ "Manager", "classVehicleControl_1_1Bluetooth_1_1Manager.html", "classVehicleControl_1_1Bluetooth_1_1Manager" ],
-      [ "State", "structVehicleControl_1_1Bluetooth_1_1Manager_1_1State.html", "structVehicleControl_1_1Bluetooth_1_1Manager_1_1State" ]
+      [ "Manager", "classLibBBB_1_1Bluetooth_1_1Manager.html", "classLibBBB_1_1Bluetooth_1_1Manager" ],
+      [ "State", "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html", "structLibBBB_1_1Bluetooth_1_1Manager_1_1State" ]
     ] ],
     [ "BluetoothServer.cpp", "BluetoothServer_8cpp.html", null ],
     [ "BluetoothServer.h", "BluetoothServer_8h.html", null ],

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['connected',['Connected',['../structVehicleControl_1_1Bluetooth_1_1Manager_1_1State.html#ad10d83f0cb6b30bb4f7893ed72c90667a7d53b29edc928431e7e25811979e8cf6',1,'VehicleControl::Bluetooth::Manager::State']]],
-  ['connecting',['Connecting',['../structVehicleControl_1_1Bluetooth_1_1Manager_1_1State.html#ad10d83f0cb6b30bb4f7893ed72c90667a0379274e09ca10866b33427317abbccf',1,'VehicleControl::Bluetooth::Manager::State']]]
+  ['connected',['Connected',['../structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba94e78fb853397369855b8e1ce02cb2b5',1,'LibBBB::Bluetooth::Manager::State']]],
+  ['connecting',['Connecting',['../structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba5f833a8528e1ef72f5bf36a9e1316942',1,'LibBBB::Bluetooth::Manager::State']]]
 ];
