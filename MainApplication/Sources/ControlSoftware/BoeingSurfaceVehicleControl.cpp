@@ -24,7 +24,7 @@
 namespace VehicleControl {
 //std::string( "30:85:A9:E0:1F:9A" )
 Control::Control()
-	: Bluetooth::Manager::Interface()
+	: LibBBB::Bluetooth::Manager::Interface()
 	, _isRunning( true )
 	, _inputs( IO::InputList::NUM_INPUTS )
 	, _outputs( IO::OutputList::NUM_OUTPUTS )
@@ -35,8 +35,8 @@ Control::Control()
 //	, _client( peerAdress )
 	, _manager( peerAdress
 				, localAdress
-				, (Bluetooth::Manager::Interface*)this
-				, (Bluetooth::Manager::stateChange)&VehicleControl::Control::stateChange )
+				, (LibBBB::Bluetooth::Manager::Interface*)this
+				, (LibBBB::Bluetooth::Manager::stateChange)&VehicleControl::Control::stateChange )
 #endif
 	, _red( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::Red ) )
 {
@@ -87,11 +87,11 @@ Control::Control()
 	memset( (void*)&_sendMessage, 0, _sendMessageSize );
 }
 
-int Control::stateChange(Bluetooth::Manager::State::Enum newState)
+int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
 {
 	printf("control got new state %u\n", newState );
 
-	if ( newState == Bluetooth::Manager::State::Connected )
+	if ( newState == LibBBB::Bluetooth::Manager::State::Connected )
 	{
 		_red.setState( LibBBB::IO::UserLED::State::On );
 	}

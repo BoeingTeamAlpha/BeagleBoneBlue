@@ -27,7 +27,7 @@ namespace VehicleControl {
  * @brief	The Control class is the main object of the application. This object wraps all of the
  *			IO and vehicle control logic.
  */
-class Control : public Bluetooth::Manager::Interface
+class Control : public LibBBB::Bluetooth::Manager::Interface
 {
 private:
 
@@ -83,10 +83,10 @@ private:
 	// bluetooth client and server
 	// @todo does these two classes need to be wrapped in a Device class?
 //	Bluetooth::Client _client;
-	Bluetooth::Manager _manager;
+	LibBBB::Bluetooth::Manager _manager;
 #endif
 
-	int stateChange( Bluetooth::Manager::State::Enum newState );
+	int stateChange( LibBBB::Bluetooth::Manager::State::Enum newState );
 public:
 
 	// TODO: Remove after testing!!
