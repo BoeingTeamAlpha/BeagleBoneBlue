@@ -73,11 +73,7 @@ private:
 	// the led just blinks to signify the app is still running properly.
 	LibBBB::IO::UserLED _runningLED;
 
-	uint8_t _receiveMessage[ NumberOfBytesPerReceiveMessage ];
 	uint8_t _sendMessage[ NumberOfBytesPerSendMessage ];
-
-	size_t _receiveMessageSize;
-	size_t _sendMessageSize;
 
 #if defined( RunBluetooth )
 	// bluetooth client and server

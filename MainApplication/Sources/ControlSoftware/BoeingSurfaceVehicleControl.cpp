@@ -19,6 +19,9 @@
 #include "BluetoothDefinitions.h"
 #include "BluetoothManager.h"
 
+
+#include <time.h>
+
 #define PID_PATH ( "/var/run/BoeingSurfaceVehicle.pid" )
 
 namespace VehicleControl {
@@ -36,7 +39,10 @@ Control::Control()
 	, _manager( peerAdress
 				, localAdress
 				, (LibBBB::Bluetooth::Manager::Interface*)this
-				, (LibBBB::Bluetooth::Manager::stateChange)&VehicleControl::Control::stateChange )
+				, (LibBBB::Bluetooth::Manager::stateChange)&VehicleControl::Control::stateChange
+				, 4
+				, 4
+				, 250000 )
 #endif
 	, _red( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::Red ) )
 {
@@ -80,11 +86,9 @@ Control::Control()
 	// set the running LED to its normal blinking
 	_runningLED.setState( LibBBB::IO::UserLED::State::Blinking, -1, 900 );
 
-	_receiveMessageSize = sizeof( _receiveMessage ) / sizeof( _receiveMessage[ 0 ] );
-	_sendMessageSize = sizeof( _sendMessage ) / sizeof( _sendMessage[ 0 ] );
+	memset( (void*)&_sendMessage, 0, NumberOfBytesPerSendMessage );
 
-	memset( (void*)&_receiveMessage, 0, _receiveMessageSize );
-	memset( (void*)&_sendMessage, 0, _sendMessageSize );
+	srand( time( NULL) );
 }
 
 int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
@@ -124,16 +128,17 @@ void Control::update()
 	static unsigned int count;
 	if ( _manager.isConnected() )
 	{
-		ssize_t receivedMessage = _manager.receiveData( _receiveMessage, NumberOfBytesPerReceiveMessage );
+		const uint8_t* const receive = _manager.receiveData();
 
-		for ( int i = 0; i < receivedMessage; ++i )
+		for ( size_t i = 0; i < NumberOfBytesPerReceiveMessage; ++i )
 		{
-			printf("rec = %u\n", _receiveMessage[ i ] );
-			_receiveMessage[ i ] = 12;//_receiveMessage[ i ] + 1;
+			printf("rec = %u ", receive[ i ] );
+			_sendMessage[ i ] = rand() % 100;
+			printf("send = %u\n", _sendMessage[ i ] );
 		}
 
-		ssize_t sentMessage = _manager.sendData( _sendMessage, NumberOfBytesPerSendMessage );
-		printf("%i sent %i bytes rec %i bytes\n", count, sentMessage, receivedMessage );
+		_manager.sendData( _sendMessage );
+//		printf("%i sent %i bytes rec %i bytes\n", count, sentMessage, receivedMessage );
 		++count;
 	}
 //	static uint32_t width = 0;
