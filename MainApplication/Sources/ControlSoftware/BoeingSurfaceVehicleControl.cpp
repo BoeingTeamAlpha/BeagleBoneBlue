@@ -23,6 +23,7 @@
 #include <time.h>
 
 #define PID_PATH ( "/var/run/BoeingSurfaceVehicle.pid" )
+#define LOG_PATH ( "Log.txt" )
 
 namespace VehicleControl {
 //std::string( "30:85:A9:E0:1F:9A" )
@@ -32,7 +33,8 @@ Control::Control()
 	, _inputs( IO::InputList::NUM_INPUTS )
 	, _outputs( IO::OutputList::NUM_OUTPUTS )
 	, _servos( IO::ServoList::NUM_SERVOS )
-	, _bluetoothConnectedLED( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::UserTwo ) )
+	, _bluetoothConnectedLED( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::Green ) )
+	, _red( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::Red ) )
 	, _runningLED( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::UserThree ) )
 #if defined( RunBluetooth )
 //	, _client( peerAdress )
@@ -40,11 +42,10 @@ Control::Control()
 				, localAdress
 				, (LibBBB::Bluetooth::Manager::Interface*)this
 				, (LibBBB::Bluetooth::Manager::stateChange)&VehicleControl::Control::stateChange
-				, 4
-				, 4
+				, NumberOfBytesPerReceiveMessage
+				, NumberOfBytesPerSendMessage
 				, 250000 )
 #endif
-	, _red( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::Red ) )
 {
 	// check if the file exists
 	if ( access( PID_PATH, F_OK ) == 0 )
@@ -89,6 +90,26 @@ Control::Control()
 	memset( (void*)&_sendMessage, 0, NumberOfBytesPerSendMessage );
 
 	srand( time( NULL) );
+
+	FILE* file = fopen( LOG_PATH, "a" );
+
+	if ( file == NULL )
+	{
+		fprintf( stderr, "Cannot access log file\n" );
+		exit( EXIT_FAILURE );
+	}
+
+	time_t timer;
+	char buffer[ 26 ];
+	struct tm* tmInfo;
+
+	time( &timer );
+	tmInfo = localtime( &timer );
+
+	strftime( buffer, 26, "%Y-%m-%d %H:%M:%S", tmInfo );
+	fprintf( file, "\nNew log time is: %s\n", buffer );
+
+	fclose( file );
 }
 
 int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
@@ -97,11 +118,13 @@ int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
 
 	if ( newState == LibBBB::Bluetooth::Manager::State::Connected )
 	{
-		_red.setState( LibBBB::IO::UserLED::State::On );
+		_red.setState( LibBBB::IO::UserLED::State::Off );
+		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::On );
 	}
 	else
 	{
-		_red.setState( LibBBB::IO::UserLED::State::Off );
+		_red.setState( LibBBB::IO::UserLED::State::On );
+		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Off );
 	}
 
 	return 0;
@@ -130,13 +153,28 @@ void Control::update()
 	{
 		const uint8_t* const receive = _manager.receiveData();
 
-		for ( size_t i = 0; i < NumberOfBytesPerReceiveMessage; ++i )
+		FILE* file = fopen( LOG_PATH, "a" );
+
+		if ( file == NULL )
 		{
-			printf("rec = %u ", receive[ i ] );
-			_sendMessage[ i ] = rand() % 100;
-			printf("send = %u\n", _sendMessage[ i ] );
+			fprintf( stderr, "Cannot access log file\n" );
+			exit( EXIT_FAILURE );
 		}
 
+		for ( size_t i = 0; i < NumberOfBytesPerReceiveMessage; ++i )
+		{
+			printf("rec = %u\n", receive[ i ] );
+			fprintf( file, "rec = %u\n", receive[ i ] );
+		}
+
+		for ( size_t i = 0; i < NumberOfBytesPerSendMessage; ++i )
+		{
+			_sendMessage[ i ] = rand() % 100;
+			printf("send = %u\n", _sendMessage[ i ] );
+			fprintf( file, "send = %u\n", _sendMessage[ i ] );
+		}
+
+		fclose( file );
 		_manager.sendData( _sendMessage );
 //		printf("%i sent %i bytes rec %i bytes\n", count, sentMessage, receivedMessage );
 		++count;

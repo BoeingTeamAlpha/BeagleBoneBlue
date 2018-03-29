@@ -17,26 +17,26 @@ namespace VehicleControl {
 
 int callback( int /* message */ )
 {
-	UserLED& led = Control::instance()._red;
+//	UserLED& led = Control::instance()._red;
 
-//	printf("callback registered on pin %d\r\n", led.state() );
-	switch ( led.state() )
-	{
-	case UserLED::State::Blinking:
-		led.setState( UserLED::State::Off );
-//		printf("blinking\r\n");
-		break;
+////	printf("callback registered on pin %d\r\n", led.state() );
+//	switch ( led.state() )
+//	{
+//	case UserLED::State::Blinking:
+//		led.setState( UserLED::State::Off );
+////		printf("blinking\r\n");
+//		break;
 
-	case UserLED::State::Off:
-		led.setState( UserLED::State::On );
-//		printf("off\r\n");
-		break;
+//	case UserLED::State::Off:
+//		led.setState( UserLED::State::On );
+////		printf("off\r\n");
+//		break;
 
-	case UserLED::State::On:
-		led.setState( UserLED::State::Blinking, -1, 60 );
-//		printf("on\r\n");
-		break;
-	}
+//	case UserLED::State::On:
+//		led.setState( UserLED::State::Blinking, -1, 60 );
+////		printf("on\r\n");
+//		break;
+//	}
 	return 0;
 //	printf("left callback\r\n");
 }

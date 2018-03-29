@@ -68,6 +68,7 @@ private:
 
 	// led that turns on when the bluetooth tablet is connected
 	LibBBB::IO::UserLED _bluetoothConnectedLED;
+	LibBBB::IO::UserLED _red;
 
 	// this led is a status LED of the program. During normal operation,
 	// the led just blinks to signify the app is still running properly.
@@ -85,8 +86,6 @@ private:
 	int stateChange( LibBBB::Bluetooth::Manager::State::Enum newState );
 public:
 
-	// TODO: Remove after testing!!
-	LibBBB::IO::UserLED _red;
 
 	/**
 	 * @brief	instance method is the Singleton method of creating and accessing this
