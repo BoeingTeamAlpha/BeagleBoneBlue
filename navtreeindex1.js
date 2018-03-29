@@ -1,13 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"structLibBBB_1_1IO_1_1IOBase_1_1Direction.html":[3,0,0,1,1,0],
-"structLibBBB_1_1IO_1_1IOBase_1_1Direction.html#a22e565ba4f7b7b85170b3e6e5cb084d2":[3,0,0,1,1,0,0],
-"structLibBBB_1_1IO_1_1IOBase_1_1Direction.html#a22e565ba4f7b7b85170b3e6e5cb084d2a2bdf5808594f62d79c15e99cbd7f48fe":[3,0,0,1,1,0,0,0],
-"structLibBBB_1_1IO_1_1IOBase_1_1Direction.html#a22e565ba4f7b7b85170b3e6e5cb084d2a519b4d0e68b6cc70dd68cf3b01c8a0a5":[3,0,0,1,1,0,0,1],
-"structLibBBB_1_1IO_1_1IOBase_1_1Value.html":[3,0,0,1,1,1],
-"structLibBBB_1_1IO_1_1IOBase_1_1Value.html#a1d784148a69f20fdf131756e88a0aeef":[3,0,0,1,1,1,0],
-"structLibBBB_1_1IO_1_1IOBase_1_1Value.html#a1d784148a69f20fdf131756e88a0aeefa44cfa4bb598b1c892380c45b967b8650":[3,0,0,1,1,1,0,1],
-"structLibBBB_1_1IO_1_1IOBase_1_1Value.html#a1d784148a69f20fdf131756e88a0aeefa566ca0b42bbfdbcd3af13e92be4dfbd9":[3,0,0,1,1,1,0,0],
 "structLibBBB_1_1IO_1_1Input_1_1Edge.html":[3,0,0,1,0,0],
 "structLibBBB_1_1IO_1_1Input_1_1Edge.html#a72e10b0719bf2d5fac5723efd655508b":[3,0,0,1,0,0,0],
 "structLibBBB_1_1IO_1_1Input_1_1Edge.html#a72e10b0719bf2d5fac5723efd655508ba2a480988c956ebaa76c28c28f30ee1ff":[3,0,0,1,0,0,0,1],

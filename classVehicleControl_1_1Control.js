@@ -9,6 +9,5 @@ var classVehicleControl_1_1Control =
     [ "isRunning", "classVehicleControl_1_1Control.html#a8242c18c2d4eb8cede01197068794ee4", null ],
     [ "outputs", "classVehicleControl_1_1Control.html#a570034bbe20182b6f23be725e6db00c9", null ],
     [ "outputs", "classVehicleControl_1_1Control.html#af4a1b0bf7931a83b9c1b80d27ebaae8f", null ],
-    [ "update", "classVehicleControl_1_1Control.html#af677fb9565407041290bbf7b681802e5", null ],
-    [ "_red", "classVehicleControl_1_1Control.html#a802720d3f5286215efbc21ad4b9c975a", null ]
+    [ "update", "classVehicleControl_1_1Control.html#af677fb9565407041290bbf7b681802e5", null ]
 ];

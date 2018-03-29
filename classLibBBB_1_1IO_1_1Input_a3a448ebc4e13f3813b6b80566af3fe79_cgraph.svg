@@ -9,16 +9,16 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 37)">
 <title>LibBBB::IO::Input::waitForEdgeThreaded</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-37 270.931,-37 270.931,4 -4,4"/>
-<!-- Node47 -->
+<!-- Node44 -->
 <g id="node1" class="node">
-<title>Node47</title>
+<title>Node44</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-32.5 114.911,-32.5 114.911,-.5 0,-.5"/>
 <text text-anchor="start" x="8" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::IO::Input::</text>
 <text text-anchor="middle" x="57.4555" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">waitForEdgeThreaded</text>
 </g>
-<!-- Node48 -->
+<!-- Node45 -->
 <g id="node2" class="node">
-<title>Node48</title>
+<title>Node45</title>
 <g id="a_node2"><a xlink:href="classLibBBB_1_1ThreadHelper.html#a6999e18135496ef252b1c43c374c20f9" target="_top" xlink:title="startDetachedThread ">
 <polygon fill="#ffffff" stroke="#000000" points="150.911,-.5 150.911,-32.5 266.931,-32.5 266.931,-.5 150.911,-.5"/>
 <text text-anchor="start" x="158.911" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::ThreadHelper</text>
@@ -26,9 +26,9 @@
 </a>
 </g>
 </g>
-<!-- Node47&#45;&gt;Node48 -->
+<!-- Node44&#45;&gt;Node45 -->
 <g id="edge1" class="edge">
-<title>Node47&#45;&gt;Node48</title>
+<title>Node44&#45;&gt;Node45</title>
 <path fill="none" stroke="#191970" d="M115.1502,-16.5C123.5626,-16.5 132.2903,-16.5 140.8845,-16.5"/>
 <polygon fill="#191970" stroke="#191970" points="140.885,-20.0001 150.885,-16.5 140.8849,-13.0001 140.885,-20.0001"/>
 </g>
