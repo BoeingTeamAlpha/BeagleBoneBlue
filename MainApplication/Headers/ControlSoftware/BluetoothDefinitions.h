@@ -14,10 +14,8 @@
 
 static const std::string localAdress( BeagleBlueBluetoothAddress );
 static const std::string peerAdress( Nexus7BluetoothAddress );
-//static const uint16_t NumberOfBytesPerReceiveMessage = 12;
-//static const uint16_t NumberOfBytesPerSendMessage = 4;
 
-static const size_t NumberOfBytesPerReceiveMessage = 8;
+static const size_t NumberOfBytesPerReceiveMessage = 16;
 static const size_t NumberOfBytesPerSendMessage = 4;
 
 #endif // BLUETOOTHDEFINITIONS_H
