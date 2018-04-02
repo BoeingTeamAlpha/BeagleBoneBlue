@@ -19,6 +19,7 @@
 #include "BluetoothDefinitions.h"
 #include "BluetoothManager.h"
 
+#include "CommunicationProtocolParser.h"
 
 #include <time.h>
 
@@ -26,7 +27,7 @@
 #define LOG_PATH ( "Log.txt" )
 
 namespace VehicleControl {
-//std::string( "30:85:A9:E0:1F:9A" )
+
 Control::Control()
 	: LibBBB::Bluetooth::Manager::Interface()
 	, _isRunning( true )
@@ -37,14 +38,13 @@ Control::Control()
 	, _red( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::Red ) )
 	, _runningLED( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::UserThree ) )
 #if defined( RunBluetooth )
-//	, _client( peerAdress )
 	, _manager( peerAdress
 				, localAdress
-				, (LibBBB::Bluetooth::Manager::Interface*)this
-				, (LibBBB::Bluetooth::Manager::stateChange)&VehicleControl::Control::stateChange
 				, NumberOfBytesPerReceiveMessage
 				, NumberOfBytesPerSendMessage
-				, 250000 )
+				, 250000
+				, (LibBBB::Bluetooth::Manager::Interface*)this
+				, (LibBBB::Bluetooth::Manager::stateChange)&VehicleControl::Control::stateChange )
 #endif
 {
 	// check if the file exists
@@ -84,6 +84,8 @@ Control::Control()
 	signal( SIGINT, signalHandler );
 	signal( SIGTERM, signalHandler );
 
+	_parser = new CommunicationProtocolParser( this );
+
 	// set the running LED to its normal blinking
 	_runningLED.setState( LibBBB::IO::UserLED::State::Blinking, -1, 900 );
 
@@ -110,6 +112,27 @@ Control::Control()
 	fprintf( file, "\nNew log time is: %s\n", buffer );
 
 	fclose( file );
+
+	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
+
+	for ( ; loopVar > 0; loopVar-- )
+	{
+		printf( "%p ", _outputs[ loopVar - 1 ] );
+	}
+
+	printf("\n");
+}
+
+Control::~Control()
+{
+	IOFactory::destroyInputs( _inputs );
+	IOFactory::destroyOutputs( _outputs );
+	IOFactory::destroyServos( _servos );
+
+	delete _parser;
+
+	// remove the file
+	remove( PID_PATH );
 }
 
 int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
@@ -119,7 +142,7 @@ int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
 	if ( newState == LibBBB::Bluetooth::Manager::State::Connected )
 	{
 		_red.setState( LibBBB::IO::UserLED::State::Off );
-		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::On );
+		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Blinking, -1, 900 );
 	}
 	else
 	{
@@ -136,22 +159,12 @@ Control& Control::instance()
 	return inst;
 }
 
-Control::~Control()
-{
-	IOFactory::destroyInputs( _inputs );
-	IOFactory::destroyOutputs( _outputs );
-	IOFactory::destroyServos( _servos );
-
-	// remove the file
-	printf( "removed %i %s\n", remove( PID_PATH ), strerror( errno ) );
-}
-
 void Control::update()
 {
 	static unsigned int count;
 	if ( _manager.isConnected() )
 	{
-		const uint8_t* const receive = _manager.receiveData();
+//		const uint8_t* const receive = _manager.receiveData();
 
 		FILE* file = fopen( LOG_PATH, "a" );
 
@@ -161,21 +174,22 @@ void Control::update()
 			exit( EXIT_FAILURE );
 		}
 
-		for ( size_t i = 0; i < NumberOfBytesPerReceiveMessage; ++i )
-		{
-			printf("rec = %u\n", receive[ i ] );
-			fprintf( file, "rec = %u\n", receive[ i ] );
-		}
+		_parser->parseIncomingPackets();
+
+//		for ( size_t i = 0; i < IO::ServoList::NUM_SERVOS; ++i )
+//		{
+//			printf( "%u is %u\n", i, _servos[ i ]->dutyCycle() );
+//		}
 
 		for ( size_t i = 0; i < NumberOfBytesPerSendMessage; ++i )
 		{
 			_sendMessage[ i ] = rand() % 100;
-			printf("send = %u\n", _sendMessage[ i ] );
-			fprintf( file, "send = %u\n", _sendMessage[ i ] );
+//			printf("send = %u\n", _sendMessage[ i ] );
+//			fprintf( file, "send = %u\n", _sendMessage[ i ] );
 		}
 
 		fclose( file );
-		_manager.sendData( _sendMessage );
+		_parser->sendOutgoingPackets();
 //		printf("%i sent %i bytes rec %i bytes\n", count, sentMessage, receivedMessage );
 		++count;
 	}

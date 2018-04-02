@@ -20,6 +20,10 @@ struct ServoList
 	{
 		LeftDriveMotor = 0,
 		RightDriveMotor,
+		CameraLeftRight,
+		DumpBedRaiseLower,
+		GripperRaiseLower,
+		GripperOpenClose,
 		NUM_SERVOS
 	};
 };

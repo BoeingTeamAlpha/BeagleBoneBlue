@@ -17,7 +17,7 @@ struct InputList
 {
 	enum Enum
 	{
-		Input1 = 0,
+		MetalDetected = 0,
 		NUM_INPUTS
 	};
 

@@ -12,6 +12,7 @@
 #define SixteenthSecondDebounceTime ( 62 )
 #define EighthSecondDebounceTime ( 125 )
 
+
 using namespace LibBBB::IO;
 namespace VehicleControl {
 
@@ -54,18 +55,33 @@ Input* createRisingEdgeThreadedInput( int number )
 
 void Control::IOFactory::fillInputList( InputList& list )
 {
-	list[ IO::InputList::Input1 ] = createRisingEdgeThreadedInput( 57 );
+	list[ IO::InputList::MetalDetected ] = createRisingEdgeThreadedInput( 116 );
 }
 
 void Control::IOFactory::fillOutputList( OutputList& list )
 {
-	list[ IO::OutputList::ServoPowerEnable ] = new Output( 80, Output::Setup() );
+	list[ IO::OutputList::ServoPowerEnable ] = new Output( 52, Output::Setup() );
+	list[ IO::OutputList::LeftDriveMotorForwardEnable ] = new Output( 57, Output::Setup() );
+	list[ IO::OutputList::RightDriveMotorForwardEnable ] = new Output( 49, Output::Setup() );
+
+	printf("fill outputs ");
+	printOutputs( list );
 }
 
 void Control::IOFactory::fillServoList( ServoList& list )
 {
-	list[ IO::ServoList::LeftDriveMotor ]	= new ServoControl( MotorControl::Motor::One, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
-	list[ IO::ServoList::RightDriveMotor ]	= new MotorControl( MotorControl::Motor::Two, 5.0f, MotorControl::RangeType( 2500, 150000 ) );
+	list[ IO::ServoList::LeftDriveMotor ]
+			= new MotorControl( MotorControl::Motor::One, 5.0f, MotorControl::RangeType( 2500, 150000 ) );
+	list[ IO::ServoList::RightDriveMotor ]
+			= new MotorControl( MotorControl::Motor::Two, 5.0f, MotorControl::RangeType( 2500, 150000 )  );
+	list[ IO::ServoList::CameraLeftRight ]
+			= new ServoControl( MotorControl::Motor::Three, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
+	list[ IO::ServoList::DumpBedRaiseLower ]
+			= new ServoControl( MotorControl::Motor::Four, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
+	list[ IO::ServoList::GripperRaiseLower ]
+			= new ServoControl( MotorControl::Motor::Five, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
+	list[ IO::ServoList::GripperOpenClose ]
+			= new ServoControl( MotorControl::Motor::Six, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
 }
 
 void Control::IOFactory::destroyInputs( InputList& list )
@@ -80,12 +96,18 @@ void Control::IOFactory::destroyInputs( InputList& list )
 
 void Control::IOFactory::destroyOutputs( OutputList& list )
 {
-	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
+	printf("destroy outputs ");
+	printOutputs( list );
+	delete list[ IO::OutputList::LeftDriveMotorForwardEnable ];
+	delete list[ IO::OutputList::RightDriveMotorForwardEnable ];
+	delete list[ IO::OutputList::ServoPowerEnable ];
+//	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
 
-	for ( ; loopVar > 0; loopVar-- )
-	{
-		delete list[ loopVar - 1 ];
-	}
+//	for ( ; loopVar > 0; loopVar-- )
+//	{
+//		printf("%p ", list[ loopVar - 1 ] );
+//		delete list[ loopVar - 1 ];
+//	}
 }
 
 void Control::IOFactory::destroyServos( ServoList& list )
@@ -96,6 +118,17 @@ void Control::IOFactory::destroyServos( ServoList& list )
 	{
 		delete list[ loopVar - 1 ];
 	}
+}
+
+void Control::IOFactory::printOutputs( OutputList& list )
+{
+	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
+
+	for ( ; loopVar > 0; loopVar-- )
+	{
+		printf("%p ", list[ loopVar - 1 ] );
+	}
+	printf("\n");
 }
 
 } // namespace VehicleControl
