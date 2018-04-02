@@ -44,6 +44,8 @@ private:
 	 */
 	Control();
 
+	class CommunicationProtocolParser;
+
 public:
 
 	// Typedefs of the input and output lists
@@ -65,6 +67,8 @@ private:
 
 	// list of all of the servos
 	ServoList _servos;
+
+	CommunicationProtocolParser* _parser;
 
 	// led that turns on when the bluetooth tablet is connected
 	LibBBB::IO::UserLED _bluetoothConnectedLED;
