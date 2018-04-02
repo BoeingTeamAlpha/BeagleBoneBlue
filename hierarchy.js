@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "VehicleControl::Control::CommunicationProtocolParser", "classVehicleControl_1_1Control_1_1CommunicationProtocolParser.html", null ],
     [ "LibBBB::IO::IOBase::Direction", "structLibBBB_1_1IO_1_1IOBase_1_1Direction.html", null ],
     [ "LibBBB::IO::Input::Edge", "structLibBBB_1_1IO_1_1Input_1_1Edge.html", null ],
     [ "VehicleControl::IO::InputList", "structVehicleControl_1_1IO_1_1InputList.html", null ],
@@ -26,8 +27,8 @@ var hierarchy =
     [ "LibBBB::IO::UserLED::Setup", "structLibBBB_1_1IO_1_1UserLED_1_1Setup.html", null ],
     [ "LibBBB::IO::Output::Setup", "structLibBBB_1_1IO_1_1Output_1_1Setup.html", null ],
     [ "LibBBB::IO::Input::Setup", "structLibBBB_1_1IO_1_1Input_1_1Setup.html", null ],
-    [ "LibBBB::Bluetooth::Manager::State", "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html", null ],
     [ "LibBBB::IO::UserLED::State", "structLibBBB_1_1IO_1_1UserLED_1_1State.html", null ],
+    [ "LibBBB::Bluetooth::Manager::State", "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html", null ],
     [ "LibBBB::ThreadHelper", "classLibBBB_1_1ThreadHelper.html", null ],
     [ "LibBBB::IO::UserLED", "classLibBBB_1_1IO_1_1UserLED.html", null ],
     [ "LibBBB::IO::IOBase::Value", "structLibBBB_1_1IO_1_1IOBase_1_1Value.html", null ]

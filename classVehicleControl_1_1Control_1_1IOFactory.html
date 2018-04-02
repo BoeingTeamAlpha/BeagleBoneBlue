@@ -114,6 +114,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f665cda1a5fc33ce4c799325cb70a3b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVehicleControl_1_1Control_1_1IOFactory.html#a2f665cda1a5fc33ce4c799325cb70a3b">destroyServos</a> (<a class="el" href="classVehicleControl_1_1Control.html#ad6487f6353364ba41e522bf23d3199d3">ServoList</a> &amp;list)</td></tr>
 <tr class="memdesc:a2f665cda1a5fc33ce4c799325cb70a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">destroyServos method loops through all of the servos, calling delete on all of them.  <a href="#a2f665cda1a5fc33ce4c799325cb70a3b">More...</a><br /></td></tr>
 <tr class="separator:a2f665cda1a5fc33ce4c799325cb70a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac08502eaea496976e62c39058e350065"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVehicleControl_1_1Control_1_1IOFactory.html#ac08502eaea496976e62c39058e350065">printOutputs</a> (<a class="el" href="classVehicleControl_1_1Control.html#a444850b95c338d05a6ed63018b212106">OutputList</a> &amp;list)</td></tr>
+<tr class="separator:ac08502eaea496976e62c39058e350065"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classVehicleControl_1_1Control_1_1IOFactory.html" title="The Control::IOFactory class creates all of the app&#39;s IO. Therefore, EVERY IO pin&#39;s creation must be ...">Control::IOFactory</a> class creates all of the app's <a class="el" href="namespaceVehicleControl_1_1IO.html">IO</a>. Therefore, EVERY <a class="el" href="namespaceVehicleControl_1_1IO.html">IO</a> pin's creation must be defined in its respective method. This class just acts as a "factory" for the <a class="el" href="classVehicleControl_1_1Control.html" title="The Control class is the main object of the application. This object wraps all of the IO and vehicle ...">Control</a> class to create the <a class="el" href="namespaceVehicleControl_1_1IO.html">IO</a> upon initialization. </p>
@@ -148,7 +150,7 @@ Static Public Member Functions</h2></td></tr>
 <p>destroyInputs method loops through all of the inputs, calling delete on all of them. </p>
 <dl class="section note"><dt>Note</dt><dd>this method should only be called by control's destructor </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00071">71</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00087">87</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -184,7 +186,7 @@ Here is the caller graph for this function:</div>
 <p>destroyOutputs method loops through all of the outputs, calling delete on all of them. </p>
 <dl class="section note"><dt>Note</dt><dd>this method should only be called by this control's destructor </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00081">81</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00097">97</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -220,7 +222,7 @@ Here is the caller graph for this function:</div>
 <p>destroyServos method loops through all of the servos, calling delete on all of them. </p>
 <dl class="section note"><dt>Note</dt><dd>this method should only be called by this control's destructor </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00091">91</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00113">113</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -261,7 +263,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00055">55</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00056">56</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -302,7 +304,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00060">60</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00061">61</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
 
 </div>
 </div>
@@ -338,7 +340,35 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00065">65</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00071">71</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac08502eaea496976e62c39058e350065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08502eaea496976e62c39058e350065">&#9670;&nbsp;</a></span>printOutputs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VehicleControl::Control::IOFactory::printOutputs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVehicleControl_1_1Control.html#a444850b95c338d05a6ed63018b212106">OutputList</a> &amp;&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="IOFactory_8cpp_source.html#l00123">123</a> of file <a class="el" href="IOFactory_8cpp_source.html">IOFactory.cpp</a>.</p>
 
 </div>
 </div>

@@ -7,5 +7,6 @@ var searchData=
   ['destroyoutputs',['destroyOutputs',['../classVehicleControl_1_1Control_1_1IOFactory.html#a029a1022f10f9273c0d7eee55a40c407',1,'VehicleControl::Control::IOFactory']]],
   ['destroyservos',['destroyServos',['../classVehicleControl_1_1Control_1_1IOFactory.html#a2f665cda1a5fc33ce4c799325cb70a3b',1,'VehicleControl::Control::IOFactory']]],
   ['direction',['Direction',['../structLibBBB_1_1IO_1_1IOBase_1_1Direction.html',1,'LibBBB::IO::IOBase']]],
+  ['dumpbedraiselower',['DumpBedRaiseLower',['../structVehicleControl_1_1IO_1_1ServoList.html#a239d0cc8936d5cf4fe90eba983b26c87a01bcaf83b61af5200bf8340bc287cf39',1,'VehicleControl::IO::ServoList']]],
   ['dutycycle',['dutyCycle',['../classLibBBB_1_1IO_1_1MotorControl.html#afe600d5686e325e4f7de645729ba1c4e',1,'LibBBB::IO::MotorControl']]]
 ];

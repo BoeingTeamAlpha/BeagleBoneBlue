@@ -1,6 +1,7 @@
 var searchData=
 [
   ['senddata',['sendData',['../classLibBBB_1_1Bluetooth_1_1Manager.html#a2f93bbcf746ab55eaf46ad12451e24fa',1,'LibBBB::Bluetooth::Manager']]],
+  ['sendoutgoingpackets',['sendOutgoingPackets',['../classVehicleControl_1_1Control_1_1CommunicationProtocolParser.html#abdbab1c6376e364c7064e5c5b04f0168',1,'VehicleControl::Control::CommunicationProtocolParser']]],
   ['servocontrol',['ServoControl',['../classLibBBB_1_1IO_1_1ServoControl.html#aa3b9715605e607c96eda2ec4e5514b14',1,'LibBBB::IO::ServoControl']]],
   ['setactivehighorlow',['setActiveHighOrLow',['../classLibBBB_1_1IO_1_1IOBase.html#aa98e79cb377720c663e79411a32a5678',1,'LibBBB::IO::IOBase']]],
   ['setdebouncetime',['setDebounceTime',['../classLibBBB_1_1IO_1_1Input.html#a042ab20fe19f0ca17d09bf22bb16b2bf',1,'LibBBB::IO::Input']]],

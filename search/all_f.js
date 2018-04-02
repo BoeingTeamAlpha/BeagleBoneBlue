@@ -1,6 +1,7 @@
 var searchData=
 [
   ['senddata',['sendData',['../classLibBBB_1_1Bluetooth_1_1Manager.html#a2f93bbcf746ab55eaf46ad12451e24fa',1,'LibBBB::Bluetooth::Manager']]],
+  ['sendoutgoingpackets',['sendOutgoingPackets',['../classVehicleControl_1_1Control_1_1CommunicationProtocolParser.html#abdbab1c6376e364c7064e5c5b04f0168',1,'VehicleControl::Control::CommunicationProtocolParser']]],
   ['servocontrol',['ServoControl',['../classLibBBB_1_1IO_1_1ServoControl.html',1,'LibBBB::IO::ServoControl'],['../classLibBBB_1_1IO_1_1ServoControl.html#aa3b9715605e607c96eda2ec4e5514b14',1,'LibBBB::IO::ServoControl::ServoControl()']]],
   ['servocontrol_2ecpp',['ServoControl.cpp',['../ServoControl_8cpp.html',1,'']]],
   ['servocontrol_2eh',['ServoControl.h',['../ServoControl_8h.html',1,'']]],
@@ -27,6 +28,6 @@ var searchData=
   ['startdetachedthread',['startDetachedThread',['../classLibBBB_1_1ThreadHelper.html#a6999e18135496ef252b1c43c374c20f9',1,'LibBBB::ThreadHelper']]],
   ['startjoinablethread',['startJoinableThread',['../classLibBBB_1_1ThreadHelper.html#a068eff4b68a89c09c63d8780621b431a',1,'LibBBB::ThreadHelper']]],
   ['startroutine',['StartRoutine',['../classLibBBB_1_1ThreadHelper.html#a4594b59704ac41cd113bb39d68731b1a',1,'LibBBB::ThreadHelper']]],
-  ['state',['State',['../structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html',1,'LibBBB::Bluetooth::Manager::State'],['../structLibBBB_1_1IO_1_1UserLED_1_1State.html',1,'LibBBB::IO::UserLED::State'],['../classLibBBB_1_1IO_1_1UserLED.html#a98c0a865b590a4149e3b5a8d8c97d6cd',1,'LibBBB::IO::UserLED::state() const']]],
+  ['state',['State',['../structLibBBB_1_1IO_1_1UserLED_1_1State.html',1,'LibBBB::IO::UserLED::State'],['../structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html',1,'LibBBB::Bluetooth::Manager::State'],['../classLibBBB_1_1IO_1_1UserLED.html#a98c0a865b590a4149e3b5a8d8c97d6cd',1,'LibBBB::IO::UserLED::state()']]],
   ['statechange',['stateChange',['../classLibBBB_1_1Bluetooth_1_1Manager.html#a8232890675f708fb8f08735375259d5e',1,'LibBBB::Bluetooth::Manager::stateChange()'],['../classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html#a4d89d1228bf44378c0caf37fddac40dc',1,'LibBBB::Bluetooth::Manager::Interface::stateChange()']]]
 ];

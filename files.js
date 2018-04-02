@@ -11,6 +11,10 @@ var files =
     ] ],
     [ "BoeingSurfaceVehicleControl.cpp", "BoeingSurfaceVehicleControl_8cpp.html", "BoeingSurfaceVehicleControl_8cpp" ],
     [ "BoeingSurfaceVehicleControl.h", "BoeingSurfaceVehicleControl_8h.html", "BoeingSurfaceVehicleControl_8h" ],
+    [ "CommunicationProtocolParser.cpp", "CommunicationProtocolParser_8cpp.html", null ],
+    [ "CommunicationProtocolParser.h", "CommunicationProtocolParser_8h.html", [
+      [ "CommunicationProtocolParser", "classVehicleControl_1_1Control_1_1CommunicationProtocolParser.html", "classVehicleControl_1_1Control_1_1CommunicationProtocolParser" ]
+    ] ],
     [ "Input.cpp", "Input_8cpp.html", "Input_8cpp" ],
     [ "Input.h", "Input_8h.html", [
       [ "Input", "classLibBBB_1_1IO_1_1Input.html", "classLibBBB_1_1IO_1_1Input" ],

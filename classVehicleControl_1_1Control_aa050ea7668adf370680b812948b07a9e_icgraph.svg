@@ -9,16 +9,16 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 76)">
 <title>VehicleControl::Control::instance</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-76 277.576,-76 277.576,4 -4,4"/>
-<!-- Node8 -->
+<!-- Node11 -->
 <g id="node1" class="node">
-<title>Node8</title>
+<title>Node11</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-16.5 0,-48.5 118.788,-48.5 118.788,-16.5 0,-16.5"/>
 <text text-anchor="start" x="8" y="-35.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::Control</text>
 <text text-anchor="middle" x="59.394" y="-23.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::instance</text>
 </g>
-<!-- Node9 -->
+<!-- Node12 -->
 <g id="node2" class="node">
-<title>Node9</title>
+<title>Node12</title>
 <g id="a_node2"><a xlink:href="classVehicleControl_1_1Control.html#af4a1b0bf7931a83b9c1b80d27ebaae8f" target="_top" xlink:title="VehicleControl::Control\l::outputs">
 <polygon fill="#ffffff" stroke="#000000" points="154.788,-39.5 154.788,-71.5 273.576,-71.5 273.576,-39.5 154.788,-39.5"/>
 <text text-anchor="start" x="162.788" y="-58.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::Control</text>
@@ -26,24 +26,24 @@
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
+<!-- Node11&#45;&gt;Node12 -->
 <g id="edge1" class="edge">
-<title>Node8&#45;&gt;Node9</title>
+<title>Node11&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M128.8367,-42.8185C137.4638,-44.1004 146.2242,-45.4021 154.6828,-46.659"/>
 <polygon fill="#191970" stroke="#191970" points="129.2022,-39.3345 118.7964,-41.3266 128.1734,-46.2585 129.2022,-39.3345"/>
 </g>
-<!-- Node10 -->
+<!-- Node13 -->
 <g id="node3" class="node">
-<title>Node10</title>
+<title>Node13</title>
 <g id="a_node3"><a xlink:href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" target="_top" xlink:title="main">
 <polygon fill="#ffffff" stroke="#000000" points="195.349,-.5 195.349,-20.5 233.015,-20.5 233.015,-.5 195.349,-.5"/>
 <text text-anchor="middle" x="214.182" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">main</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node10 -->
+<!-- Node11&#45;&gt;Node13 -->
 <g id="edge2" class="edge">
-<title>Node8&#45;&gt;Node10</title>
+<title>Node11&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M128.7572,-22.6414C153.0646,-19.1866 178.4402,-15.58 195.1535,-13.2045"/>
 <polygon fill="#191970" stroke="#191970" points="128.2044,-19.1847 118.7964,-24.0571 129.1894,-26.1151 128.2044,-19.1847"/>
 </g>

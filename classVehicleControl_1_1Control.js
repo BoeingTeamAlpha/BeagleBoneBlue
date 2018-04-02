@@ -1,5 +1,6 @@
 var classVehicleControl_1_1Control =
 [
+    [ "CommunicationProtocolParser", "classVehicleControl_1_1Control_1_1CommunicationProtocolParser.html", "classVehicleControl_1_1Control_1_1CommunicationProtocolParser" ],
     [ "IOFactory", "classVehicleControl_1_1Control_1_1IOFactory.html", null ],
     [ "InputList", "classVehicleControl_1_1Control.html#a415b93bd7350b1eb49ae41cc00f01da1", null ],
     [ "OutputList", "classVehicleControl_1_1Control.html#a444850b95c338d05a6ed63018b212106", null ],

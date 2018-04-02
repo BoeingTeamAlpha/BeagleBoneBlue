@@ -7,5 +7,7 @@ var searchData=
   ['getvalue',['getValue',['../classLibBBB_1_1IO_1_1IOBase.html#a8ae8a79c81d61625f5b864abebe944a2',1,'LibBBB::IO::IOBase']]],
   ['gpio_5fpath',['GPIO_PATH',['../IOBase_8cpp.html#aa735592f7579934ca442d9a338588b90',1,'IOBase.cpp']]],
   ['green',['Green',['../structLibBBB_1_1IO_1_1UserLED_1_1LED.html#aea1c3430eab2684e6567550c21c16ba0a7f1aab1b467ea99d0c4283dc31f52b95',1,'LibBBB::IO::UserLED::LED']]],
-  ['greenpath',['GreenPath',['../UserLED_8cpp.html#a6b8b4c00cb98582db42fa936af71163e',1,'UserLED.cpp']]]
+  ['greenpath',['GreenPath',['../UserLED_8cpp.html#a6b8b4c00cb98582db42fa936af71163e',1,'UserLED.cpp']]],
+  ['gripperopenclose',['GripperOpenClose',['../structVehicleControl_1_1IO_1_1ServoList.html#a239d0cc8936d5cf4fe90eba983b26c87a0b55af841234ce51610092a50ea99ef7',1,'VehicleControl::IO::ServoList']]],
+  ['gripperraiselower',['GripperRaiseLower',['../structVehicleControl_1_1IO_1_1ServoList.html#a239d0cc8936d5cf4fe90eba983b26c87adbbcb0fdceac0216702eda35d3068508',1,'VehicleControl::IO::ServoList']]]
 ];
