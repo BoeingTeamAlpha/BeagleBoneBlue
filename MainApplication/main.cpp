@@ -37,7 +37,7 @@ int main()
 	while ( control.isRunning() )
 	{
 		control.update();
-		usleep( 500000 );
+		usleep( 250000 );
 	}
 
 	return EXIT_SUCCESS;
