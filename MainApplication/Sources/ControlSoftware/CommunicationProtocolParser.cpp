@@ -25,7 +25,7 @@ Control::CommunicationProtocolParser::~CommunicationProtocolParser()
 
 void Control::CommunicationProtocolParser::parseIncomingPackets()
 {
-	// get the received data
+	/// get the received data
 	const uint8_t* const incoming = _control->_manager.receiveData();
 
 	// if there is no data, just return
@@ -34,7 +34,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 		return;
 	}
 
-	// create local variables
+	/// create local variables
 	int16_t signedData;
 	uint16_t unsignedData;
 
