@@ -42,6 +42,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 	// parse the left drive motor's value
 	signedData = (int16_t)( ( incoming[ 1 ] << 8 ) | ( incoming[ 0 ] ) );
 
+
 	// if the motor is going in reverse,
 	if ( signedData < 0 )
 	{
@@ -55,7 +56,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 	}
 
 	// set the PWM output
-	_control->_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( abs( signedData ), 250000 );
+	_control->_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( abs( signedData * 10 ), 250 );
 
 	// parse the right drive motor's value
 	signedData = (int16_t)( ( incoming[ 3 ] << 8 ) | ( incoming[ 2 ] ) );
@@ -73,7 +74,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 	}
 
 	// set the PWM output
-	_control->_servos[ IO::ServoList::RightDriveMotor ]->setDutyCycle( abs( signedData ), 250000 );
+	_control->_servos[ IO::ServoList::RightDriveMotor ]->setDutyCycle( abs( signedData * 10 ), 250 );
 
 	// create and init the local variables
 	size_t servo = 2;
@@ -86,7 +87,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 		unsignedData = (uint16_t)( ( incoming[ i ] << 8 ) | ( incoming[ i - 1 ] ) );
 
 		// set the servo's desired duty cycle
-		_control->_servos[ servo ]->setDutyCycle( unsignedData, 250000 );
+		_control->_servos[ servo ]->setDutyCycle( unsignedData, 250 );
 
 		// increment the byte array position
 		i += 2;
@@ -102,9 +103,9 @@ void Control::CommunicationProtocolParser::sendOutgoingPackets()
 	uint8_t bitPack = 0;
 
 	// clear it
-	memset( (void*)outgoing, 0, NumberOfBytesPerSendMessage );
+//	memset( (void*)outgoing, 0, NumberOfBytesPerSendMessage );
 
-	// create dummy batter percent
+	// create dummy battery percent
 	outgoing[ 0 ] = 75;
 
 	// get the value of the metal detector

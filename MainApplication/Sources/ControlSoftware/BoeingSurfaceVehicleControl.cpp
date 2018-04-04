@@ -93,14 +93,6 @@ Control::Control()
 
 	srand( time( NULL) );
 
-	FILE* file = fopen( LOG_PATH, "a" );
-
-	if ( file == NULL )
-	{
-		fprintf( stderr, "Cannot access log file\n" );
-		exit( EXIT_FAILURE );
-	}
-
 	time_t timer;
 	char buffer[ 26 ];
 	struct tm* tmInfo;
@@ -109,6 +101,14 @@ Control::Control()
 	tmInfo = localtime( &timer );
 
 	strftime( buffer, 26, "%Y-%m-%d %H:%M:%S", tmInfo );
+
+	FILE* file = fopen( LOG_PATH, "a" );
+	if ( file == NULL )
+	{
+		fprintf( stderr, "Cannot access log file\n" );
+		exit( EXIT_FAILURE );
+	}
+
 	fprintf( file, "\nNew log time is: %s\n", buffer );
 
 	fclose( file );
