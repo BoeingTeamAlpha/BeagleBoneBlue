@@ -47,12 +47,12 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 	if ( signedData < 0 )
 	{
 		// set the proper output on the motor driver board
-		_control->_outputs[ IO::OutputList::LeftDriveMotorForwardEnable ]->setValue( LibBBB::IO::Output::Value::Low );
+//		_control->_outputs[ IO::OutputList::LeftDriveMotorForwardEnable ]->setValue( LibBBB::IO::Output::Value::Low );
 	}
 	else // motor is going forward
 	{
 		// so set the proper driver board output
-		_control->_outputs[ IO::OutputList::LeftDriveMotorForwardEnable ]->setValue( LibBBB::IO::Output::Value::High );
+//		_control->_outputs[ IO::OutputList::LeftDriveMotorForwardEnable ]->setValue( LibBBB::IO::Output::Value::High );
 	}
 
 	// set the PWM output
@@ -65,12 +65,12 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 	if ( signedData < 0 )
 	{
 		// set the proper output on the motor driver board
-		_control->_outputs[ IO::OutputList::RightDriveMotorForwardEnable ]->setValue( LibBBB::IO::Output::Value::High );
+//		_control->_outputs[ IO::OutputList::RightDriveMotorForwardEnable ]->setValue( LibBBB::IO::Output::Value::High );
 	}
 	else // motor is going forward
 	{
 		// so set the proper driver board output
-		_control->_outputs[ IO::OutputList::RightDriveMotorForwardEnable ]->setValue( LibBBB::IO::Output::Value::Low );
+//		_control->_outputs[ IO::OutputList::RightDriveMotorForwardEnable ]->setValue( LibBBB::IO::Output::Value::Low );
 	}
 
 	// set the PWM output

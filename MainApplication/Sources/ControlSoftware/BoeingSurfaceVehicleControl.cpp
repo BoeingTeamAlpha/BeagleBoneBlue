@@ -116,6 +116,7 @@ Control::Control()
 
 	turnOffAllMotors();
 
+	_red.setState( LibBBB::IO::UserLED::State::On );
 //	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
 
 //	for ( ; loopVar > 0; loopVar-- )

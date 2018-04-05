@@ -61,8 +61,8 @@ void Control::IOFactory::fillInputList( InputList& list )
 void Control::IOFactory::fillOutputList( OutputList& list )
 {
 	list[ IO::OutputList::ServoPowerEnable ] = new Output( 80, Output::Setup() );
-	list[ IO::OutputList::LeftDriveMotorForwardEnable ] = new Output( 57, Output::Setup() );
-	list[ IO::OutputList::RightDriveMotorForwardEnable ] = new Output( 49, Output::Setup() );
+//	list[ IO::OutputList::LeftDriveMotorForwardEnable ] = new Output( 57, Output::Setup() );
+//	list[ IO::OutputList::RightDriveMotorForwardEnable ] = new Output( 49, Output::Setup() );
 
 	printf("fill outputs ");
 	printOutputs( list );
@@ -98,8 +98,8 @@ void Control::IOFactory::destroyOutputs( OutputList& list )
 {
 	printf("destroy outputs ");
 	printOutputs( list );
-	delete list[ IO::OutputList::LeftDriveMotorForwardEnable ];
-	delete list[ IO::OutputList::RightDriveMotorForwardEnable ];
+//	delete list[ IO::OutputList::LeftDriveMotorForwardEnable ];
+//	delete list[ IO::OutputList::RightDriveMotorForwardEnable ];
 	delete list[ IO::OutputList::ServoPowerEnable ];
 //	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
 
