@@ -56,7 +56,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 	}
 
 	// set the PWM output
-	_control->_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( abs( signedData * 10 ), 250 );
+	_control->_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( abs( signedData * 10 ), BluetoothPollRate / 1000 );
 
 	// parse the right drive motor's value
 	signedData = (int16_t)( ( incoming[ 3 ] << 8 ) | ( incoming[ 2 ] ) );
@@ -74,7 +74,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 	}
 
 	// set the PWM output
-	_control->_servos[ IO::ServoList::RightDriveMotor ]->setDutyCycle( abs( signedData * 10 ), 250 );
+	_control->_servos[ IO::ServoList::RightDriveMotor ]->setDutyCycle( abs( signedData * 10 ), BluetoothPollRate / 1000 );
 
 	// create and init the local variables
 	size_t servo = 2;
@@ -87,11 +87,19 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 		unsignedData = (uint16_t)( ( incoming[ i ] << 8 ) | ( incoming[ i - 1 ] ) );
 
 		// set the servo's desired duty cycle
-		_control->_servos[ servo ]->setDutyCycle( unsignedData, 250 );
+		_control->_servos[ servo ]->setDesiredDegree( unsignedData, BluetoothPollRate / 1000 );
 
 		// increment the byte array position
 		i += 2;
 	}
+
+//	// loop through the servos
+//	for ( servo = 0; servo < IO::ServoList::NUM_SERVOS; ++servo )
+//	{
+//		printf("%u ", _control->_servos[ servo ]->dutyCycle() );
+//	}
+
+//	printf("\n");
 }
 
 void Control::CommunicationProtocolParser::sendOutgoingPackets()
@@ -99,6 +107,7 @@ void Control::CommunicationProtocolParser::sendOutgoingPackets()
 	// get the pointer to the send message
 	uint8_t* const outgoing = _control->_sendMessage;
 
+	memset( (void*)outgoing, 0, NumberOfBytesPerSendMessage );
 	// create a local variable to pack the bools
 	uint8_t bitPack = 0;
 
@@ -106,11 +115,11 @@ void Control::CommunicationProtocolParser::sendOutgoingPackets()
 //	memset( (void*)outgoing, 0, NumberOfBytesPerSendMessage );
 
 	// create dummy battery percent
-	outgoing[ 0 ] = 75;
+	outgoing[ 0 ] = 25;
 
 	// get the value of the metal detector
-	bool metalDected = _control->_inputs[ IO::InputList::MetalDetected ]->getValue();
-//	bool metalDected = true;
+//	bool metalDected = _control->_inputs[ IO::InputList::MetalDetected ]->getValue();
+	bool metalDected = true;
 
 	// if metal has been detected
 	if ( metalDected )

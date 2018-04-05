@@ -155,6 +155,8 @@ private:
 	 * @brief addPIDFile method adds the pid to the file
 	 */
 	void addPIDFile();
+
+	void turnOffAllMotors();
 };
 
 } // namespace VehicleControl

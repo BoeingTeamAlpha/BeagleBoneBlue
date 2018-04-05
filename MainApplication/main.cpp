@@ -4,7 +4,6 @@
 #include "Input.h"
 #include "BoeingSurfaceVehicleControl.h"
 #include "ManagerPRUs.h"
-
 #define PRU_NUM 	0
 
 using namespace VehicleControl;
@@ -37,7 +36,7 @@ int main()
 	while ( control.isRunning() )
 	{
 		control.update();
-		usleep( 250000 );
+		usleep( BluetoothPollRate );
 	}
 
 	return EXIT_SUCCESS;

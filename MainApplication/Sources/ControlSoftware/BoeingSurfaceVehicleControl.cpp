@@ -42,11 +42,16 @@ Control::Control()
 				, localAdress
 				, NumberOfBytesPerReceiveMessage
 				, NumberOfBytesPerSendMessage
-				, 250000
+				, BluetoothPollRate
 				, (LibBBB::Bluetooth::Manager::Interface*)this
 				, (LibBBB::Bluetooth::Manager::stateChange)&VehicleControl::Control::stateChange )
 #endif
 {
+	// Fill up the IO
+	IOFactory::fillInputList( _inputs );
+	IOFactory::fillOutputList( _outputs );
+	IOFactory::fillServoList( _servos );
+
 	// check if the file exists
 	if ( access( PID_PATH, F_OK ) == 0 )
 	{
@@ -75,10 +80,6 @@ Control::Control()
 	// add pid file
 	addPIDFile();
 
-	// Fill up the IO
-	IOFactory::fillInputList( _inputs );
-	IOFactory::fillOutputList( _outputs );
-	IOFactory::fillServoList( _servos );
 
 	// set up the signal handlers
 	signal( SIGINT, signalHandler );
@@ -113,14 +114,16 @@ Control::Control()
 
 	fclose( file );
 
-	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
+	turnOffAllMotors();
 
-	for ( ; loopVar > 0; loopVar-- )
-	{
-		printf( "%p ", _outputs[ loopVar - 1 ] );
-	}
+//	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
 
-	printf("\n");
+//	for ( ; loopVar > 0; loopVar-- )
+//	{
+//		printf( "%p ", _outputs[ loopVar - 1 ] );
+//	}
+
+//	printf("\n");
 }
 
 Control::~Control()
@@ -141,15 +144,18 @@ int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
 
 	if ( newState == LibBBB::Bluetooth::Manager::State::Connected )
 	{
+		setServoPower( true );
 		_red.setState( LibBBB::IO::UserLED::State::Off );
 		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Blinking, -1, 900 );
 	}
 	else
 	{
+		setServoPower( false );
 		_red.setState( LibBBB::IO::UserLED::State::On );
 		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Off );
 	}
 
+	turnOffAllMotors();
 	return 0;
 }
 
@@ -311,6 +317,16 @@ void Control::addPIDFile()
 //	write( fd, (void*)&pid, 4 );
 
 	fclose( file );
+}
+
+void Control::turnOffAllMotors()
+{
+	// loop through the servos
+	for ( size_t motor = 0; motor < IO::ServoList::NUM_SERVOS; ++motor )
+	{
+		// set the servo's desired duty cycle
+		_servos[ motor ]->setDutyCycle( 0 );
+	}
 }
 
 } // namespace VehicleControl

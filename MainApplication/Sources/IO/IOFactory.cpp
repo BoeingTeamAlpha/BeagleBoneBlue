@@ -60,7 +60,7 @@ void Control::IOFactory::fillInputList( InputList& list )
 
 void Control::IOFactory::fillOutputList( OutputList& list )
 {
-	list[ IO::OutputList::ServoPowerEnable ] = new Output( 52, Output::Setup() );
+	list[ IO::OutputList::ServoPowerEnable ] = new Output( 80, Output::Setup() );
 	list[ IO::OutputList::LeftDriveMotorForwardEnable ] = new Output( 57, Output::Setup() );
 	list[ IO::OutputList::RightDriveMotorForwardEnable ] = new Output( 49, Output::Setup() );
 
@@ -75,13 +75,13 @@ void Control::IOFactory::fillServoList( ServoList& list )
 	list[ IO::ServoList::RightDriveMotor ]
 			= new MotorControl( MotorControl::Motor::Two, 5.0f, MotorControl::RangeType( 2500, 150000 )  );
 	list[ IO::ServoList::CameraLeftRight ]
-			= new ServoControl( MotorControl::Motor::Three, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
+			= new ServoControl( MotorControl::Motor::Three, 20.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
 	list[ IO::ServoList::DumpBedRaiseLower ]
-			= new ServoControl( MotorControl::Motor::Four, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
+			= new ServoControl( MotorControl::Motor::Four, 20.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
 	list[ IO::ServoList::GripperRaiseLower ]
-			= new ServoControl( MotorControl::Motor::Five, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
+			= new ServoControl( MotorControl::Motor::Five, 20.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
 	list[ IO::ServoList::GripperOpenClose ]
-			= new ServoControl( MotorControl::Motor::Six, 5.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
+			= new ServoControl( MotorControl::Motor::Six, 20.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
 }
 
 void Control::IOFactory::destroyInputs( InputList& list )
