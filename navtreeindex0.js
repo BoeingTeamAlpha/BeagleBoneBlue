@@ -2,8 +2,9 @@ var NAVTREEINDEX0 =
 {
 "BluetoothDefinitions_8h.html":[4,0,0],
 "BluetoothDefinitions_8h.html#a0b0f56aa6dd85a933a745d6fe4934aca":[4,0,0,0],
-"BluetoothDefinitions_8h.html#a1f992231b71f66bc4f78181806c6b50c":[4,0,0,2],
+"BluetoothDefinitions_8h.html#a1f992231b71f66bc4f78181806c6b50c":[4,0,0,3],
 "BluetoothDefinitions_8h.html#ab8e857e740d3878ff22556bca0a25542":[4,0,0,1],
+"BluetoothDefinitions_8h.html#acf1ad29ca5eb3e7eab3505aa6fef19ef":[4,0,0,2],
 "BluetoothDefinitions_8h_source.html":[4,0,0],
 "BluetoothInterface_8h.html":[4,0,1],
 "BluetoothInterface_8h_source.html":[4,0,1],
@@ -229,12 +230,12 @@ var NAVTREEINDEX0 =
 "main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,16,1],
 "main_8cpp_source.html":[4,0,16],
 "md__home_jc_Documents_School_SeniorDesign_ControlCode_MainApplication_BBBLibrary_README.html":[0],
-"namespaceLibBBB.html":[2,0,0],
 "namespaceLibBBB.html":[3,0,0],
+"namespaceLibBBB.html":[2,0,0],
 "namespaceLibBBB_1_1Bluetooth.html":[3,0,0,0],
 "namespaceLibBBB_1_1Bluetooth.html":[2,0,0,0],
-"namespaceLibBBB_1_1IO.html":[3,0,0,1],
 "namespaceLibBBB_1_1IO.html":[2,0,0,1],
+"namespaceLibBBB_1_1IO.html":[3,0,0,1],
 "namespaceLibBBB_1_1Math.html":[2,0,0,2],
 "namespaceLibBBB_1_1Math.html":[3,0,0,2],
 "namespaceVehicleControl.html":[2,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html":[3,0,0,0,0,1],
 "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eb":[3,0,0,0,0,1,0],
 "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba4195022a1d6a593b6b50d077f33ba3d0":[3,0,0,0,0,1,0,2],
-"structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba5f833a8528e1ef72f5bf36a9e1316942":[3,0,0,0,0,1,0,1],
-"structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba94e78fb853397369855b8e1ce02cb2b5":[3,0,0,0,0,1,0,0]
+"structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba5f833a8528e1ef72f5bf36a9e1316942":[3,0,0,0,0,1,0,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba94e78fb853397369855b8e1ce02cb2b5":[3,0,0,0,0,1,0,0],
 "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374ebae2ca5fbdf194750311d8411501e06ea2":[3,0,0,0,0,1,0,3],
 "structLibBBB_1_1IO_1_1IOBase_1_1Direction.html":[3,0,0,1,1,0],
 "structLibBBB_1_1IO_1_1IOBase_1_1Direction.html#a22e565ba4f7b7b85170b3e6e5cb084d2":[3,0,0,1,1,0,0],
