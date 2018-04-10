@@ -4,7 +4,6 @@ var searchData=
   ['io',['IO',['../namespaceLibBBB_1_1IO.html',1,'LibBBB']]],
   ['led',['LED',['../structLibBBB_1_1IO_1_1UserLED_1_1LED.html',1,'LibBBB::IO::UserLED']]],
   ['leftdrivemotor',['LeftDriveMotor',['../structVehicleControl_1_1IO_1_1ServoList.html#a239d0cc8936d5cf4fe90eba983b26c87ac84bf8d26ab5d38ecae02068894174fb',1,'VehicleControl::IO::ServoList']]],
-  ['leftdrivemotorforwardenable',['LeftDriveMotorForwardEnable',['../structVehicleControl_1_1IO_1_1OutputList.html#a371729ed6a94a1deaed1cea3404a9a5fa02bd382a5826ab883a024fa0cf133673',1,'VehicleControl::IO::OutputList']]],
   ['libbbb',['LibBBB',['../namespaceLibBBB.html',1,'']]],
   ['linearconverter',['LinearConverter',['../classLibBBB_1_1Math_1_1LinearConverter.html',1,'LibBBB::Math::LinearConverter&lt; DataType &gt;'],['../classLibBBB_1_1Math_1_1LinearConverter.html#a7dbe4c4264abe53c4a9f06f0a51bbedd',1,'LibBBB::Math::LinearConverter::LinearConverter()']]],
   ['linearconverter_2eh',['LinearConverter.h',['../LinearConverter_8h.html',1,'']]],

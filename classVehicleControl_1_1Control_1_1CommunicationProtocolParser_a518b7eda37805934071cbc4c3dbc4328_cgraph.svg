@@ -20,7 +20,7 @@
 <!-- Node5 -->
 <g id="node2" class="node">
 <title>Node5</title>
-<g id="a_node2"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#a060493f898621db59bfda9b7077d759c" target="_top" xlink:title="receiveData method that receives the data ">
+<g id="a_node2"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#ae579e5664c1fa9a5cb4ed5e067f80e33" target="_top" xlink:title="receiveData method that receives the data ">
 <polygon fill="#ffffff" stroke="#000000" points="193.124,-6.5 193.124,-38.5 307.476,-38.5 307.476,-6.5 193.124,-6.5"/>
 <text text-anchor="start" x="201.124" y="-25.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::Bluetooth::</text>
 <text text-anchor="middle" x="250.3" y="-13.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Manager::receiveData</text>
