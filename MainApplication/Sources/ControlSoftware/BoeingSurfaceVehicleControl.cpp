@@ -23,6 +23,10 @@
 
 #include <time.h>
 
+#include <sstream>
+#include <fstream>
+#include <iosfwd>
+
 #define PID_PATH ( "/var/run/BoeingSurfaceVehicle.pid" )
 #define LOG_PATH ( "Log.txt" )
 
@@ -141,22 +145,39 @@ Control::~Control()
 
 int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
 {
-	printf("control got new state %u\n", newState );
+	time_t timer;
+	char buffer[ 26 ];
+	std::ostringstream message;
+	std::fstream file;
+	struct tm* tmInfo;
 
+	time( &timer );
+	tmInfo = localtime( &timer );
+
+	strftime( buffer, 26, "%Y-%m-%d %H:%M:%S", tmInfo );
+
+	message << buffer;
 	if ( newState == LibBBB::Bluetooth::Manager::State::Connected )
 	{
+		message << ": connected\n";
 		setServoPower( true );
 		_red.setState( LibBBB::IO::UserLED::State::Off );
 		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Blinking, -1, 900 );
 	}
 	else
 	{
+		message << ": disconnected\n";
 		setServoPower( false );
 		_red.setState( LibBBB::IO::UserLED::State::On );
 		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Off );
 	}
 
 	turnOffAllMotors();
+
+	file.open( LOG_PATH, std::fstream::out | std::fstream::app );
+
+	file << message.str();
+	file.close();
 	return 0;
 }
 
@@ -169,88 +190,13 @@ Control& Control::instance()
 void Control::update()
 {
 	static unsigned int count;
+
 	if ( _manager.isConnected() )
-	{
-//		const uint8_t* const receive = _manager.receiveData();
-
-		FILE* file = fopen( LOG_PATH, "a" );
-
-		if ( file == NULL )
-		{
-			fprintf( stderr, "Cannot access log file\n" );
-			exit( EXIT_FAILURE );
-		}
-
+	{		
 		_parser->parseIncomingPackets();
-
-//		for ( size_t i = 0; i < IO::ServoList::NUM_SERVOS; ++i )
-//		{
-//			printf( "%u is %u\n", i, _servos[ i ]->dutyCycle() );
-//		}
-
-		for ( size_t i = 0; i < NumberOfBytesPerSendMessage; ++i )
-		{
-			_sendMessage[ i ] = rand() % 100;
-//			printf("send = %u\n", _sendMessage[ i ] );
-//			fprintf( file, "send = %u\n", _sendMessage[ i ] );
-		}
-
-		fclose( file );
 		_parser->sendOutgoingPackets();
-//		printf("%i sent %i bytes rec %i bytes\n", count, sentMessage, receivedMessage );
 		++count;
 	}
-//	static uint32_t width = 0;
-
-//	static bool firstRun = true;
-//	static uint32_t counter = 1;
-
-
-//	if ( !_servos[ IO::ServoList::LeftDriveMotor ]->isRamping() )
-//	{
-//		printf("counter is %u\n", counter );
-//		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( counter, 5000 );
-//		counter += 100;
-//	}
-//	if ( firstRun )
-//	{
-//		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 1000 );
-//		printf("first %u\n", _servos[ IO::ServoList::LeftDriveMotor ]->dutyCycle() );
-
-//		firstRun = false;
-//	}
-
-//	if ( counter == 10 )
-//	{
-//		printf("switching to duty cycle\n");
-//		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 1000 );
-//	}
-
-//	if ( counter == 10 )
-//	{
-//		_servos[ IO::ServoList::LeftDriveMotor ]->setDesiredDegree( 5 );
-//		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 500 );
-//		printf("50%% %u\n", _servos[ IO::ServoList::LeftDriveMotor ]->dutyCycle() );
-//		counter = 0;
-//	}
-//	++counter;
-//	duty += 100;
-
-//	_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( duty );
-//	printf("duty is %i\n", _servos[ IO::ServoList::LeftDriveMotor ]->dutyCycle() );
-
-//	if ( duty >= 1000 )
-//	{
-//		sleep( 4 );
-//		duty = 0;
-//	}
-
-//	if ( !_servos[ IO::ServoList::LeftDriveMotor ]->isRamping() )
-//	{
-//		printf("deg %u\n", width );
-//		_servos[ IO::ServoList::LeftDriveMotor ]->setDesiredDegree( width, 1500 );
-//		width += 20;
-//	}
 }
 
 bool Control::isRunning() const
