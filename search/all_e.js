@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['range',['Range',['../classLibBBB_1_1Math_1_1Range.html',1,'LibBBB::Math::Range&lt; DataType &gt;'],['../classLibBBB_1_1Math_1_1Range.html#a4fbb3575e5d4e630eee0b46c93d58c4d',1,'LibBBB::Math::Range::Range(const DataType &amp;lowValue, const DataType &amp;highValue)'],['../classLibBBB_1_1Math_1_1Range.html#a4d667cd5441894830446301f16141d02',1,'LibBBB::Math::Range::range() const']]],
+  ['range',['Range',['../classLibBBB_1_1Math_1_1Range.html',1,'LibBBB::Math::Range&lt; DataType &gt;'],['../classLibBBB_1_1Math_1_1Range.html#a4d667cd5441894830446301f16141d02',1,'LibBBB::Math::Range::range() const'],['../classLibBBB_1_1Math_1_1Range.html#a4fbb3575e5d4e630eee0b46c93d58c4d',1,'LibBBB::Math::Range::Range(const DataType &amp;lowValue, const DataType &amp;highValue)']]],
   ['range_2eh',['Range.h',['../Range_8h.html',1,'']]],
   ['rangetype',['RangeType',['../classLibBBB_1_1Math_1_1LinearConverter.html#a6aefd91abadb86c255206e5bd9f4fed9',1,'LibBBB::Math::LinearConverter::RangeType()'],['../classLibBBB_1_1IO_1_1MotorControl.html#a34429f4f0df2578c5ffeeaa84e7312d1',1,'LibBBB::IO::MotorControl::RangeType()']]],
   ['read',['read',['../classLibBBB_1_1IO_1_1IOBase.html#aa317b2515288dbe3905b675a9033e2fa',1,'LibBBB::IO::IOBase']]],
