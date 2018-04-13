@@ -64,8 +64,8 @@ void Control::IOFactory::fillOutputList( OutputList& list )
 //	list[ IO::OutputList::LeftDriveMotorForwardEnable ] = new Output( 57, Output::Setup() );
 //	list[ IO::OutputList::RightDriveMotorForwardEnable ] = new Output( 49, Output::Setup() );
 
-	printf("fill outputs ");
-	printOutputs( list );
+//	printf("fill outputs ");
+//	printOutputs( list );
 }
 
 void Control::IOFactory::fillServoList( ServoList& list )

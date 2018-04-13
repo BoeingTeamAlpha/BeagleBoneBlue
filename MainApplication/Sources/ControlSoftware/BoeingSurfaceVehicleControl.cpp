@@ -84,7 +84,6 @@ Control::Control()
 	// add pid file
 	addPIDFile();
 
-
 	// set up the signal handlers
 	signal( SIGINT, signalHandler );
 	signal( SIGTERM, signalHandler );
@@ -155,21 +154,21 @@ int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
 	tmInfo = localtime( &timer );
 
 	strftime( buffer, 26, "%Y-%m-%d %H:%M:%S", tmInfo );
-
 	message << buffer;
+
 	if ( newState == LibBBB::Bluetooth::Manager::State::Connected )
 	{
-		message << ": connected\n";
 		setServoPower( true );
 		_red.setState( LibBBB::IO::UserLED::State::Off );
 		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Blinking, -1, 900 );
+		message << ": connected\n";
 	}
 	else
 	{
-		message << ": disconnected\n";
-		setServoPower( false );
 		_red.setState( LibBBB::IO::UserLED::State::On );
 		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Off );
+		message << ": disconnected\n";
+		setServoPower( false );
 	}
 
 	turnOffAllMotors();
@@ -258,7 +257,7 @@ void Control::addPIDFile()
 
 	pid_t pid = getpid();
 
-	printf("pid is %i\n", pid );
+//	printf("pid is %i\n", pid );
 
 	fprintf( file, "%i", pid );
 //	write( fd, (void*)&pid, 4 );
