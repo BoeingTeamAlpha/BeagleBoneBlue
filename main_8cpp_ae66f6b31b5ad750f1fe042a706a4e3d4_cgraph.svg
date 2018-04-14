@@ -95,10 +95,10 @@
 <path fill="none" stroke="#191970" d="M181.8259,-101.5735C197.2353,-106.7049 214.3902,-112.3795 230.128,-117.5 236.0232,-119.4181 242.1724,-121.4027 248.321,-123.3766"/>
 <polygon fill="#191970" stroke="#191970" points="247.3548,-126.7422 257.9458,-126.4582 249.4894,-120.0755 247.3548,-126.7422"/>
 </g>
-<!-- Node7 -->
-<g id="node8" class="node">
-<title>Node7</title>
-<g id="a_node8"><a xlink:href="classVehicleControl_1_1Control_1_1CommunicationProtocolParser.html#a518b7eda37805934071cbc4c3dbc4328" target="_top" xlink:title="parseIncomingPackets method gets and parses the incoming Bluetooth packets. This method calls the Blu...">
+<!-- Node8 -->
+<g id="node9" class="node">
+<title>Node8</title>
+<g id="a_node9"><a xlink:href="classVehicleControl_1_1Control_1_1CommunicationProtocolParser.html#a518b7eda37805934071cbc4c3dbc4328" target="_top" xlink:title="parseIncomingPackets method gets and parses the incoming Bluetooth packets. This method calls the Blu...">
 <polygon fill="#ffffff" stroke="#000000" points="230.128,-63.5 230.128,-107.5 387.252,-107.5 387.252,-63.5 230.128,-63.5"/>
 <text text-anchor="start" x="238.128" y="-94.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::Control</text>
 <text text-anchor="start" x="238.128" y="-82.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::CommunicationProtocolParser</text>
@@ -106,16 +106,16 @@
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node7 -->
-<g id="edge7" class="edge">
-<title>Node4&#45;&gt;Node7</title>
+<!-- Node4&#45;&gt;Node8 -->
+<g id="edge8" class="edge">
+<title>Node4&#45;&gt;Node8</title>
 <path fill="none" stroke="#191970" d="M193.562,-85.5C202.041,-85.5 210.9085,-85.5 219.7967,-85.5"/>
 <polygon fill="#191970" stroke="#191970" points="219.8209,-89.0001 229.8209,-85.5 219.8209,-82.0001 219.8209,-89.0001"/>
 </g>
-<!-- Node9 -->
-<g id="node10" class="node">
-<title>Node9</title>
-<g id="a_node10"><a xlink:href="classVehicleControl_1_1Control_1_1CommunicationProtocolParser.html#abdbab1c6376e364c7064e5c5b04f0168" target="_top" xlink:title="sendOutgoingPackets packs and send outgoing data. This method takes care of packing bools into a sing...">
+<!-- Node10 -->
+<g id="node11" class="node">
+<title>Node10</title>
+<g id="a_node11"><a xlink:href="classVehicleControl_1_1Control_1_1CommunicationProtocolParser.html#abdbab1c6376e364c7064e5c5b04f0168" target="_top" xlink:title="sendOutgoingPackets packs and send outgoing data. This method takes care of packing bools into a sing...">
 <polygon fill="#ffffff" stroke="#000000" points="230.128,-.5 230.128,-44.5 387.252,-44.5 387.252,-.5 230.128,-.5"/>
 <text text-anchor="start" x="238.128" y="-31.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">VehicleControl::Control</text>
 <text text-anchor="start" x="238.128" y="-19.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::CommunicationProtocolParser</text>
@@ -123,9 +123,9 @@
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node9 -->
-<g id="edge9" class="edge">
-<title>Node4&#45;&gt;Node9</title>
+<!-- Node4&#45;&gt;Node10 -->
+<g id="edge10" class="edge">
+<title>Node4&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M178.4569,-69.4394C196.5316,-62.9248 217.8539,-55.2397 237.955,-47.9947"/>
 <polygon fill="#191970" stroke="#191970" points="239.1749,-51.2755 247.3957,-44.5921 236.8013,-44.6902 239.1749,-51.2755"/>
 </g>
@@ -133,31 +133,47 @@
 <g id="node7" class="node">
 <title>Node6</title>
 <g id="a_node7"><a xlink:href="classLibBBB_1_1ThreadHelper.html#a068eff4b68a89c09c63d8780621b431a" target="_top" xlink:title="startJoinableThread ">
-<polygon fill="#ffffff" stroke="#000000" points="423.252,-126.5 423.252,-158.5 539.272,-158.5 539.272,-126.5 423.252,-126.5"/>
-<text text-anchor="start" x="431.252" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::ThreadHelper</text>
-<text text-anchor="middle" x="481.262" y="-133.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::startJoinableThread</text>
+<polygon fill="#ffffff" stroke="#000000" points="423.252,-174.5 423.252,-206.5 539.272,-206.5 539.272,-174.5 423.252,-174.5"/>
+<text text-anchor="start" x="431.252" y="-193.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::ThreadHelper</text>
+<text text-anchor="middle" x="481.262" y="-181.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::startJoinableThread</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node5&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M367.115,-142.5C381.8129,-142.5 397.719,-142.5 412.8571,-142.5"/>
-<polygon fill="#191970" stroke="#191970" points="413.1903,-146.0001 423.1903,-142.5 413.1902,-139.0001 413.1903,-146.0001"/>
+<path fill="none" stroke="#191970" d="M366.6341,-158.6168C381.6545,-162.7947 397.964,-167.3311 413.4418,-171.6362"/>
+<polygon fill="#191970" stroke="#191970" points="412.8987,-175.1179 423.4709,-174.4257 414.7745,-168.3739 412.8987,-175.1179"/>
 </g>
-<!-- Node8 -->
-<g id="node9" class="node">
-<title>Node8</title>
-<g id="a_node9"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#ae579e5664c1fa9a5cb4ed5e067f80e33" target="_top" xlink:title="receiveData method that receives the data ">
+<!-- Node7 -->
+<g id="node8" class="node">
+<title>Node7</title>
+<g id="a_node8"><a xlink:href="classLibBBB_1_1ThreadHelper.html#a6999e18135496ef252b1c43c374c20f9" target="_top" xlink:title="startDetachedThread ">
+<polygon fill="#ffffff" stroke="#000000" points="423.252,-123.5 423.252,-155.5 539.272,-155.5 539.272,-123.5 423.252,-123.5"/>
+<text text-anchor="start" x="431.252" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::ThreadHelper</text>
+<text text-anchor="middle" x="481.262" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::startDetachedThread</text>
+</a>
+</g>
+</g>
+<!-- Node5&#45;&gt;Node7 -->
+<g id="edge7" class="edge">
+<title>Node5&#45;&gt;Node7</title>
+<path fill="none" stroke="#191970" d="M367.115,-141.4843C381.8129,-141.2288 397.719,-140.9523 412.8571,-140.6892"/>
+<polygon fill="#191970" stroke="#191970" points="413.2527,-144.1829 423.1903,-140.5095 413.1309,-137.184 413.2527,-144.1829"/>
+</g>
+<!-- Node9 -->
+<g id="node10" class="node">
+<title>Node9</title>
+<g id="a_node10"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#ae579e5664c1fa9a5cb4ed5e067f80e33" target="_top" xlink:title="receiveData method that receives the data ">
 <polygon fill="#ffffff" stroke="#000000" points="424.086,-69.5 424.086,-101.5 538.438,-101.5 538.438,-69.5 424.086,-69.5"/>
 <text text-anchor="start" x="432.086" y="-88.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::Bluetooth::</text>
 <text text-anchor="middle" x="481.262" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Manager::receiveData</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node8 -->
-<g id="edge8" class="edge">
-<title>Node7&#45;&gt;Node8</title>
+<!-- Node8&#45;&gt;Node9 -->
+<g id="edge9" class="edge">
+<title>Node8&#45;&gt;Node9</title>
 <path fill="none" stroke="#191970" d="M387.4009,-85.5C396.2821,-85.5 405.2711,-85.5 413.9877,-85.5"/>
 <polygon fill="#191970" stroke="#191970" points="414.0724,-89.0001 424.0724,-85.5 414.0723,-82.0001 414.0724,-89.0001"/>
 </g>

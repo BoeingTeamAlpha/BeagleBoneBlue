@@ -1,9 +1,15 @@
 var searchData=
 [
-  ['name',['name',['../classLibBBB_1_1IO_1_1IOBase.html#ab84b84e0b23c250dc5c56d5201dda44e',1,'LibBBB::IO::IOBase']]],
-  ['nexus7bluetoothaddress',['Nexus7BluetoothAddress',['../BluetoothDefinitions_8h.html#a1f992231b71f66bc4f78181806c6b50c',1,'BluetoothDefinitions.h']]],
-  ['none',['None',['../structLibBBB_1_1IO_1_1Input_1_1Edge.html#a72e10b0719bf2d5fac5723efd655508baf2b3d7229773bdbf875a17936bf48444',1,'LibBBB::IO::Input::Edge']]],
-  ['num_5finputs',['NUM_INPUTS',['../structVehicleControl_1_1IO_1_1InputList.html#af1bf2c23842eb4890f71fdcea9b79ba7a33805bd1f45580ae7b3d62e2b62040ad',1,'VehicleControl::IO::InputList']]],
-  ['num_5foutputs',['NUM_OUTPUTS',['../structVehicleControl_1_1IO_1_1OutputList.html#a371729ed6a94a1deaed1cea3404a9a5fabfbfcb0d8f741a08f6c7bf35064c6a3d',1,'VehicleControl::IO::OutputList']]],
-  ['num_5fservos',['NUM_SERVOS',['../structVehicleControl_1_1IO_1_1ServoList.html#a239d0cc8936d5cf4fe90eba983b26c87a52fe84e4ab3ead8a5bca80a96194bcfb',1,'VehicleControl::IO::ServoList']]]
+  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['manager',['Manager',['../classLibBBB_1_1Bluetooth_1_1Manager.html',1,'LibBBB::Bluetooth::Manager'],['../classLibBBB_1_1Bluetooth_1_1Manager.html#ae004b4701f383a22e0b9cb1093f579bb',1,'LibBBB::Bluetooth::Manager::Manager()']]],
+  ['managerprus',['ManagerPRUs',['../classLibBBB_1_1ManagerPRUs.html',1,'LibBBB']]],
+  ['managerprus_2ecpp',['ManagerPRUs.cpp',['../ManagerPRUs_8cpp.html',1,'']]],
+  ['managerprus_2eh',['ManagerPRUs.h',['../ManagerPRUs_8h.html',1,'']]],
+  ['metaldetected',['MetalDetected',['../structVehicleControl_1_1IO_1_1InputList.html#af1bf2c23842eb4890f71fdcea9b79ba7adb9b4ce0118f72a7ef6acf4178d91134',1,'VehicleControl::IO::InputList']]],
+  ['microseconds',['Microseconds',['../MotorControl_8cpp.html#a6394d8d883bf74f9cecc246c0d880d15',1,'MotorControl.cpp']]],
+  ['motor',['Motor',['../structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html',1,'LibBBB::IO::MotorControl']]],
+  ['motorcontrol',['MotorControl',['../classLibBBB_1_1IO_1_1MotorControl.html',1,'LibBBB::IO::MotorControl'],['../classLibBBB_1_1IO_1_1MotorControl.html#a55cb5ace57f63ba73e679b5f79c3459a',1,'LibBBB::IO::MotorControl::MotorControl()']]],
+  ['motorcontrol_2ecpp',['MotorControl.cpp',['../MotorControl_8cpp.html',1,'']]],
+  ['motorcontrol_2eh',['MotorControl.h',['../MotorControl_8h.html',1,'']]]
 ];
