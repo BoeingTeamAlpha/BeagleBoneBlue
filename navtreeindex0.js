@@ -9,7 +9,6 @@ var NAVTREEINDEX0 =
 "BluetoothInterface_8h.html":[4,0,1],
 "BluetoothInterface_8h_source.html":[4,0,1],
 "BluetoothManager_8cpp.html":[4,0,2],
-"BluetoothManager_8cpp.html#a9fa3782469c2a253bd0b65d6e9af5915":[4,0,2,0],
 "BluetoothManager_8cpp_source.html":[4,0,2],
 "BluetoothManager_8h.html":[4,0,3],
 "BluetoothManager_8h_source.html":[4,0,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "pages.html":[],
 "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html":[3,0,0,0,0,1],
 "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eb":[3,0,0,0,0,1,0],
-"structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba4195022a1d6a593b6b50d077f33ba3d0":[3,0,0,0,0,1,0,2]
+"structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba4195022a1d6a593b6b50d077f33ba3d0":[3,0,0,0,0,1,0,2],
+"structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba5f833a8528e1ef72f5bf36a9e1316942":[3,0,0,0,0,1,0,1]
 };
