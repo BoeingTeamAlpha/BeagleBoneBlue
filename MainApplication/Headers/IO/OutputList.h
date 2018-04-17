@@ -18,8 +18,8 @@ struct OutputList
 	enum Enum
 	{
 		ServoPowerEnable = 0,
-//		LeftDriveMotorForwardEnable,
-//		RightDriveMotorForwardEnable,
+		LeftDriveMotorForwardEnable,
+		RightDriveMotorForwardEnable,
 		NUM_OUTPUTS
 	};
 };

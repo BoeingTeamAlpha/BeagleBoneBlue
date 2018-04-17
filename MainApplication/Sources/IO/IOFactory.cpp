@@ -16,36 +16,10 @@
 using namespace LibBBB::IO;
 namespace VehicleControl {
 
-int callback( int /* message */ )
-{
-//	UserLED& led = Control::instance()._red;
-
-////	printf("callback registered on pin %d\r\n", led.state() );
-//	switch ( led.state() )
-//	{
-//	case UserLED::State::Blinking:
-//		led.setState( UserLED::State::Off );
-////		printf("blinking\r\n");
-//		break;
-
-//	case UserLED::State::Off:
-//		led.setState( UserLED::State::On );
-////		printf("off\r\n");
-//		break;
-
-//	case UserLED::State::On:
-//		led.setState( UserLED::State::Blinking, -1, 60 );
-////		printf("on\r\n");
-//		break;
-//	}
-	return 0;
-//	printf("left callback\r\n");
-}
-
 Input* createRisingEdgeThreadedInput( int number )
 {
 	Input::Setup setup;
-	setup.callback = &callback;
+//	setup.callback = &callback;
 	setup.debounceTime = EighthSecondDebounceTime;
 	setup.desiredEdge = Input::Edge::Rising;
 	setup.isActiveLow = true;
@@ -61,19 +35,16 @@ void Control::IOFactory::fillInputList( InputList& list )
 void Control::IOFactory::fillOutputList( OutputList& list )
 {
 	list[ IO::OutputList::ServoPowerEnable ] = new Output( 80, Output::Setup() );
-//	list[ IO::OutputList::LeftDriveMotorForwardEnable ] = new Output( 57, Output::Setup() );
-//	list[ IO::OutputList::RightDriveMotorForwardEnable ] = new Output( 49, Output::Setup() );
-
-//	printf("fill outputs ");
-//	printOutputs( list );
+	list[ IO::OutputList::LeftDriveMotorForwardEnable ] = new Output( 57, Output::Setup() );
+	list[ IO::OutputList::RightDriveMotorForwardEnable ] = new Output( 49, Output::Setup() );
 }
 
 void Control::IOFactory::fillServoList( ServoList& list )
 {
 	list[ IO::ServoList::LeftDriveMotor ]
-			= new MotorControl( MotorControl::Motor::One, 5.0f, MotorControl::RangeType( 2500, 150000 ) );
+			= new MotorControl( MotorControl::Motor::One, 20.0f, MotorControl::RangeType( 0, 50000 ) );
 	list[ IO::ServoList::RightDriveMotor ]
-			= new MotorControl( MotorControl::Motor::Two, 5.0f, MotorControl::RangeType( 2500, 150000 )  );
+			= new MotorControl( MotorControl::Motor::Two, 20.0f, MotorControl::RangeType( 0, 50000 )  );
 	list[ IO::ServoList::CameraLeftRight ]
 			= new ServoControl( MotorControl::Motor::Three, 20.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
 	list[ IO::ServoList::DumpBedRaiseLower ]
@@ -96,18 +67,12 @@ void Control::IOFactory::destroyInputs( InputList& list )
 
 void Control::IOFactory::destroyOutputs( OutputList& list )
 {
-	printf("destroy outputs ");
-	printOutputs( list );
-//	delete list[ IO::OutputList::LeftDriveMotorForwardEnable ];
-//	delete list[ IO::OutputList::RightDriveMotorForwardEnable ];
-	delete list[ IO::OutputList::ServoPowerEnable ];
-//	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
+	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
 
-//	for ( ; loopVar > 0; loopVar-- )
-//	{
-//		printf("%p ", list[ loopVar - 1 ] );
-//		delete list[ loopVar - 1 ];
-//	}
+	for ( ; loopVar > 0; loopVar-- )
+	{
+		delete list[ loopVar - 1 ];
+	}
 }
 
 void Control::IOFactory::destroyServos( ServoList& list )
@@ -118,17 +83,6 @@ void Control::IOFactory::destroyServos( ServoList& list )
 	{
 		delete list[ loopVar - 1 ];
 	}
-}
-
-void Control::IOFactory::printOutputs( OutputList& list )
-{
-	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
-
-	for ( ; loopVar > 0; loopVar-- )
-	{
-		printf("%p ", list[ loopVar - 1 ] );
-	}
-	printf("\n");
 }
 
 } // namespace VehicleControl

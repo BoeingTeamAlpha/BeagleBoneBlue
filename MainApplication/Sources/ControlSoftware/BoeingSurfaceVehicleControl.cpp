@@ -120,14 +120,6 @@ Control::Control()
 	turnOffAllMotors();
 
 	_red.setState( LibBBB::IO::UserLED::State::On );
-//	size_t loopVar = IO::OutputList::NUM_OUTPUTS;
-
-//	for ( ; loopVar > 0; loopVar-- )
-//	{
-//		printf( "%p ", _outputs[ loopVar - 1 ] );
-//	}
-
-//	printf("\n");
 }
 
 Control::~Control()
@@ -167,11 +159,13 @@ int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
 	{
 		_red.setState( LibBBB::IO::UserLED::State::On );
 		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Off );
+		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 0 );
+		_servos[ IO::ServoList::RightDriveMotor ]->setDutyCycle( 0 );
 		message << ": disconnected\n";
 		setServoPower( false );
 	}
 
-	turnOffAllMotors();
+//	turnOffAllMotors();
 
 	file.open( LOG_PATH, std::fstream::out | std::fstream::app );
 

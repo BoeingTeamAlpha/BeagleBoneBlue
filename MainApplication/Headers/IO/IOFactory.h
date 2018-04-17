@@ -60,8 +60,6 @@ public:
 	 */
 	static void destroyServos( ServoList& list );
 
-	static void printOutputs( OutputList& list );
-
 private:
 	/**
 	 * All methods that are in private HAVE to stay private,
