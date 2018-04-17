@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374eba94e78fb853397369855b8e1ce02cb2b5":[3,0,0,0,0,1,0,0],
 "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374ebae2ca5fbdf194750311d8411501e06ea2":[3,0,0,0,0,1,0,3],
 "structLibBBB_1_1IO_1_1IOBase_1_1Direction.html":[3,0,0,1,1,0],
 "structLibBBB_1_1IO_1_1IOBase_1_1Direction.html#a22e565ba4f7b7b85170b3e6e5cb084d2":[3,0,0,1,1,0,0],
@@ -60,8 +59,10 @@ var NAVTREEINDEX1 =
 "structVehicleControl_1_1IO_1_1InputList.html#af1bf2c23842eb4890f71fdcea9b79ba7adb9b4ce0118f72a7ef6acf4178d91134":[3,0,1,0,0,0,0],
 "structVehicleControl_1_1IO_1_1OutputList.html":[3,0,1,0,1],
 "structVehicleControl_1_1IO_1_1OutputList.html#a371729ed6a94a1deaed1cea3404a9a5f":[3,0,1,0,1,0],
+"structVehicleControl_1_1IO_1_1OutputList.html#a371729ed6a94a1deaed1cea3404a9a5fa02bd382a5826ab883a024fa0cf133673":[3,0,1,0,1,0,1],
+"structVehicleControl_1_1IO_1_1OutputList.html#a371729ed6a94a1deaed1cea3404a9a5fa657379867a80c77a5257f2db36b2716e":[3,0,1,0,1,0,2],
 "structVehicleControl_1_1IO_1_1OutputList.html#a371729ed6a94a1deaed1cea3404a9a5fabb4b63113da82cea56157cc239eeaf01":[3,0,1,0,1,0,0],
-"structVehicleControl_1_1IO_1_1OutputList.html#a371729ed6a94a1deaed1cea3404a9a5fabfbfcb0d8f741a08f6c7bf35064c6a3d":[3,0,1,0,1,0,1],
+"structVehicleControl_1_1IO_1_1OutputList.html#a371729ed6a94a1deaed1cea3404a9a5fabfbfcb0d8f741a08f6c7bf35064c6a3d":[3,0,1,0,1,0,3],
 "structVehicleControl_1_1IO_1_1ServoList.html":[3,0,1,0,2],
 "structVehicleControl_1_1IO_1_1ServoList.html#a239d0cc8936d5cf4fe90eba983b26c87":[3,0,1,0,2,0],
 "structVehicleControl_1_1IO_1_1ServoList.html#a239d0cc8936d5cf4fe90eba983b26c87a01bcaf83b61af5200bf8340bc287cf39":[3,0,1,0,2,0,3],

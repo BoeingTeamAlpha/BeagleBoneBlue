@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['callback',['callback',['../structLibBBB_1_1IO_1_1Input_1_1Setup.html#a8e309f885f8e0b291459890c3ab7cf6d',1,'LibBBB::IO::Input::Setup::callback()'],['../namespaceVehicleControl.html#af89cecf99aa4e7787af7433d8f3b6970',1,'VehicleControl::callback()']]],
+  ['callback',['callback',['../structLibBBB_1_1IO_1_1Input_1_1Setup.html#a8e309f885f8e0b291459890c3ab7cf6d',1,'LibBBB::IO::Input::Setup']]],
   ['callbacktype',['CallbackType',['../classLibBBB_1_1IO_1_1Input.html#a52bea679c85777efac52841eba65818f',1,'LibBBB::IO::Input']]],
   ['cameraleftright',['CameraLeftRight',['../structVehicleControl_1_1IO_1_1ServoList.html#a239d0cc8936d5cf4fe90eba983b26c87aab03d3f4126db1d1ceab5741b60d00aa',1,'VehicleControl::IO::ServoList']]],
   ['canceltoggle',['cancelToggle',['../classLibBBB_1_1IO_1_1Output.html#a4fd232f60d3148259f6d5d91e842950a',1,'LibBBB::IO::Output']]],
