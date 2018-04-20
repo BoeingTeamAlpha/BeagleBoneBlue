@@ -15,7 +15,8 @@ namespace VehicleControl {
 Control::CommunicationProtocolParser::CommunicationProtocolParser( Control* control )
 	: _control( control )
 {
-
+	memset( &_sendMessage, 0, NumberOfBytesPerSendMessage );
+	memset( &_receiveMessage, 0, NumberOfBytesPerReceiveMessage );
 }
 
 Control::CommunicationProtocolParser::~CommunicationProtocolParser()
@@ -25,14 +26,15 @@ Control::CommunicationProtocolParser::~CommunicationProtocolParser()
 
 void Control::CommunicationProtocolParser::parseIncomingPackets()
 {
-	/// get the received data
-	const uint8_t* const incoming = _control->_manager.receiveData();
+	const uint8_t* const receiveBuffer = _control->_manager.receiveData();
 
 	// if there is no data, just return
-	if ( incoming == NULL )
+	if ( receiveBuffer == NULL )
 	{
 		return;
 	}
+
+	memcpy( _receiveMessage, receiveBuffer, NumberOfBytesPerReceiveMessage );
 
 	/// create local variables
 	int16_t signedData;
@@ -40,7 +42,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 
 	/// @todo This should be automated in a loop or similar
 	// parse the left drive motor's value
-	signedData = (int16_t)( ( incoming[ 1 ] << 8 ) | ( incoming[ 0 ] ) );
+	signedData = (int16_t)( ( _receiveMessage[ 1 ] << 8 ) | ( _receiveMessage[ 0 ] ) );
 
 
 	// if the motor is going in reverse,
@@ -59,7 +61,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 	_control->_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( abs( signedData * 10 ), BluetoothPollRate / 1000 );
 
 	// parse the right drive motor's value
-	signedData = (int16_t)( ( incoming[ 3 ] << 8 ) | ( incoming[ 2 ] ) );
+	signedData = (int16_t)( ( _receiveMessage[ 3 ] << 8 ) | ( _receiveMessage[ 2 ] ) );
 
 	// if the motor is going in reverse,
 	if ( signedData < 0 )
@@ -84,7 +86,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 	for ( ; servo < IO::ServoList::NUM_SERVOS; ++servo )
 	{
 		// create the 16 bit integer from the byte array
-		unsignedData = (uint16_t)( ( incoming[ i ] << 8 ) | ( incoming[ i - 1 ] ) );
+		unsignedData = (uint16_t)( ( _receiveMessage[ i ] << 8 ) | ( _receiveMessage[ i - 1 ] ) );
 
 		// set the servo's desired duty cycle
 		_control->_servos[ servo ]->setDesiredDegree( unsignedData, BluetoothPollRate / 1000 );
@@ -104,10 +106,7 @@ void Control::CommunicationProtocolParser::parseIncomingPackets()
 
 void Control::CommunicationProtocolParser::sendOutgoingPackets()
 {
-	// get the pointer to the send message
-	uint8_t* const outgoing = _control->_sendMessage;
-
-	memset( (void*)outgoing, 0, NumberOfBytesPerSendMessage );
+//	memset( _sendMessage, 0, NumberOfBytesPerSendMessage );
 	// create a local variable to pack the bools
 	uint8_t bitPack = 0;
 
@@ -115,11 +114,11 @@ void Control::CommunicationProtocolParser::sendOutgoingPackets()
 //	memset( (void*)outgoing, 0, NumberOfBytesPerSendMessage );
 
 	// create dummy battery percent
-	outgoing[ 0 ] = 25;
+	_sendMessage[ 0 ] = 25;
 
 	// get the value of the metal detector
-//	bool metalDected = _control->_inputs[ IO::InputList::MetalDetected ]->getValue();
-	bool metalDected = true;
+	bool metalDected = _control->_inputs[ IO::InputList::MetalDetected ]->getValue();
+//	bool metalDected = true;
 
 	// if metal has been detected
 	if ( metalDected )
@@ -129,10 +128,10 @@ void Control::CommunicationProtocolParser::sendOutgoingPackets()
 	}
 
 	// set the byte array to the proper value
-	outgoing[ 1 ] = bitPack;
+	_sendMessage[ 1 ] = bitPack;
 
 	// send the message
-	_control->_manager.sendData( outgoing );
+	_control->_manager.sendData( _sendMessage );
 }
 
 } // namespace VehicleControl

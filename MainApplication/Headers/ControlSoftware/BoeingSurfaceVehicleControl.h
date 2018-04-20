@@ -78,12 +78,7 @@ private:
 	// the led just blinks to signify the app is still running properly.
 	LibBBB::IO::UserLED _runningLED;
 
-	uint8_t _sendMessage[ NumberOfBytesPerSendMessage ];
-
 #if defined( RunBluetooth )
-	// bluetooth client and server
-	// @todo does these two classes need to be wrapped in a Device class?
-//	Bluetooth::Client _client;
 	LibBBB::Bluetooth::Manager _manager;
 #endif
 

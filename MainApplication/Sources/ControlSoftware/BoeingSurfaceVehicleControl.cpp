@@ -93,8 +93,6 @@ Control::Control()
 	// set the running LED to its normal blinking
 	_runningLED.setState( LibBBB::IO::UserLED::State::Blinking, -1, 900 );
 
-	memset( (void*)&_sendMessage, 0, NumberOfBytesPerSendMessage );
-
 	srand( time( NULL) );
 
 	time_t timer;
@@ -153,14 +151,17 @@ int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
 		setServoPower( true );
 		_red.setState( LibBBB::IO::UserLED::State::Off );
 		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Blinking, -1, 900 );
+		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 0, BluetoothPollRate  );
+		_servos[ IO::ServoList::RightDriveMotor ]->setDutyCycle( 0, BluetoothPollRate );
+
 		message << ": connected\n";
 	}
 	else
 	{
+		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 0, BluetoothPollRate  );
+		_servos[ IO::ServoList::RightDriveMotor ]->setDutyCycle( 0, BluetoothPollRate );
 		_red.setState( LibBBB::IO::UserLED::State::On );
 		_bluetoothConnectedLED.setState( LibBBB::IO::UserLED::State::Off );
-		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 0 );
-		_servos[ IO::ServoList::RightDriveMotor ]->setDutyCycle( 0 );
 		message << ": disconnected\n";
 		setServoPower( false );
 	}
@@ -182,14 +183,20 @@ Control& Control::instance()
 
 void Control::update()
 {
-	static unsigned int count;
+//	static unsigned int count;
 
 	if ( _manager.isConnected() )
 	{		
 		_parser->parseIncomingPackets();
 		_parser->sendOutgoingPackets();
-		++count;
+//		++count;
 	}
+
+//	printf("\r%u\t%u\n"
+//			, _servos[ IO::ServoList::LeftDriveMotor ]->dutyCycle()
+//			, _servos[ IO::ServoList::RightDriveMotor ]->dutyCycle() );
+//	fflush(stdout);
+
 }
 
 bool Control::isRunning() const

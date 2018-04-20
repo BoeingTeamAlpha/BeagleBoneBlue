@@ -35,6 +35,9 @@ private:
 	///	variables
 	Control* _control;
 
+	uint8_t _sendMessage[ NumberOfBytesPerSendMessage ];
+
+	uint8_t _receiveMessage[ NumberOfBytesPerReceiveMessage ];
 public:
 
 	/**

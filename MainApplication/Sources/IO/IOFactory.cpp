@@ -12,7 +12,6 @@
 #define SixteenthSecondDebounceTime ( 62 )
 #define EighthSecondDebounceTime ( 125 )
 
-
 using namespace LibBBB::IO;
 namespace VehicleControl {
 
