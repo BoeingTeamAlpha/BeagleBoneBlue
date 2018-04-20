@@ -98,5 +98,21 @@
 <path fill="none" stroke="#191970" d="M312.0609,-85.5C320.9421,-85.5 329.9311,-85.5 338.6477,-85.5"/>
 <polygon fill="#191970" stroke="#191970" points="338.7324,-89.0001 348.7324,-85.5 338.7323,-82.0001 338.7324,-89.0001"/>
 </g>
+<!-- Node28 -->
+<g id="node7" class="node">
+<title>Node28</title>
+<g id="a_node7"><a xlink:href="classLibBBB_1_1Bluetooth_1_1Manager.html#a2f93bbcf746ab55eaf46ad12451e24fa" target="_top" xlink:title="sendData method that sends the data over the Bluetooth connection ">
+<polygon fill="#ffffff" stroke="#000000" points="354.02,-6.5 354.02,-38.5 457.824,-38.5 457.824,-6.5 354.02,-6.5"/>
+<text text-anchor="start" x="362.02" y="-25.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">LibBBB::Bluetooth::</text>
+<text text-anchor="middle" x="405.922" y="-13.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Manager::sendData</text>
+</a>
+</g>
+</g>
+<!-- Node27&#45;&gt;Node28 -->
+<g id="edge6" class="edge">
+<title>Node27&#45;&gt;Node28</title>
+<path fill="none" stroke="#191970" d="M312.0609,-22.5C322.7283,-22.5 333.5513,-22.5 343.871,-22.5"/>
+<polygon fill="#191970" stroke="#191970" points="343.9985,-26.0001 353.9985,-22.5 343.9984,-19.0001 343.9985,-26.0001"/>
+</g>
 </g>
 </svg>
