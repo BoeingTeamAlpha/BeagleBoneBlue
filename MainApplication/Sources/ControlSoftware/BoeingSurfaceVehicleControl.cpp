@@ -191,6 +191,11 @@ void Control::update()
 		_parser->sendOutgoingPackets();
 //		++count;
 	}
+	else
+	{
+		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 0 );
+		_servos[ IO::ServoList::RightDriveMotor ]->setDutyCycle( 0 );
+	}
 
 //	printf("\r%u\t%u\n"
 //			, _servos[ IO::ServoList::LeftDriveMotor ]->dutyCycle()
