@@ -1,5 +1,11 @@
 var files =
 [
+    [ "ADCMacros.h", "ADCMacros_8h.html", "ADCMacros_8h" ],
+    [ "AnalogToDigitalController.cpp", "AnalogToDigitalController_8cpp.html", "AnalogToDigitalController_8cpp" ],
+    [ "AnalogToDigitalController.h", "AnalogToDigitalController_8h.html", [
+      [ "AnalogToDigitalController", "classLibBBB_1_1AnalogToDigitalController.html", "classLibBBB_1_1AnalogToDigitalController" ],
+      [ "Channel", "structLibBBB_1_1AnalogToDigitalController_1_1Channel.html", "structLibBBB_1_1AnalogToDigitalController_1_1Channel" ]
+    ] ],
     [ "BluetoothDefinitions.h", "BluetoothDefinitions_8h.html", "BluetoothDefinitions_8h" ],
     [ "BluetoothInterface.h", "BluetoothInterface_8h.html", [
       [ "Interface", "classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface.html", "classLibBBB_1_1Bluetooth_1_1Manager_1_1Interface" ]
@@ -10,7 +16,9 @@ var files =
       [ "State", "structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html", "structLibBBB_1_1Bluetooth_1_1Manager_1_1State" ]
     ] ],
     [ "BoeingSurfaceVehicleControl.cpp", "BoeingSurfaceVehicleControl_8cpp.html", "BoeingSurfaceVehicleControl_8cpp" ],
-    [ "BoeingSurfaceVehicleControl.h", "BoeingSurfaceVehicleControl_8h.html", "BoeingSurfaceVehicleControl_8h" ],
+    [ "BoeingSurfaceVehicleControl.h", "BoeingSurfaceVehicleControl_8h.html", [
+      [ "Control", "classVehicleControl_1_1Control.html", "classVehicleControl_1_1Control" ]
+    ] ],
     [ "CommunicationProtocolParser.cpp", "CommunicationProtocolParser_8cpp.html", null ],
     [ "CommunicationProtocolParser.h", "CommunicationProtocolParser_8h.html", [
       [ "CommunicationProtocolParser", "classVehicleControl_1_1Control_1_1CommunicationProtocolParser.html", "classVehicleControl_1_1Control_1_1CommunicationProtocolParser" ]
@@ -35,7 +43,9 @@ var files =
       [ "IOFactory", "classVehicleControl_1_1Control_1_1IOFactory.html", null ]
     ] ],
     [ "LinearConverter.h", "LinearConverter_8h.html", [
-      [ "LinearConverter", "classLibBBB_1_1Math_1_1LinearConverter.html", "classLibBBB_1_1Math_1_1LinearConverter" ]
+      [ "LinearConverter", "classLibBBB_1_1Math_1_1LinearConverter.html", "classLibBBB_1_1Math_1_1LinearConverter" ],
+      [ "LinearConverter< float >", "classLibBBB_1_1Math_1_1LinearConverter_3_01float_01_4.html", "classLibBBB_1_1Math_1_1LinearConverter_3_01float_01_4" ],
+      [ "LinearConverter< double >", "classLibBBB_1_1Math_1_1LinearConverter_3_01double_01_4.html", "classLibBBB_1_1Math_1_1LinearConverter_3_01double_01_4" ]
     ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "ManagerPRUs.cpp", "ManagerPRUs_8cpp.html", "ManagerPRUs_8cpp" ],

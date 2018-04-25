@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['output',['Output',['../classLibBBB_1_1IO_1_1Output.html',1,'LibBBB::IO']]],
-  ['outputlist',['OutputList',['../structVehicleControl_1_1IO_1_1OutputList.html',1,'VehicleControl::IO']]]
+  ['manager',['Manager',['../classLibBBB_1_1Bluetooth_1_1Manager.html',1,'LibBBB::Bluetooth']]],
+  ['managerprus',['ManagerPRUs',['../classLibBBB_1_1ManagerPRUs.html',1,'LibBBB']]],
+  ['motor',['Motor',['../structLibBBB_1_1IO_1_1MotorControl_1_1Motor.html',1,'LibBBB::IO::MotorControl']]],
+  ['motorcontrol',['MotorControl',['../classLibBBB_1_1IO_1_1MotorControl.html',1,'LibBBB::IO']]]
 ];

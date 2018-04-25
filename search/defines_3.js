@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['file_5ferror',['FILE_ERROR',['../ManagerPRUs_8cpp.html#a1de2eedfe6ca1998a0dcdaaf67beb824',1,'ManagerPRUs.cpp']]]
+  ['dc_5fjack_5fadc_5fch',['DC_JACK_ADC_CH',['../ADCMacros_8h.html#a66a77ecd1d152a65209daef5ad541674',1,'ADCMacros.h']]],
+  ['dc_5fjack_5foffset',['DC_JACK_OFFSET',['../ADCMacros_8h.html#a962e4b1dedba6094a91d4b0cab6128ba',1,'ADCMacros.h']]]
 ];

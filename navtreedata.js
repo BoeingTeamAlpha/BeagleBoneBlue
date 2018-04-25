@@ -28,6 +28,7 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -36,8 +37,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"BluetoothDefinitions_8h.html",
-"structLibBBB_1_1Bluetooth_1_1Manager_1_1State.html#a8a068e2a9c2bffa2d8b6ff5b795374ebae2ca5fbdf194750311d8411501e06ea2"
+"ADCMacros_8h.html",
+"classLibBBB_1_1Math_1_1LinearConverter_3_01double_01_4.html#aef1bcbb3436259fb7e4670f7db69a2ef"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
