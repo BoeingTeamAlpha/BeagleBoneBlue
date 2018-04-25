@@ -2,6 +2,8 @@
 #define COMMUNICATIONPROTOCOLPARSER_H
 
 #include "BoeingSurfaceVehicleControl.h"
+#include "LinearConverter.h"
+#include "BluetoothDefinitions.h"
 
 namespace VehicleControl {
 
@@ -35,9 +37,15 @@ private:
 	///	variables
 	Control* _control;
 
+	typedef LibBBB::Math::LinearConverter< float > BatteryConverter;
+	BatteryConverter _batteryConverter;
+
 	uint8_t _sendMessage[ NumberOfBytesPerSendMessage ];
 
 	uint8_t _receiveMessage[ NumberOfBytesPerReceiveMessage ];
+
+	static inline float boundValue( const float value );
+
 public:
 
 	/**

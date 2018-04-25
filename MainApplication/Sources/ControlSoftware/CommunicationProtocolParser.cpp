@@ -10,10 +10,18 @@
 #include "OutputList.h"
 #include "ServoList.h"
 
+#include "AnalogToDigitalController.h"
+
+using namespace LibBBB::Math;
 
 namespace VehicleControl {
+
+static const float BatteryLowValue = 0;
+static const float BatteryHighValue = 100;
+
 Control::CommunicationProtocolParser::CommunicationProtocolParser( Control* control )
 	: _control( control )
+	, _batteryConverter( BatteryConverter::RangeType( 0.3, 8.55 ), BatteryConverter::RangeType( BatteryLowValue, BatteryHighValue ) )
 {
 	memset( &_sendMessage, 0, NumberOfBytesPerSendMessage );
 	memset( &_receiveMessage, 0, NumberOfBytesPerReceiveMessage );
@@ -22,6 +30,21 @@ Control::CommunicationProtocolParser::CommunicationProtocolParser( Control* cont
 Control::CommunicationProtocolParser::~CommunicationProtocolParser()
 {
 
+}
+
+float Control::CommunicationProtocolParser::boundValue(const float value)
+{
+	if ( value < BatteryLowValue )
+	{
+		return BatteryLowValue;
+	}
+
+	if ( value > BatteryHighValue )
+	{
+		return BatteryHighValue;
+	}
+
+	return value;
 }
 
 void Control::CommunicationProtocolParser::parseIncomingPackets()
@@ -113,12 +136,11 @@ void Control::CommunicationProtocolParser::sendOutgoingPackets()
 	// clear it
 //	memset( (void*)outgoing, 0, NumberOfBytesPerSendMessage );
 
-	// create dummy battery percent
-	_sendMessage[ 0 ] = 25;
+	// send the battery percent
+	_sendMessage[ 0 ] = boundValue( _batteryConverter.convertXtoY( LibBBB::AnalogToDigitalController::instance().batteryVoltage() ) );
 
 	// get the value of the metal detector
 	bool metalDected = _control->_inputs[ IO::InputList::MetalDetected ]->getValue();
-//	bool metalDected = true;
 
 	// if metal has been detected
 	if ( metalDected )
