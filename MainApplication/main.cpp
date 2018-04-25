@@ -4,6 +4,7 @@
 #include "Input.h"
 #include "BoeingSurfaceVehicleControl.h"
 #include "ManagerPRUs.h"
+#include "BluetoothDefinitions.h"
 #define PRU_NUM 	0
 
 using namespace VehicleControl;

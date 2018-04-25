@@ -7,11 +7,8 @@
 
 #include <vector>
 #include "BluetoothInterface.h"
-#include "BluetoothDefinitions.h"
-//#include "BluetoothServer.h"
 #include "UserLED.h"
 
-#define RunBluetooth ( 1 )
 // Forwared declarations
 namespace LibBBB {
 namespace IO {
@@ -78,9 +75,7 @@ private:
 	// the led just blinks to signify the app is still running properly.
 	LibBBB::IO::UserLED _runningLED;
 
-#if defined( RunBluetooth )
 	LibBBB::Bluetooth::Manager _manager;
-#endif
 
 	int stateChange( LibBBB::Bluetooth::Manager::State::Enum newState );
 public:

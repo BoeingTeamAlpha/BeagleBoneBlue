@@ -41,7 +41,6 @@ Control::Control()
 	, _bluetoothConnectedLED( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::Green ) )
 	, _red( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::Red ) )
 	, _runningLED( LibBBB::IO::UserLED::Setup( LibBBB::IO::UserLED::LED::UserThree ) )
-#if defined( RunBluetooth )
 	, _manager( peerAdress
 				, localAdress
 				, NumberOfBytesPerReceiveMessage
@@ -49,7 +48,6 @@ Control::Control()
 				, BluetoothPollRate
 				, (LibBBB::Bluetooth::Manager::Interface*)this
 				, (LibBBB::Bluetooth::Manager::stateChange)&VehicleControl::Control::stateChange )
-#endif
 {
 	// Fill up the IO
 	IOFactory::fillInputList( _inputs );
@@ -166,8 +164,6 @@ int Control::stateChange( LibBBB::Bluetooth::Manager::State::Enum newState)
 		setServoPower( false );
 	}
 
-//	turnOffAllMotors();
-
 	file.open( LOG_PATH, std::fstream::out | std::fstream::app );
 
 	file << message.str();
@@ -183,25 +179,16 @@ Control& Control::instance()
 
 void Control::update()
 {
-//	static unsigned int count;
-
 	if ( _manager.isConnected() )
-	{		
+	{
 		_parser->parseIncomingPackets();
 		_parser->sendOutgoingPackets();
-//		++count;
 	}
 	else
 	{
 		_servos[ IO::ServoList::LeftDriveMotor ]->setDutyCycle( 0 );
 		_servos[ IO::ServoList::RightDriveMotor ]->setDutyCycle( 0 );
 	}
-
-//	printf("\r%u\t%u\n"
-//			, _servos[ IO::ServoList::LeftDriveMotor ]->dutyCycle()
-//			, _servos[ IO::ServoList::RightDriveMotor ]->dutyCycle() );
-//	fflush(stdout);
-
 }
 
 bool Control::isRunning() const
@@ -263,10 +250,7 @@ void Control::addPIDFile()
 
 	pid_t pid = getpid();
 
-//	printf("pid is %i\n", pid );
-
 	fprintf( file, "%i", pid );
-//	write( fd, (void*)&pid, 4 );
 
 	fclose( file );
 }
