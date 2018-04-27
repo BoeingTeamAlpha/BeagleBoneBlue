@@ -49,9 +49,9 @@ void Control::IOFactory::fillServoList( ServoList& list )
 	list[ IO::ServoList::DumpBedRaiseLower ]
 			= new ServoControl( MotorControl::Motor::Four, 20.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
 	list[ IO::ServoList::GripperRaiseLower ]
-			= new ServoControl( MotorControl::Motor::Five, 20.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
+			= new ServoControl( MotorControl::Motor::Five, 20.0f, ServoControl::RangeType( 0, 160 ), ServoControl::RangeType( 1400, 2550 ) );
 	list[ IO::ServoList::GripperOpenClose ]
-			= new ServoControl( MotorControl::Motor::Six, 20.0f, ServoControl::RangeType( 0, 180 ), ServoControl::RangeType( 800, 2500 ) );
+			= new ServoControl( MotorControl::Motor::Six, 20.0f, ServoControl::RangeType( 0, 160 ), ServoControl::RangeType( 1400, 2550 ) );
 }
 
 void Control::IOFactory::destroyInputs( InputList& list )
